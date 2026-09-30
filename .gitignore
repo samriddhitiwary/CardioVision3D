@@ -1,0 +1,96 @@
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+**/.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+backend/.venv/
+ml/.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+secrets/
+
+# Node
+node_modules/
+frontend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vite and frontend builds
+dist/
+build/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ML datasets and patient data
+ml/data/raw/*
+!ml/data/raw/.gitkeep
+ml/data/processed/*
+!ml/data/processed/.gitkeep
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+
+# ML model binaries and artifacts
+ml/artifacts/models/*
+!ml/artifacts/models/.gitkeep
+ml/artifacts/preprocessors/*
+!ml/artifacts/preprocessors/.gitkeep
+ml/artifacts/metrics/*
+!ml/artifacts/metrics/.gitkeep
+*.pkl
+*.pickle
+*.joblib
+*.onnx
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.model
+
+# Temporary files and logs
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
