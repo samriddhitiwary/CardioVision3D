@@ -8,5 +8,8 @@ numpy
 pandas
 scikit-learn
 shap
+matplotlib
+xgboost
+catboost
 pytest
-httpx2
+httpx

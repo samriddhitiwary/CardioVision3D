@@ -1,11 +1,11 @@
 from fastapi.testclient import TestClient
 
-from app.main import app
+from backend.app.main import app
 
 
 def test_health_check() -> None:
-    client = TestClient(app)
-    response = client.get("/health")
+    with TestClient(app) as client:
+        response = client.get("/health")
 
     assert response.status_code == 200
-    assert response.json() == {"status": "ok"}
+    assert response.json() == {"status": "ok", "model_version": "1.0.0", "models_loaded": True}
