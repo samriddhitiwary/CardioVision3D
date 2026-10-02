@@ -1,0 +1,3624 @@
+{
+  "source": "frontend\\public\\models\\heart\\BP51782_FMA3_2_1_inference_isa_FMA67135_Postnatal_anatomical_structure",
+  "summary": {
+    "obj_count": 129,
+    "total_size_bytes": 29359001,
+    "total_vertices": 271706,
+    "total_faces": 407681,
+    "total_triangles": 407681
+  },
+  "objects": [
+    {
+      "filename": "MM419_BP51825_FMA9477_Sinuatrial node.obj",
+      "anatomical_name": "Sinuatrial node",
+      "size_bytes": 8959,
+      "vertices": 96,
+      "faces": 126,
+      "triangles": 126,
+      "bbox_min": [
+        -18.2147,
+        -134.589,
+        1262.36
+      ],
+      "bbox_max": [
+        -10.7588,
+        -132.049,
+        1266.51
+      ],
+      "center": [
+        -14.48675,
+        -133.31900000000002,
+        1264.435
+      ],
+      "dimensions": [
+        7.4559,
+        2.539999999999992,
+        4.150000000000091
+      ]
+    },
+    {
+      "filename": "MM420_BP51969_FMA74912_Trunk of anterior interventricular branch of left coronary artery.obj",
+      "anatomical_name": "Trunk of anterior interventricular branch of left coronary artery",
+      "size_bytes": 41532,
+      "vertices": 397,
+      "faces": 642,
+      "triangles": 642,
+      "bbox_min": [
+        35.9236,
+        -138.093,
+        1245.52
+      ],
+      "bbox_max": [
+        45.7372,
+        -124.688,
+        1252.08
+      ],
+      "center": [
+        40.8304,
+        -131.3905,
+        1248.8
+      ],
+      "dimensions": [
+        9.813600000000001,
+        13.404999999999987,
+        6.559999999999945
+      ]
+    },
+    {
+      "filename": "MM422_BP51972_FMA3860_Diagonal branch of anterior descending branch of left coronary artery.obj",
+      "anatomical_name": "Diagonal branch of anterior descending branch of left coronary artery",
+      "size_bytes": 125253,
+      "vertices": 1118,
+      "faces": 2016,
+      "triangles": 2016,
+      "bbox_min": [
+        43.7963,
+        -138.866,
+        1233.85
+      ],
+      "bbox_max": [
+        71.4937,
+        -120.974,
+        1247.93
+      ],
+      "center": [
+        57.645,
+        -129.92000000000002,
+        1240.8899999999999
+      ],
+      "dimensions": [
+        27.697400000000002,
+        17.89200000000001,
+        14.080000000000155
+      ]
+    },
+    {
+      "filename": "MM423_BP51965_FMA3888_Second left anterior branch of anterior interventricular branch of left coronary artery.obj",
+      "anatomical_name": "Second left anterior branch of anterior interventricular branch of left coronary artery",
+      "size_bytes": 80756,
+      "vertices": 748,
+      "faces": 1268,
+      "triangles": 1268,
+      "bbox_min": [
+        48.6393,
+        -152.715,
+        1220.15
+      ],
+      "bbox_max": [
+        76.9354,
+        -137.339,
+        1236.08
+      ],
+      "center": [
+        62.78735,
+        -145.027,
+        1228.115
+      ],
+      "dimensions": [
+        28.296100000000003,
+        15.376000000000005,
+        15.929999999999836
+      ]
+    },
+    {
+      "filename": "MM424_BP51969_FMA74912_Trunk of anterior interventricular branch of left coronary artery.obj",
+      "anatomical_name": "Trunk of anterior interventricular branch of left coronary artery",
+      "size_bytes": 67711,
+      "vertices": 610,
+      "faces": 1104,
+      "triangles": 1104,
+      "bbox_min": [
+        42.9584,
+        -153.5,
+        1232.76
+      ],
+      "bbox_max": [
+        51.3551,
+        -135.521,
+        1248.09
+      ],
+      "center": [
+        47.15675,
+        -144.51049999999998,
+        1240.425
+      ],
+      "dimensions": [
+        8.396700000000003,
+        17.979000000000013,
+        15.329999999999927
+      ]
+    },
+    {
+      "filename": "MM425_BP51969_FMA74912_Trunk of anterior interventricular branch of left coronary artery.obj",
+      "anatomical_name": "Trunk of anterior interventricular branch of left coronary artery",
+      "size_bytes": 56250,
+      "vertices": 511,
+      "faces": 912,
+      "triangles": 912,
+      "bbox_min": [
+        48.4882,
+        -166.257,
+        1186.97
+      ],
+      "bbox_max": [
+        57.1139,
+        -151.21,
+        1234.05
+      ],
+      "center": [
+        52.801050000000004,
+        -158.7335,
+        1210.51
+      ],
+      "dimensions": [
+        8.625700000000002,
+        15.046999999999997,
+        47.07999999999993
+      ]
+    },
+    {
+      "filename": "MM426_BP51973_FMA74923_Trunk of circumflex branch of left coronary artery.obj",
+      "anatomical_name": "Trunk of circumflex branch of left coronary artery",
+      "size_bytes": 47376,
+      "vertices": 434,
+      "faces": 764,
+      "triangles": 764,
+      "bbox_min": [
+        35.4651,
+        -125.032,
+        1231.16
+      ],
+      "bbox_max": [
+        44.4317,
+        -89.3978,
+        1254.22
+      ],
+      "center": [
+        39.9484,
+        -107.2149,
+        1242.69
+      ],
+      "dimensions": [
+        8.9666,
+        35.63419999999999,
+        23.059999999999945
+      ]
+    },
+    {
+      "filename": "MM428_BP51937_FMA3914_First posterior ventricular branch of circumflex coronary artery.obj",
+      "anatomical_name": "First posterior ventricular branch of circumflex coronary artery",
+      "size_bytes": 148267,
+      "vertices": 1413,
+      "faces": 2164,
+      "triangles": 2164,
+      "bbox_min": [
+        36.623,
+        -115.852,
+        1178.86
+      ],
+      "bbox_max": [
+        69.1247,
+        -82.3112,
+        1224.0
+      ],
+      "center": [
+        52.873850000000004,
+        -99.08160000000001,
+        1201.4299999999998
+      ],
+      "dimensions": [
+        32.50170000000001,
+        33.540800000000004,
+        45.1400000000001
+      ]
+    },
+    {
+      "filename": "MM430_BP58390_FMA79742_Trunk of posterior interventricular branch of left coronary artery.obj",
+      "anatomical_name": "Trunk of posterior interventricular branch of left coronary artery",
+      "size_bytes": 70881,
+      "vertices": 661,
+      "faces": 1112,
+      "triangles": 1112,
+      "bbox_min": [
+        12.0301,
+        -147.073,
+        1175.12
+      ],
+      "bbox_max": [
+        45.3474,
+        -104.521,
+        1190.42
+      ],
+      "center": [
+        28.68875,
+        -125.797,
+        1182.77
+      ],
+      "dimensions": [
+        33.3173,
+        42.55200000000001,
+        15.300000000000182
+      ]
+    },
+    {
+      "filename": "MM431_BP51970_FMA3893_Anterior septal branch of anterior interventricular artery.obj",
+      "anatomical_name": "Anterior septal branch of anterior interventricular artery",
+      "size_bytes": 81293,
+      "vertices": 752,
+      "faces": 1286,
+      "triangles": 1286,
+      "bbox_min": [
+        13.2616,
+        -140.922,
+        1225.31
+      ],
+      "bbox_max": [
+        45.1708,
+        -130.638,
+        1249.67
+      ],
+      "center": [
+        29.2162,
+        -135.78,
+        1237.49
+      ],
+      "dimensions": [
+        31.9092,
+        10.283999999999992,
+        24.360000000000127
+      ]
+    },
+    {
+      "filename": "MM432_BP51962_FMA3890_Third left anterior branch of anterior interventricular branch of left coronary artery.obj",
+      "anatomical_name": "Third left anterior branch of anterior interventricular branch of left coronary artery",
+      "size_bytes": 123481,
+      "vertices": 1138,
+      "faces": 1922,
+      "triangles": 1922,
+      "bbox_min": [
+        51.5921,
+        -163.675,
+        1208.58
+      ],
+      "bbox_max": [
+        79.8615,
+        -156.204,
+        1220.07
+      ],
+      "center": [
+        65.7268,
+        -159.9395,
+        1214.3249999999998
+      ],
+      "dimensions": [
+        28.269400000000005,
+        7.471000000000004,
+        11.490000000000009
+      ]
+    },
+    {
+      "filename": "MM433_BP51970_FMA3893_Anterior septal branch of anterior interventricular artery.obj",
+      "anatomical_name": "Anterior septal branch of anterior interventricular artery",
+      "size_bytes": 143317,
+      "vertices": 1288,
+      "faces": 2242,
+      "triangles": 2242,
+      "bbox_min": [
+        31.3752,
+        -157.663,
+        1213.86
+      ],
+      "bbox_max": [
+        50.9862,
+        -150.179,
+        1229.15
+      ],
+      "center": [
+        41.1807,
+        -153.921,
+        1221.505
+      ],
+      "dimensions": [
+        19.610999999999997,
+        7.484000000000009,
+        15.290000000000191
+      ]
+    },
+    {
+      "filename": "MM434_BP51970_FMA3893_Anterior septal branch of anterior interventricular artery.obj",
+      "anatomical_name": "Anterior septal branch of anterior interventricular artery",
+      "size_bytes": 145186,
+      "vertices": 1352,
+      "faces": 2182,
+      "triangles": 2182,
+      "bbox_min": [
+        31.2542,
+        -164.497,
+        1202.48
+      ],
+      "bbox_max": [
+        55.124,
+        -151.439,
+        1211.73
+      ],
+      "center": [
+        43.1891,
+        -157.96800000000002,
+        1207.105
+      ],
+      "dimensions": [
+        23.8698,
+        13.058000000000021,
+        9.25
+      ]
+    },
+    {
+      "filename": "MM436_BP51977_FMA3802_Trunk of right coronary artery.obj",
+      "anatomical_name": "Trunk of right coronary artery",
+      "size_bytes": 48478,
+      "vertices": 442,
+      "faces": 774,
+      "triangles": 774,
+      "bbox_min": [
+        -16.9084,
+        -154.171,
+        1204.3
+      ],
+      "bbox_max": [
+        -7.71565,
+        -143.656,
+        1226.2
+      ],
+      "center": [
+        -12.312025,
+        -148.9135,
+        1215.25
+      ],
+      "dimensions": [
+        9.19275,
+        10.514999999999986,
+        21.90000000000009
+      ]
+    },
+    {
+      "filename": "MM437_BP51980_FMA3815_First anterior ventricular branch of right coronary artery.obj",
+      "anatomical_name": "First anterior ventricular branch of right coronary artery",
+      "size_bytes": 116501,
+      "vertices": 1082,
+      "faces": 1792,
+      "triangles": 1792,
+      "bbox_min": [
+        -11.4706,
+        -177.084,
+        1207.2
+      ],
+      "bbox_max": [
+        26.0143,
+        -150.824,
+        1225.85
+      ],
+      "center": [
+        7.27185,
+        -163.954,
+        1216.525
+      ],
+      "dimensions": [
+        37.484899999999996,
+        26.25999999999999,
+        18.649999999999864
+      ]
+    },
+    {
+      "filename": "MM438_BP51922_FMA3823_Sinoatrial nodal branch of right coronary artery.obj",
+      "anatomical_name": "Sinoatrial nodal branch of right coronary artery",
+      "size_bytes": 43879,
+      "vertices": 433,
+      "faces": 640,
+      "triangles": 640,
+      "bbox_min": [
+        -14.3361,
+        -140.973,
+        1238.96
+      ],
+      "bbox_max": [
+        7.32645,
+        -132.285,
+        1265.69
+      ],
+      "center": [
+        -3.504825,
+        -136.62900000000002,
+        1252.325
+      ],
+      "dimensions": [
+        21.66255,
+        8.688000000000017,
+        26.730000000000018
+      ]
+    },
+    {
+      "filename": "MM439_BP51977_FMA3802_Trunk of right coronary artery.obj",
+      "anatomical_name": "Trunk of right coronary artery",
+      "size_bytes": 88232,
+      "vertices": 795,
+      "faces": 1402,
+      "triangles": 1402,
+      "bbox_min": [
+        -16.7844,
+        -146.064,
+        1193.92
+      ],
+      "bbox_max": [
+        0.269238,
+        -124.139,
+        1205.6
+      ],
+      "center": [
+        -8.257581,
+        -135.1015,
+        1199.76
+      ],
+      "dimensions": [
+        17.053638000000003,
+        21.924999999999997,
+        11.679999999999836
+      ]
+    },
+    {
+      "filename": "MM440_BP51950_FMA3818_Marginal branch of right coronary artery.obj",
+      "anatomical_name": "Marginal branch of right coronary artery",
+      "size_bytes": 101479,
+      "vertices": 1018,
+      "faces": 1426,
+      "triangles": 1426,
+      "bbox_min": [
+        -16.5136,
+        -170.218,
+        1185.04
+      ],
+      "bbox_max": [
+        32.9446,
+        -142.962,
+        1205.51
+      ],
+      "center": [
+        8.2155,
+        -156.58999999999997,
+        1195.275
+      ],
+      "dimensions": [
+        49.458200000000005,
+        27.256,
+        20.470000000000027
+      ]
+    },
+    {
+      "filename": "MM441_BP51955_FMA3807_Conus branch of right coronary artery.obj",
+      "anatomical_name": "Conus branch of right coronary artery",
+      "size_bytes": 83772,
+      "vertices": 780,
+      "faces": 1308,
+      "triangles": 1308,
+      "bbox_min": [
+        0.83929,
+        -173.026,
+        1234.66
+      ],
+      "bbox_max": [
+        31.7792,
+        -139.503,
+        1248.12
+      ],
+      "center": [
+        16.309245,
+        -156.2645,
+        1241.3899999999999
+      ],
+      "dimensions": [
+        30.93991,
+        33.523000000000025,
+        13.459999999999809
+      ]
+    },
+    {
+      "filename": "MM443_BP51952_FMA3851_Atrioventricular node branch of right coronary artery.obj",
+      "anatomical_name": "Atrioventricular node branch of right coronary artery",
+      "size_bytes": 233596,
+      "vertices": 2041,
+      "faces": 3518,
+      "triangles": 3518,
+      "bbox_min": [
+        -2.84653,
+        -127.664,
+        1194.47
+      ],
+      "bbox_max": [
+        6.67944,
+        -116.923,
+        1219.71
+      ],
+      "center": [
+        1.9164549999999998,
+        -122.2935,
+        1207.0900000000001
+      ],
+      "dimensions": [
+        9.52597,
+        10.741,
+        25.24000000000001
+      ]
+    },
+    {
+      "filename": "MM444_BP51956_FMA3837_First posterior ventricular branch of right coronary artery.obj",
+      "anatomical_name": "First posterior ventricular branch of right coronary artery",
+      "size_bytes": 58180,
+      "vertices": 524,
+      "faces": 950,
+      "triangles": 950,
+      "bbox_min": [
+        -0.869092,
+        -150.822,
+        1174.58
+      ],
+      "bbox_max": [
+        43.3685,
+        -122.276,
+        1196.37
+      ],
+      "center": [
+        21.249703999999998,
+        -136.549,
+        1185.475
+      ],
+      "dimensions": [
+        44.237592,
+        28.546000000000006,
+        21.789999999999964
+      ]
+    },
+    {
+      "filename": "MM445_BP51957_FMA3829_Anterior atrial branch of right coronary artery.obj",
+      "anatomical_name": "Anterior atrial branch of right coronary artery",
+      "size_bytes": 56736,
+      "vertices": 524,
+      "faces": 888,
+      "triangles": 888,
+      "bbox_min": [
+        -32.7997,
+        -150.079,
+        1210.48
+      ],
+      "bbox_max": [
+        -13.5425,
+        -134.937,
+        1221.38
+      ],
+      "center": [
+        -23.171100000000003,
+        -142.508,
+        1215.93
+      ],
+      "dimensions": [
+        19.2572,
+        15.141999999999996,
+        10.900000000000091
+      ]
+    },
+    {
+      "filename": "MM446_BP58391_FMA76767_Anterior cardiac vein.obj",
+      "anatomical_name": "Anterior cardiac vein",
+      "size_bytes": 97135,
+      "vertices": 919,
+      "faces": 1474,
+      "triangles": 1474,
+      "bbox_min": [
+        -19.7468,
+        -177.219,
+        1206.21
+      ],
+      "bbox_max": [
+        22.2182,
+        -147.344,
+        1226.07
+      ],
+      "center": [
+        1.2356999999999996,
+        -162.2815,
+        1216.1399999999999
+      ],
+      "dimensions": [
+        41.965,
+        29.875,
+        19.8599999999999
+      ]
+    },
+    {
+      "filename": "MM447_BP51947_FMA4707_Great cardiac vein.obj",
+      "anatomical_name": "Great cardiac vein",
+      "size_bytes": 340968,
+      "vertices": 3230,
+      "faces": 4578,
+      "triangles": 4578,
+      "bbox_min": [
+        39.2305,
+        -165.948,
+        1195.99
+      ],
+      "bbox_max": [
+        79.3731,
+        -80.6974,
+        1251.05
+      ],
+      "center": [
+        59.3018,
+        -123.3227,
+        1223.52
+      ],
+      "dimensions": [
+        40.142599999999995,
+        85.2506,
+        55.059999999999945
+      ]
+    },
+    {
+      "filename": "MM448_BP51947_FMA4707_Great cardiac vein.obj",
+      "anatomical_name": "Great cardiac vein",
+      "size_bytes": 162964,
+      "vertices": 1422,
+      "faces": 2584,
+      "triangles": 2584,
+      "bbox_min": [
+        45.1,
+        -141.966,
+        1203.4
+      ],
+      "bbox_max": [
+        81.1026,
+        -87.6132,
+        1235.64
+      ],
+      "center": [
+        63.101299999999995,
+        -114.78960000000001,
+        1219.52
+      ],
+      "dimensions": [
+        36.002599999999994,
+        54.3528,
+        32.24000000000001
+      ]
+    },
+    {
+      "filename": "MM449_BP51951_FMA4706_Coronary sinus.obj",
+      "anatomical_name": "Coronary sinus",
+      "size_bytes": 61520,
+      "vertices": 577,
+      "faces": 966,
+      "triangles": 966,
+      "bbox_min": [
+        3.64635,
+        -143.875,
+        1178.37
+      ],
+      "bbox_max": [
+        40.1153,
+        -106.655,
+        1203.3
+      ],
+      "center": [
+        21.880824999999998,
+        -125.265,
+        1190.835
+      ],
+      "dimensions": [
+        36.46895,
+        37.22,
+        24.930000000000064
+      ]
+    },
+    {
+      "filename": "MM451_BP51932_FMA4716_Right marginal vein.obj",
+      "anatomical_name": "Right marginal vein",
+      "size_bytes": 75213,
+      "vertices": 680,
+      "faces": 1208,
+      "triangles": 1208,
+      "bbox_min": [
+        -16.1177,
+        -171.367,
+        1190.68
+      ],
+      "bbox_max": [
+        16.4794,
+        -141.771,
+        1202.02
+      ],
+      "center": [
+        0.1808499999999995,
+        -156.569,
+        1196.35
+      ],
+      "dimensions": [
+        32.5971,
+        29.596000000000004,
+        11.339999999999918
+      ]
+    },
+    {
+      "filename": "MM452_BP51938_FMA4714_Small cardiac vein.obj",
+      "anatomical_name": "Small cardiac vein",
+      "size_bytes": 127454,
+      "vertices": 1187,
+      "faces": 1924,
+      "triangles": 1924,
+      "bbox_min": [
+        -16.0693,
+        -166.147,
+        1192.41
+      ],
+      "bbox_max": [
+        8.12432,
+        -110.65,
+        1211.17
+      ],
+      "center": [
+        -3.9724899999999987,
+        -138.3985,
+        1201.79
+      ],
+      "dimensions": [
+        24.19362,
+        55.496999999999986,
+        18.75999999999999
+      ]
+    },
+    {
+      "filename": "MM456_BP51862_FMA9306_Lateral wall of left atrium.obj",
+      "anatomical_name": "Lateral wall of left atrium",
+      "size_bytes": 162703,
+      "vertices": 1428,
+      "faces": 2548,
+      "triangles": 2548,
+      "bbox_min": [
+        23.5142,
+        -109.498,
+        1215.94
+      ],
+      "bbox_max": [
+        45.6798,
+        -70.6127,
+        1265.51
+      ],
+      "center": [
+        34.597,
+        -90.05535,
+        1240.725
+      ],
+      "dimensions": [
+        22.1656,
+        38.8853,
+        49.569999999999936
+      ]
+    },
+    {
+      "filename": "MM458_BP51886_FMA84095_Septal wall of left atrium.obj",
+      "anatomical_name": "Septal wall of left atrium",
+      "size_bytes": 145347,
+      "vertices": 1272,
+      "faces": 2290,
+      "triangles": 2290,
+      "bbox_min": [
+        -22.2626,
+        -102.687,
+        1207.45
+      ],
+      "bbox_max": [
+        -1.21232,
+        -76.0682,
+        1256.44
+      ],
+      "center": [
+        -11.737459999999999,
+        -89.3776,
+        1231.9450000000002
+      ],
+      "dimensions": [
+        21.05028,
+        26.618799999999993,
+        48.99000000000001
+      ]
+    },
+    {
+      "filename": "MM459_BP51840_FMA9547_Wall of left auricle.obj",
+      "anatomical_name": "Wall of left auricle",
+      "size_bytes": 343552,
+      "vertices": 3053,
+      "faces": 4938,
+      "triangles": 4938,
+      "bbox_min": [
+        21.4238,
+        -150.838,
+        1239.79
+      ],
+      "bbox_max": [
+        62.9496,
+        -94.8677,
+        1272.24
+      ],
+      "center": [
+        42.1867,
+        -122.85284999999999,
+        1256.0149999999999
+      ],
+      "dimensions": [
+        41.5258,
+        55.970299999999995,
+        32.450000000000045
+      ]
+    },
+    {
+      "filename": "MM460_BP51866_FMA9562_Superior wall of left atrium.obj",
+      "anatomical_name": "Superior wall of left atrium",
+      "size_bytes": 98655,
+      "vertices": 888,
+      "faces": 1578,
+      "triangles": 1578,
+      "bbox_min": [
+        -8.59492,
+        -109.295,
+        1247.81
+      ],
+      "bbox_max": [
+        26.0641,
+        -76.4435,
+        1265.77
+      ],
+      "center": [
+        8.73459,
+        -92.86925,
+        1256.79
+      ],
+      "dimensions": [
+        34.65902,
+        32.8515,
+        17.960000000000036
+      ]
+    },
+    {
+      "filename": "MM461_BP51819_FMA49299_Wall of right auricle proper.obj",
+      "anatomical_name": "Wall of right auricle proper",
+      "size_bytes": 146689,
+      "vertices": 1275,
+      "faces": 2336,
+      "triangles": 2336,
+      "bbox_min": [
+        -32.1686,
+        -162.962,
+        1210.63
+      ],
+      "bbox_max": [
+        6.10496,
+        -130.222,
+        1266.03
+      ],
+      "center": [
+        -13.03182,
+        -146.59199999999998,
+        1238.33
+      ],
+      "dimensions": [
+        38.273559999999996,
+        32.73999999999998,
+        55.399999999999864
+      ]
+    },
+    {
+      "filename": "MM462_BP51838_FMA9236_Crista terminalis.obj",
+      "anatomical_name": "Crista terminalis",
+      "size_bytes": 164115,
+      "vertices": 1707,
+      "faces": 2030,
+      "triangles": 2030,
+      "bbox_min": [
+        -31.4073,
+        -139.465,
+        1207.19
+      ],
+      "bbox_max": [
+        2.9787,
+        -127.939,
+        1264.26
+      ],
+      "center": [
+        -14.2143,
+        -133.702,
+        1235.725
+      ],
+      "dimensions": [
+        34.385999999999996,
+        11.52600000000001,
+        57.069999999999936
+      ]
+    },
+    {
+      "filename": "MM463_BP51847_FMA9240_Valve of inferior vena cava.obj",
+      "anatomical_name": "Valve of inferior vena cava",
+      "size_bytes": 96801,
+      "vertices": 835,
+      "faces": 1618,
+      "triangles": 1618,
+      "bbox_min": [
+        -29.0328,
+        -132.33,
+        1192.74
+      ],
+      "bbox_max": [
+        6.7089,
+        -106.836,
+        1217.93
+      ],
+      "center": [
+        -11.161950000000001,
+        -119.583,
+        1205.335
+      ],
+      "dimensions": [
+        35.7417,
+        25.494000000000014,
+        25.190000000000055
+      ]
+    },
+    {
+      "filename": "MM466_BP51829_FMA49298_Pectinate muscle of right auricle.obj",
+      "anatomical_name": "Pectinate muscle of right auricle",
+      "size_bytes": 499565,
+      "vertices": 5666,
+      "faces": 4782,
+      "triangles": 4782,
+      "bbox_min": [
+        -29.0621,
+        -161.328,
+        1211.97
+      ],
+      "bbox_max": [
+        4.38179,
+        -130.786,
+        1263.23
+      ],
+      "center": [
+        -12.340155000000001,
+        -146.05700000000002,
+        1237.6
+      ],
+      "dimensions": [
+        33.44389,
+        30.542,
+        51.25999999999999
+      ]
+    },
+    {
+      "filename": "MM467_BP51841_FMA9277_Tendon of Todaro.obj",
+      "anatomical_name": "Tendon of Todaro",
+      "size_bytes": 43720,
+      "vertices": 411,
+      "faces": 692,
+      "triangles": 692,
+      "bbox_min": [
+        3.98897,
+        -123.137,
+        1214.47
+      ],
+      "bbox_max": [
+        8.48634,
+        -109.939,
+        1226.64
+      ],
+      "center": [
+        6.237655,
+        -116.538,
+        1220.555
+      ],
+      "dimensions": [
+        4.49737,
+        13.198000000000008,
+        12.170000000000073
+      ]
+    },
+    {
+      "filename": "MM474_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 363570,
+      "vertices": 3039,
+      "faces": 5530,
+      "triangles": 5530,
+      "bbox_min": [
+        6.64671,
+        -165.55,
+        1175.22
+      ],
+      "bbox_max": [
+        78.3414,
+        -83.5152,
+        1250.09
+      ],
+      "center": [
+        42.494054999999996,
+        -124.5326,
+        1212.655
+      ],
+      "dimensions": [
+        71.69469,
+        82.03480000000002,
+        74.86999999999989
+      ]
+    },
+    {
+      "filename": "MM506_BP51985_FMA23733_Ascending aorta proper.obj",
+      "anatomical_name": "Ascending aorta proper",
+      "size_bytes": 171574,
+      "vertices": 1492,
+      "faces": 2684,
+      "triangles": 2684,
+      "bbox_min": [
+        -5.53776,
+        -136.78,
+        1245.47
+      ],
+      "bbox_max": [
+        25.7819,
+        -109.576,
+        1276.47
+      ],
+      "center": [
+        10.12207,
+        -123.178,
+        1260.97
+      ],
+      "dimensions": [
+        31.31966,
+        27.204000000000008,
+        31.0
+      ]
+    },
+    {
+      "filename": "MM514_BP51916_FMA84617_Right posterior semilunar fibrous scallop of aortic valve anulus.obj",
+      "anatomical_name": "Right posterior semilunar fibrous scallop of aortic valve anulus",
+      "size_bytes": 78748,
+      "vertices": 716,
+      "faces": 1262,
+      "triangles": 1262,
+      "bbox_min": [
+        5.36709,
+        -130.103,
+        1226.34
+      ],
+      "bbox_max": [
+        15.3053,
+        -105.649,
+        1247.25
+      ],
+      "center": [
+        10.336195,
+        -117.876,
+        1236.795
+      ],
+      "dimensions": [
+        9.938210000000002,
+        24.454000000000008,
+        20.910000000000082
+      ]
+    },
+    {
+      "filename": "MM515_BP51913_FMA84616_Left posterior semilunar fibrous scallop of aortic valve anulus.obj",
+      "anatomical_name": "Left posterior semilunar fibrous scallop of aortic valve anulus",
+      "size_bytes": 66288,
+      "vertices": 612,
+      "faces": 1052,
+      "triangles": 1052,
+      "bbox_min": [
+        12.8149,
+        -130.921,
+        1239.43
+      ],
+      "bbox_max": [
+        34.4426,
+        -104.931,
+        1251.06
+      ],
+      "center": [
+        23.62875,
+        -117.92599999999999,
+        1245.245
+      ],
+      "dimensions": [
+        21.627699999999997,
+        25.989999999999995,
+        11.629999999999882
+      ]
+    },
+    {
+      "filename": "MM516_BP51915_FMA84618_Anterior semilunar fibrous scallop of aortic valve anulus.obj",
+      "anatomical_name": "Anterior semilunar fibrous scallop of aortic valve anulus",
+      "size_bytes": 65643,
+      "vertices": 592,
+      "faces": 1068,
+      "triangles": 1068,
+      "bbox_min": [
+        6.03067,
+        -134.704,
+        1229.92
+      ],
+      "bbox_max": [
+        28.7667,
+        -129.261,
+        1249.97
+      ],
+      "center": [
+        17.398685,
+        -131.98250000000002,
+        1239.9450000000002
+      ],
+      "dimensions": [
+        22.73603,
+        5.443000000000012,
+        20.049999999999955
+      ]
+    },
+    {
+      "filename": "MM517_BP51924_FMA9502_Fibrous ring of aortic valve.obj",
+      "anatomical_name": "Fibrous ring of aortic valve",
+      "size_bytes": 68356,
+      "vertices": 723,
+      "faces": 898,
+      "triangles": 898,
+      "bbox_min": [
+        12.6991,
+        -107.895,
+        1231.86
+      ],
+      "bbox_max": [
+        23.8178,
+        -104.343,
+        1244.53
+      ],
+      "center": [
+        18.25845,
+        -106.119,
+        1238.195
+      ],
+      "dimensions": [
+        11.118699999999999,
+        3.5519999999999925,
+        12.670000000000073
+      ]
+    },
+    {
+      "filename": "MM519_BP51879_FMA7252_Right posterior cusp of aortic valve.obj",
+      "anatomical_name": "Right posterior cusp of aortic valve",
+      "size_bytes": 71399,
+      "vertices": 686,
+      "faces": 1074,
+      "triangles": 1074,
+      "bbox_min": [
+        6.48167,
+        -128.857,
+        1227.01
+      ],
+      "bbox_max": [
+        19.4413,
+        -106.466,
+        1247.4
+      ],
+      "center": [
+        12.961485,
+        -117.66149999999999,
+        1237.205
+      ],
+      "dimensions": [
+        12.959629999999997,
+        22.391000000000005,
+        20.3900000000001
+      ]
+    },
+    {
+      "filename": "MM520_BP51924_FMA9502_Fibrous ring of aortic valve.obj",
+      "anatomical_name": "Fibrous ring of aortic valve",
+      "size_bytes": 110714,
+      "vertices": 1139,
+      "faces": 1492,
+      "triangles": 1492,
+      "bbox_min": [
+        27.3129,
+        -133.425,
+        1236.48
+      ],
+      "bbox_max": [
+        34.1848,
+        -122.831,
+        1248.44
+      ],
+      "center": [
+        30.74885,
+        -128.12800000000001,
+        1242.46
+      ],
+      "dimensions": [
+        6.871900000000004,
+        10.594000000000008,
+        11.960000000000036
+      ]
+    },
+    {
+      "filename": "MM521_BP51864_FMA7254_Left posterior cusp of aortic valve.obj",
+      "anatomical_name": "Left posterior cusp of aortic valve",
+      "size_bytes": 37976,
+      "vertices": 388,
+      "faces": 540,
+      "triangles": 540,
+      "bbox_min": [
+        13.2221,
+        -129.656,
+        1235.32
+      ],
+      "bbox_max": [
+        34.2564,
+        -105.711,
+        1250.18
+      ],
+      "center": [
+        23.73925,
+        -117.68350000000001,
+        1242.75
+      ],
+      "dimensions": [
+        21.0343,
+        23.945000000000007,
+        14.860000000000127
+      ]
+    },
+    {
+      "filename": "MM524_BP51927_FMA7253_Anterior cusp of aortic valve.obj",
+      "anatomical_name": "Anterior cusp of aortic valve",
+      "size_bytes": 48231,
+      "vertices": 470,
+      "faces": 722,
+      "triangles": 722,
+      "bbox_min": [
+        6.16036,
+        -134.693,
+        1230.25
+      ],
+      "bbox_max": [
+        28.6234,
+        -123.106,
+        1250.5
+      ],
+      "center": [
+        17.39188,
+        -128.8995,
+        1240.375
+      ],
+      "dimensions": [
+        22.46304,
+        11.587000000000018,
+        20.25
+      ]
+    },
+    {
+      "filename": "MM526_BP51892_FMA9508_Left fibrous trigone of heart.obj",
+      "anatomical_name": "Left fibrous trigone of heart",
+      "size_bytes": 119514,
+      "vertices": 1052,
+      "faces": 1964,
+      "triangles": 1964,
+      "bbox_min": [
+        21.5567,
+        -111.485,
+        1236.09
+      ],
+      "bbox_max": [
+        34.1872,
+        -97.9302,
+        1242.42
+      ],
+      "center": [
+        27.87195,
+        -104.7076,
+        1239.255
+      ],
+      "dimensions": [
+        12.630499999999998,
+        13.5548,
+        6.330000000000155
+      ]
+    },
+    {
+      "filename": "MM529_BP51899_FMA9498_Fibrous ring of mitral valve.obj",
+      "anatomical_name": "Fibrous ring of mitral valve",
+      "size_bytes": 1205266,
+      "vertices": 9656,
+      "faces": 18256,
+      "triangles": 18256,
+      "bbox_min": [
+        7.29368,
+        -114.804,
+        1204.83
+      ],
+      "bbox_max": [
+        35.7116,
+        -85.7715,
+        1239.5
+      ],
+      "center": [
+        21.50264,
+        -100.28775,
+        1222.165
+      ],
+      "dimensions": [
+        28.417919999999995,
+        29.0325,
+        34.67000000000007
+      ]
+    },
+    {
+      "filename": "MM532_BP51848_FMA7272_Septomarginal trabecula.obj",
+      "anatomical_name": "Septomarginal trabecula",
+      "size_bytes": 111960,
+      "vertices": 1000,
+      "faces": 1822,
+      "triangles": 1822,
+      "bbox_min": [
+        17.8324,
+        -163.41,
+        1195.47
+      ],
+      "bbox_max": [
+        35.5738,
+        -153.46,
+        1215.99
+      ],
+      "center": [
+        26.7031,
+        -158.435,
+        1205.73
+      ],
+      "dimensions": [
+        17.7414,
+        9.949999999999989,
+        20.519999999999982
+      ]
+    },
+    {
+      "filename": "MM534_BP51828_FMA13258_Mural limb of supraventricular crest.obj",
+      "anatomical_name": "Mural limb of supraventricular crest",
+      "size_bytes": 50090,
+      "vertices": 471,
+      "faces": 786,
+      "triangles": 786,
+      "bbox_min": [
+        0.296361,
+        -144.898,
+        1228.45
+      ],
+      "bbox_max": [
+        25.5022,
+        -133.691,
+        1243.15
+      ],
+      "center": [
+        12.8992805,
+        -139.2945,
+        1235.8000000000002
+      ],
+      "dimensions": [
+        25.205838999999997,
+        11.206999999999994,
+        14.700000000000045
+      ]
+    },
+    {
+      "filename": "MM537_BP51810_FMA7262_Septal papillary muscle of right ventricle.obj",
+      "anatomical_name": "Septal papillary muscle of right ventricle",
+      "size_bytes": 197120,
+      "vertices": 1866,
+      "faces": 2786,
+      "triangles": 2786,
+      "bbox_min": [
+        20.098,
+        -156.245,
+        1214.69
+      ],
+      "bbox_max": [
+        36.936,
+        -141.808,
+        1222.06
+      ],
+      "center": [
+        28.517,
+        -149.0265,
+        1218.375
+      ],
+      "dimensions": [
+        16.838,
+        14.437000000000012,
+        7.369999999999891
+      ]
+    },
+    {
+      "filename": "MM538_BP51878_FMA49208_Wall of outflow part of right ventricle.obj",
+      "anatomical_name": "Wall of outflow part of right ventricle",
+      "size_bytes": 92036,
+      "vertices": 852,
+      "faces": 1442,
+      "triangles": 1442,
+      "bbox_min": [
+        -0.100251,
+        -173.995,
+        1218.85
+      ],
+      "bbox_max": [
+        50.6292,
+        -132.66,
+        1257.75
+      ],
+      "center": [
+        25.2644745,
+        -153.3275,
+        1238.3
+      ],
+      "dimensions": [
+        50.729451,
+        41.33500000000001,
+        38.90000000000009
+      ]
+    },
+    {
+      "filename": "MM541_BP51877_FMA7242_Anterior leaflet of mitral valve.obj",
+      "anatomical_name": "Anterior leaflet of mitral valve",
+      "size_bytes": 577791,
+      "vertices": 6548,
+      "faces": 5629,
+      "triangles": 5629,
+      "bbox_min": [
+        8.37583,
+        -120.719,
+        1206.61
+      ],
+      "bbox_max": [
+        45.7802,
+        -102.19,
+        1238.6
+      ],
+      "center": [
+        27.078015,
+        -111.4545,
+        1222.605
+      ],
+      "dimensions": [
+        37.40437,
+        18.528999999999996,
+        31.99000000000001
+      ]
+    },
+    {
+      "filename": "MM542_BP51793_FMA7243_Posterior leaflet of mitral valve.obj",
+      "anatomical_name": "Posterior leaflet of mitral valve",
+      "size_bytes": 1662075,
+      "vertices": 15274,
+      "faces": 20871,
+      "triangles": 20871,
+      "bbox_min": [
+        7.91489,
+        -120.727,
+        1205.02
+      ],
+      "bbox_max": [
+        45.8529,
+        -86.9248,
+        1238.65
+      ],
+      "center": [
+        26.883895,
+        -103.8259,
+        1221.835
+      ],
+      "dimensions": [
+        37.93801,
+        33.8022,
+        33.63000000000011
+      ]
+    },
+    {
+      "filename": "MM543_BP51877_FMA7242_Anterior leaflet of mitral valve.obj",
+      "anatomical_name": "Anterior leaflet of mitral valve",
+      "size_bytes": 578353,
+      "vertices": 6548,
+      "faces": 5629,
+      "triangles": 5629,
+      "bbox_min": [
+        8.37583,
+        -120.719,
+        1206.61
+      ],
+      "bbox_max": [
+        45.7802,
+        -102.19,
+        1238.6
+      ],
+      "center": [
+        27.078015,
+        -111.4545,
+        1222.605
+      ],
+      "dimensions": [
+        37.40437,
+        18.528999999999996,
+        31.99000000000001
+      ]
+    },
+    {
+      "filename": "MM544_BP51793_FMA7243_Posterior leaflet of mitral valve.obj",
+      "anatomical_name": "Posterior leaflet of mitral valve",
+      "size_bytes": 1674306,
+      "vertices": 15274,
+      "faces": 20871,
+      "triangles": 20871,
+      "bbox_min": [
+        7.91489,
+        -120.727,
+        1205.02
+      ],
+      "bbox_max": [
+        45.8529,
+        -86.9248,
+        1238.65
+      ],
+      "center": [
+        26.883895,
+        -103.8259,
+        1221.835
+      ],
+      "dimensions": [
+        37.93801,
+        33.8022,
+        33.63000000000011
+      ]
+    },
+    {
+      "filename": "MM550_BP51806_FMA7260_Anterior papillary muscle of right ventricle.obj",
+      "anatomical_name": "Anterior papillary muscle of right ventricle",
+      "size_bytes": 197150,
+      "vertices": 1864,
+      "faces": 2786,
+      "triangles": 2786,
+      "bbox_min": [
+        7.20389,
+        -168.373,
+        1192.68
+      ],
+      "bbox_max": [
+        24.2572,
+        -149.006,
+        1209.58
+      ],
+      "center": [
+        15.730545000000001,
+        -158.6895,
+        1201.13
+      ],
+      "dimensions": [
+        17.05331,
+        19.36699999999999,
+        16.899999999999864
+      ]
+    },
+    {
+      "filename": "MM551_BP51803_FMA7261_Posterior papillary muscle of right ventricle.obj",
+      "anatomical_name": "Posterior papillary muscle of right ventricle",
+      "size_bytes": 208230,
+      "vertices": 1990,
+      "faces": 2862,
+      "triangles": 2862,
+      "bbox_min": [
+        15.1752,
+        -150.049,
+        1191.32
+      ],
+      "bbox_max": [
+        37.6437,
+        -140.583,
+        1202.71
+      ],
+      "center": [
+        26.40945,
+        -145.316,
+        1197.0149999999999
+      ],
+      "dimensions": [
+        22.468500000000002,
+        9.466000000000008,
+        11.3900000000001
+      ]
+    },
+    {
+      "filename": "MM556_BP51977_FMA3802_Trunk of right coronary artery.obj",
+      "anatomical_name": "Trunk of right coronary artery",
+      "size_bytes": 64759,
+      "vertices": 576,
+      "faces": 1066,
+      "triangles": 1066,
+      "bbox_min": [
+        -10.7163,
+        -154.235,
+        1224.82
+      ],
+      "bbox_max": [
+        16.5645,
+        -135.984,
+        1240.4
+      ],
+      "center": [
+        2.9240999999999993,
+        -145.10950000000003,
+        1232.6100000000001
+      ],
+      "dimensions": [
+        27.2808,
+        18.251000000000005,
+        15.580000000000155
+      ]
+    },
+    {
+      "filename": "MM557_BP58405_FMA4685_Stem of left coronary artery.obj",
+      "anatomical_name": "Stem of left coronary artery",
+      "size_bytes": 35796,
+      "vertices": 370,
+      "faces": 500,
+      "triangles": 500,
+      "bbox_min": [
+        29.3593,
+        -127.28,
+        1248.33
+      ],
+      "bbox_max": [
+        38.3009,
+        -118.089,
+        1253.39
+      ],
+      "center": [
+        33.8301,
+        -122.6845,
+        1250.8600000000001
+      ],
+      "dimensions": [
+        8.941599999999998,
+        9.191000000000003,
+        5.060000000000173
+      ]
+    },
+    {
+      "filename": "MM558_BP51975_FMA15098_Wall of bulb of aorta.obj",
+      "anatomical_name": "Wall of bulb of aorta",
+      "size_bytes": 263251,
+      "vertices": 2327,
+      "faces": 3888,
+      "triangles": 3888,
+      "bbox_min": [
+        2.26922,
+        -138.331,
+        1226.83
+      ],
+      "bbox_max": [
+        34.6291,
+        -105.153,
+        1255.67
+      ],
+      "center": [
+        18.44916,
+        -121.74199999999999,
+        1241.25
+      ],
+      "dimensions": [
+        32.359880000000004,
+        33.17799999999998,
+        28.840000000000146
+      ]
+    },
+    {
+      "filename": "MM559_BP51843_FMA49285_Anterior wall proper of right atrium.obj",
+      "anatomical_name": "Anterior wall proper of right atrium",
+      "size_bytes": 115011,
+      "vertices": 1094,
+      "faces": 1694,
+      "triangles": 1694,
+      "bbox_min": [
+        -23.2586,
+        -150.595,
+        1187.34
+      ],
+      "bbox_max": [
+        7.74547,
+        -124.385,
+        1275.56
+      ],
+      "center": [
+        -7.756565,
+        -137.49,
+        1231.4499999999998
+      ],
+      "dimensions": [
+        31.004070000000002,
+        26.209999999999994,
+        88.22000000000003
+      ]
+    },
+    {
+      "filename": "MM560_BP51837_FMA49286_Lateral wall proper of right atrium.obj",
+      "anatomical_name": "Lateral wall proper of right atrium",
+      "size_bytes": 405080,
+      "vertices": 3387,
+      "faces": 6022,
+      "triangles": 6022,
+      "bbox_min": [
+        -35.3272,
+        -145.282,
+        1186.91
+      ],
+      "bbox_max": [
+        -16.3463,
+        -97.0453,
+        1276.71
+      ],
+      "center": [
+        -25.83675,
+        -121.16365,
+        1231.81
+      ],
+      "dimensions": [
+        18.9809,
+        48.23670000000001,
+        89.79999999999995
+      ]
+    },
+    {
+      "filename": "MM562_BP51846_FMA9242_Valve of coronary sinus.obj",
+      "anatomical_name": "Valve of coronary sinus",
+      "size_bytes": 132439,
+      "vertices": 1257,
+      "faces": 1964,
+      "triangles": 1964,
+      "bbox_min": [
+        -0.62172,
+        -116.722,
+        1203.26
+      ],
+      "bbox_max": [
+        8.0266,
+        -109.054,
+        1218.13
+      ],
+      "center": [
+        3.70244,
+        -112.888,
+        1210.6950000000002
+      ],
+      "dimensions": [
+        8.64832,
+        7.667999999999992,
+        14.870000000000118
+      ]
+    },
+    {
+      "filename": "MM563_BP51852_FMA13257_Septal limb of supraventricular crest.obj",
+      "anatomical_name": "Septal limb of supraventricular crest",
+      "size_bytes": 211199,
+      "vertices": 1828,
+      "faces": 3256,
+      "triangles": 3256,
+      "bbox_min": [
+        13.4923,
+        -167.815,
+        1206.43
+      ],
+      "bbox_max": [
+        45.1444,
+        -131.084,
+        1244.99
+      ],
+      "center": [
+        29.31835,
+        -149.4495,
+        1225.71
+      ],
+      "dimensions": [
+        31.652099999999997,
+        36.730999999999995,
+        38.559999999999945
+      ]
+    },
+    {
+      "filename": "MM564_BP51832_FMA7270_Trabecula carnea of right ventricle.obj",
+      "anatomical_name": "Trabecula carnea of right ventricle",
+      "size_bytes": 626256,
+      "vertices": 6466,
+      "faces": 7230,
+      "triangles": 7230,
+      "bbox_min": [
+        -3.21972,
+        -168.595,
+        1187.61
+      ],
+      "bbox_max": [
+        46.8133,
+        -128.558,
+        1228.11
+      ],
+      "center": [
+        21.796789999999998,
+        -148.5765,
+        1207.86
+      ],
+      "dimensions": [
+        50.03302,
+        40.037000000000006,
+        40.5
+      ]
+    },
+    {
+      "filename": "MM568_BP51893_FMA83468_Membranous part of interventricular septum proper.obj",
+      "anatomical_name": "Membranous part of interventricular septum proper",
+      "size_bytes": 340139,
+      "vertices": 2943,
+      "faces": 5058,
+      "triangles": 5058,
+      "bbox_min": [
+        8.1931,
+        -134.434,
+        1219.35
+      ],
+      "bbox_max": [
+        17.4877,
+        -120.572,
+        1232.11
+      ],
+      "center": [
+        12.840399999999999,
+        -127.503,
+        1225.73
+      ],
+      "dimensions": [
+        9.2946,
+        13.861999999999995,
+        12.759999999999991
+      ]
+    },
+    {
+      "filename": "MM569_BP51930_FMA7238_Anterior leaflet of tricuspid valve.obj",
+      "anatomical_name": "Anterior leaflet of tricuspid valve",
+      "size_bytes": 429893,
+      "vertices": 4404,
+      "faces": 5051,
+      "triangles": 5051,
+      "bbox_min": [
+        -10.2136,
+        -150.812,
+        1208.21
+      ],
+      "bbox_max": [
+        21.8216,
+        -132.22,
+        1232.92
+      ],
+      "center": [
+        5.804,
+        -141.51600000000002,
+        1220.565
+      ],
+      "dimensions": [
+        32.0352,
+        18.592000000000013,
+        24.710000000000036
+      ]
+    },
+    {
+      "filename": "MM570_BP51920_FMA7239_Posterior leaflet of tricuspid valve.obj",
+      "anatomical_name": "Posterior leaflet of tricuspid valve",
+      "size_bytes": 420665,
+      "vertices": 4432,
+      "faces": 4830,
+      "triangles": 4830,
+      "bbox_min": [
+        -15.6787,
+        -150.824,
+        1200.64
+      ],
+      "bbox_max": [
+        16.4109,
+        -126.339,
+        1220.05
+      ],
+      "center": [
+        0.3661000000000012,
+        -138.5815,
+        1210.345
+      ],
+      "dimensions": [
+        32.089600000000004,
+        24.485000000000014,
+        19.409999999999854
+      ]
+    },
+    {
+      "filename": "MM571_BP51920_FMA7239_Posterior leaflet of tricuspid valve.obj",
+      "anatomical_name": "Posterior leaflet of tricuspid valve",
+      "size_bytes": 429823,
+      "vertices": 4437,
+      "faces": 4830,
+      "triangles": 4830,
+      "bbox_min": [
+        -15.6787,
+        -150.824,
+        1200.64
+      ],
+      "bbox_max": [
+        16.4109,
+        -126.339,
+        1220.05
+      ],
+      "center": [
+        0.3661000000000012,
+        -138.5815,
+        1210.345
+      ],
+      "dimensions": [
+        32.089600000000004,
+        24.485000000000014,
+        19.409999999999854
+      ]
+    },
+    {
+      "filename": "MM572_BP51918_FMA85237_Anulus proper of tricuspid valve.obj",
+      "anatomical_name": "Anulus proper of tricuspid valve",
+      "size_bytes": 193066,
+      "vertices": 1634,
+      "faces": 3048,
+      "triangles": 3048,
+      "bbox_min": [
+        -15.7546,
+        -149.88,
+        1199.59
+      ],
+      "bbox_max": [
+        11.6594,
+        -118.571,
+        1234.55
+      ],
+      "center": [
+        -2.0476,
+        -134.2255,
+        1217.07
+      ],
+      "dimensions": [
+        27.414,
+        31.308999999999997,
+        34.960000000000036
+      ]
+    },
+    {
+      "filename": "MM573_BP51943_FMA7240_Septal leaflet of tricuspid valve.obj",
+      "anatomical_name": "Septal leaflet of tricuspid valve",
+      "size_bytes": 423969,
+      "vertices": 4421,
+      "faces": 4738,
+      "triangles": 4738,
+      "bbox_min": [
+        -0.457523,
+        -142.828,
+        1200.86
+      ],
+      "bbox_max": [
+        22.0315,
+        -119.022,
+        1231.91
+      ],
+      "center": [
+        10.786988500000001,
+        -130.925,
+        1216.385
+      ],
+      "dimensions": [
+        22.489023,
+        23.805999999999997,
+        31.050000000000182
+      ]
+    },
+    {
+      "filename": "MM574_BP51943_FMA7240_Septal leaflet of tricuspid valve.obj",
+      "anatomical_name": "Septal leaflet of tricuspid valve",
+      "size_bytes": 417473,
+      "vertices": 4421,
+      "faces": 4738,
+      "triangles": 4738,
+      "bbox_min": [
+        -0.457523,
+        -142.828,
+        1200.86
+      ],
+      "bbox_max": [
+        22.0315,
+        -119.022,
+        1231.91
+      ],
+      "center": [
+        10.786988500000001,
+        -130.925,
+        1216.385
+      ],
+      "dimensions": [
+        22.489023,
+        23.805999999999997,
+        31.050000000000182
+      ]
+    },
+    {
+      "filename": "MM575_BP51930_FMA7238_Anterior leaflet of tricuspid valve.obj",
+      "anatomical_name": "Anterior leaflet of tricuspid valve",
+      "size_bytes": 432004,
+      "vertices": 4401,
+      "faces": 5051,
+      "triangles": 5051,
+      "bbox_min": [
+        -10.2136,
+        -150.812,
+        1208.21
+      ],
+      "bbox_max": [
+        21.8216,
+        -132.22,
+        1232.92
+      ],
+      "center": [
+        5.804,
+        -141.51600000000002,
+        1220.565
+      ],
+      "dimensions": [
+        32.0352,
+        18.592000000000013,
+        24.710000000000036
+      ]
+    },
+    {
+      "filename": "MM577_BP51824_FMA9486_Right branch of atrioventricular bundle.obj",
+      "anatomical_name": "Right branch of atrioventricular bundle",
+      "size_bytes": 650707,
+      "vertices": 6220,
+      "faces": 8310,
+      "triangles": 8310,
+      "bbox_min": [
+        12.6586,
+        -160.58,
+        1199.38
+      ],
+      "bbox_max": [
+        35.2501,
+        -126.047,
+        1227.51
+      ],
+      "center": [
+        23.95435,
+        -143.3135,
+        1213.4450000000002
+      ],
+      "dimensions": [
+        22.591500000000003,
+        34.533000000000015,
+        28.12999999999988
+      ]
+    },
+    {
+      "filename": "MM578_BP51790_FMA9489_Posterior division of left branch of atrioventricular bundle.obj",
+      "anatomical_name": "Posterior division of left branch of atrioventricular bundle",
+      "size_bytes": 193237,
+      "vertices": 2289,
+      "faces": 1866,
+      "triangles": 1866,
+      "bbox_min": [
+        18.8578,
+        -138.354,
+        1193.95
+      ],
+      "bbox_max": [
+        41.9337,
+        -117.249,
+        1219.4
+      ],
+      "center": [
+        30.39575,
+        -127.8015,
+        1206.6750000000002
+      ],
+      "dimensions": [
+        23.0759,
+        21.105000000000018,
+        25.450000000000045
+      ]
+    },
+    {
+      "filename": "MM579_BP51789_FMA83331_Septal division of left branch of atrioventricular bundle.obj",
+      "anatomical_name": "Septal division of left branch of atrioventricular bundle",
+      "size_bytes": 181949,
+      "vertices": 2048,
+      "faces": 1976,
+      "triangles": 1976,
+      "bbox_min": [
+        13.7767,
+        -147.38,
+        1196.32
+      ],
+      "bbox_max": [
+        47.7403,
+        -125.875,
+        1226.35
+      ],
+      "center": [
+        30.758499999999998,
+        -136.6275,
+        1211.335
+      ],
+      "dimensions": [
+        33.9636,
+        21.504999999999995,
+        30.029999999999973
+      ]
+    },
+    {
+      "filename": "MM580_BP51788_FMA9488_Anterior division of left branch of atrioventricular bundle.obj",
+      "anatomical_name": "Anterior division of left branch of atrioventricular bundle",
+      "size_bytes": 302476,
+      "vertices": 3298,
+      "faces": 3300,
+      "triangles": 3300,
+      "bbox_min": [
+        15.2375,
+        -144.618,
+        1212.84
+      ],
+      "bbox_max": [
+        61.8901,
+        -114.362,
+        1233.91
+      ],
+      "center": [
+        38.5638,
+        -129.49,
+        1223.375
+      ],
+      "dimensions": [
+        46.65259999999999,
+        30.256,
+        21.070000000000164
+      ]
+    },
+    {
+      "filename": "MM582_BP51827_FMA9483_Posterior internodal tract.obj",
+      "anatomical_name": "Posterior internodal tract",
+      "size_bytes": 135337,
+      "vertices": 1174,
+      "faces": 2184,
+      "triangles": 2184,
+      "bbox_min": [
+        -32.5773,
+        -134.69,
+        1202.48
+      ],
+      "bbox_max": [
+        9.08519,
+        -108.502,
+        1264.22
+      ],
+      "center": [
+        -11.746055,
+        -121.596,
+        1233.35
+      ],
+      "dimensions": [
+        41.662490000000005,
+        26.188000000000002,
+        61.74000000000001
+      ]
+    },
+    {
+      "filename": "MM583_BP51818_FMA9482_Middle internodal tract.obj",
+      "anatomical_name": "Middle internodal tract",
+      "size_bytes": 130523,
+      "vertices": 1280,
+      "faces": 1818,
+      "triangles": 1818,
+      "bbox_min": [
+        -32.6817,
+        -135.174,
+        1222.72
+      ],
+      "bbox_max": [
+        8.55049,
+        -99.0605,
+        1268.81
+      ],
+      "center": [
+        -12.065605,
+        -117.11725000000001,
+        1245.7649999999999
+      ],
+      "dimensions": [
+        41.23219,
+        36.1135,
+        46.08999999999992
+      ]
+    },
+    {
+      "filename": "MM584_BP51831_FMA84578_Atrial branch of anterior internodal tract.obj",
+      "anatomical_name": "Atrial branch of anterior internodal tract",
+      "size_bytes": 42345,
+      "vertices": 428,
+      "faces": 606,
+      "triangles": 606,
+      "bbox_min": [
+        -0.358306,
+        -109.557,
+        1250.58
+      ],
+      "bbox_max": [
+        36.8695,
+        -93.0155,
+        1264.53
+      ],
+      "center": [
+        18.255597,
+        -101.28625,
+        1257.5549999999998
+      ],
+      "dimensions": [
+        37.227806,
+        16.5415,
+        13.950000000000045
+      ]
+    },
+    {
+      "filename": "MM585_BP51875_FMA9480_Anterior internodal tract.obj",
+      "anatomical_name": "Anterior internodal tract",
+      "size_bytes": 51270,
+      "vertices": 541,
+      "faces": 668,
+      "triangles": 668,
+      "bbox_min": [
+        -11.6882,
+        -131.829,
+        1222.27
+      ],
+      "bbox_max": [
+        8.78022,
+        -107.926,
+        1267.27
+      ],
+      "center": [
+        -1.4539900000000001,
+        -119.8775,
+        1244.77
+      ],
+      "dimensions": [
+        20.468420000000002,
+        23.903000000000006,
+        45.0
+      ]
+    },
+    {
+      "filename": "MM586_BP51792_FMA9484_Atrioventricular bundle.obj",
+      "anatomical_name": "Atrioventricular bundle",
+      "size_bytes": 97478,
+      "vertices": 875,
+      "faces": 1584,
+      "triangles": 1584,
+      "bbox_min": [
+        8.03186,
+        -130.138,
+        1223.33
+      ],
+      "bbox_max": [
+        14.7104,
+        -120.428,
+        1226.65
+      ],
+      "center": [
+        11.37113,
+        -125.283,
+        1224.99
+      ],
+      "dimensions": [
+        6.67854,
+        9.710000000000008,
+        3.3200000000001637
+      ]
+    },
+    {
+      "filename": "MM587_BP51791_FMA9478_Atrioventricular node.obj",
+      "anatomical_name": "Atrioventricular node",
+      "size_bytes": 126013,
+      "vertices": 1103,
+      "faces": 2072,
+      "triangles": 2072,
+      "bbox_min": [
+        7.58783,
+        -121.984,
+        1221.34
+      ],
+      "bbox_max": [
+        9.38383,
+        -117.669,
+        1226.36
+      ],
+      "center": [
+        8.48583,
+        -119.8265,
+        1223.85
+      ],
+      "dimensions": [
+        1.7959999999999994,
+        4.314999999999998,
+        5.019999999999982
+      ]
+    },
+    {
+      "filename": "MM590_BP51888_FMA84094_Septal wall of right atrium.obj",
+      "anatomical_name": "Septal wall of right atrium",
+      "size_bytes": 439656,
+      "vertices": 3747,
+      "faces": 6412,
+      "triangles": 6412,
+      "bbox_min": [
+        -17.29,
+        -135.526,
+        1186.59
+      ],
+      "bbox_max": [
+        10.1862,
+        -97.1419,
+        1275.42
+      ],
+      "center": [
+        -3.5519,
+        -116.33395000000002,
+        1231.005
+      ],
+      "dimensions": [
+        27.4762,
+        38.384100000000004,
+        88.83000000000015
+      ]
+    },
+    {
+      "filename": "MM591_BP51888_FMA84094_Septal wall of right atrium.obj",
+      "anatomical_name": "Septal wall of right atrium",
+      "size_bytes": 40551,
+      "vertices": 423,
+      "faces": 554,
+      "triangles": 554,
+      "bbox_min": [
+        4.27533,
+        -122.397,
+        1204.61
+      ],
+      "bbox_max": [
+        10.673,
+        -110.222,
+        1228.23
+      ],
+      "center": [
+        7.474165,
+        -116.3095,
+        1216.42
+      ],
+      "dimensions": [
+        6.39767,
+        12.175000000000011,
+        23.62000000000012
+      ]
+    },
+    {
+      "filename": "MM592_BP51898_FMA7108_Interatrial septum.obj",
+      "anatomical_name": "Interatrial septum",
+      "size_bytes": 203570,
+      "vertices": 1841,
+      "faces": 2978,
+      "triangles": 2978,
+      "bbox_min": [
+        -12.0851,
+        -117.859,
+        1208.69
+      ],
+      "bbox_max": [
+        7.18945,
+        -97.7297,
+        1256.06
+      ],
+      "center": [
+        -2.4478250000000004,
+        -107.79435,
+        1232.375
+      ],
+      "dimensions": [
+        19.27455,
+        20.1293,
+        47.36999999999989
+      ]
+    },
+    {
+      "filename": "MM593_BP51898_FMA7108_Interatrial septum.obj",
+      "anatomical_name": "Interatrial septum",
+      "size_bytes": 179877,
+      "vertices": 1488,
+      "faces": 2918,
+      "triangles": 2918,
+      "bbox_min": [
+        -11.3216,
+        -116.258,
+        1208.13
+      ],
+      "bbox_max": [
+        8.23851,
+        -97.3604,
+        1240.54
+      ],
+      "center": [
+        -1.5415450000000002,
+        -106.8092,
+        1224.335
+      ],
+      "dimensions": [
+        19.56011,
+        18.897599999999997,
+        32.409999999999854
+      ]
+    },
+    {
+      "filename": "MM594_BP51936_FMA7134_Muscular part of interventricular septum.obj",
+      "anatomical_name": "Muscular part of interventricular septum",
+      "size_bytes": 111814,
+      "vertices": 1026,
+      "faces": 1766,
+      "triangles": 1766,
+      "bbox_min": [
+        7.86423,
+        -121.437,
+        1210.51
+      ],
+      "bbox_max": [
+        13.9703,
+        -112.783,
+        1222.5
+      ],
+      "center": [
+        10.917265,
+        -117.11,
+        1216.505
+      ],
+      "dimensions": [
+        6.10607,
+        8.653999999999996,
+        11.990000000000009
+      ]
+    },
+    {
+      "filename": "MM595_BP51903_FMA7136_Atrioventricular septum.obj",
+      "anatomical_name": "Atrioventricular septum",
+      "size_bytes": 170783,
+      "vertices": 1573,
+      "faces": 2540,
+      "triangles": 2540,
+      "bbox_min": [
+        8.54146,
+        -127.021,
+        1219.24
+      ],
+      "bbox_max": [
+        12.0789,
+        -117.822,
+        1229.21
+      ],
+      "center": [
+        10.31018,
+        -122.42150000000001,
+        1224.225
+      ],
+      "dimensions": [
+        3.53744,
+        9.198999999999998,
+        9.970000000000027
+      ]
+    },
+    {
+      "filename": "MM596_BP51912_FMA9505_Right fibrous trigone of heart.obj",
+      "anatomical_name": "Right fibrous trigone of heart",
+      "size_bytes": 272050,
+      "vertices": 2365,
+      "faces": 4066,
+      "triangles": 4066,
+      "bbox_min": [
+        7.43657,
+        -121.569,
+        1219.38
+      ],
+      "bbox_max": [
+        12.1646,
+        -109.659,
+        1229.65
+      ],
+      "center": [
+        9.800585,
+        -115.614,
+        1224.515
+      ],
+      "dimensions": [
+        4.72803,
+        11.909999999999997,
+        10.269999999999982
+      ]
+    },
+    {
+      "filename": "MM598_BP51861_FMA49207_Wall of inflow part of right ventricle.obj",
+      "anatomical_name": "Wall of inflow part of right ventricle",
+      "size_bytes": 579740,
+      "vertices": 4887,
+      "faces": 8560,
+      "triangles": 8560,
+      "bbox_min": [
+        -14.6634,
+        -175.087,
+        1177.02
+      ],
+      "bbox_max": [
+        52.2246,
+        -117.001,
+        1239.06
+      ],
+      "center": [
+        18.7806,
+        -146.04399999999998,
+        1208.04
+      ],
+      "dimensions": [
+        66.888,
+        58.085999999999984,
+        62.039999999999964
+      ]
+    },
+    {
+      "filename": "MM599_BP51796_FMA7271_Trabecula carnea of left ventricle.obj",
+      "anatomical_name": "Trabecula carnea of left ventricle",
+      "size_bytes": 691740,
+      "vertices": 7782,
+      "faces": 6872,
+      "triangles": 6872,
+      "bbox_min": [
+        29.5884,
+        -157.676,
+        1186.01
+      ],
+      "bbox_max": [
+        66.6956,
+        -102.198,
+        1235.8
+      ],
+      "center": [
+        48.141999999999996,
+        -129.93699999999998,
+        1210.905
+      ],
+      "dimensions": [
+        37.1072,
+        55.477999999999994,
+        49.789999999999964
+      ]
+    },
+    {
+      "filename": "MM600_BP51936_FMA7134_Muscular part of interventricular septum.obj",
+      "anatomical_name": "Muscular part of interventricular septum",
+      "size_bytes": 309287,
+      "vertices": 2530,
+      "faces": 4868,
+      "triangles": 4868,
+      "bbox_min": [
+        9.65895,
+        -163.099,
+        1180.2
+      ],
+      "bbox_max": [
+        54.63,
+        -116.388,
+        1235.19
+      ],
+      "center": [
+        32.144475,
+        -139.74349999999998,
+        1207.6950000000002
+      ],
+      "dimensions": [
+        44.971050000000005,
+        46.710999999999984,
+        54.99000000000001
+      ]
+    },
+    {
+      "filename": "MM601_BP51900_FMA84619_Right anterior semilunar fibrous scallop of pulmonary valve anulus.obj",
+      "anatomical_name": "Right anterior semilunar fibrous scallop of pulmonary valve anulus",
+      "size_bytes": 47082,
+      "vertices": 496,
+      "faces": 634,
+      "triangles": 634,
+      "bbox_min": [
+        14.6845,
+        -154.431,
+        1244.47
+      ],
+      "bbox_max": [
+        25.1302,
+        -132.464,
+        1261.74
+      ],
+      "center": [
+        19.90735,
+        -143.4475,
+        1253.105
+      ],
+      "dimensions": [
+        10.445699999999999,
+        21.967000000000013,
+        17.269999999999982
+      ]
+    },
+    {
+      "filename": "MM602_BP58389_FMA84625_Posterior semilunar fibrous scallop of pulmonary valve anulus.obj",
+      "anatomical_name": "Posterior semilunar fibrous scallop of pulmonary valve anulus",
+      "size_bytes": 107867,
+      "vertices": 988,
+      "faces": 1704,
+      "triangles": 1704,
+      "bbox_min": [
+        23.8882,
+        -143.454,
+        1242.49
+      ],
+      "bbox_max": [
+        42.6038,
+        -132.357,
+        1261.14
+      ],
+      "center": [
+        33.246,
+        -137.90550000000002,
+        1251.815
+      ],
+      "dimensions": [
+        18.7156,
+        11.097000000000008,
+        18.65000000000009
+      ]
+    },
+    {
+      "filename": "MM603_BP51914_FMA84626_Left anterior semilunar fibrous scallop of pulmonary valve anulus.obj",
+      "anatomical_name": "Left anterior semilunar fibrous scallop of pulmonary valve anulus",
+      "size_bytes": 109775,
+      "vertices": 961,
+      "faces": 1826,
+      "triangles": 1826,
+      "bbox_min": [
+        22.9868,
+        -159.197,
+        1251.76
+      ],
+      "bbox_max": [
+        42.1207,
+        -142.445,
+        1261.6
+      ],
+      "center": [
+        32.55375,
+        -150.821,
+        1256.6799999999998
+      ],
+      "dimensions": [
+        19.1339,
+        16.75200000000001,
+        9.839999999999918
+      ]
+    },
+    {
+      "filename": "MM604_BP51948_FMA7249_Right anterior cusp of pulmonary valve.obj",
+      "anatomical_name": "Right anterior cusp of pulmonary valve",
+      "size_bytes": 252134,
+      "vertices": 2246,
+      "faces": 3714,
+      "triangles": 3714,
+      "bbox_min": [
+        15.4186,
+        -154.487,
+        1243.84
+      ],
+      "bbox_max": [
+        30.1332,
+        -132.862,
+        1260.42
+      ],
+      "center": [
+        22.7759,
+        -143.6745,
+        1252.13
+      ],
+      "dimensions": [
+        14.714599999999999,
+        21.625,
+        16.580000000000155
+      ]
+    },
+    {
+      "filename": "MM605_BP51935_FMA7250_Posterior cusp of pulmonary valve.obj",
+      "anatomical_name": "Posterior cusp of pulmonary valve",
+      "size_bytes": 185502,
+      "vertices": 1696,
+      "faces": 2752,
+      "triangles": 2752,
+      "bbox_min": [
+        24.7447,
+        -146.147,
+        1242.14
+      ],
+      "bbox_max": [
+        42.6227,
+        -132.915,
+        1257.98
+      ],
+      "center": [
+        33.6837,
+        -139.531,
+        1250.06
+      ],
+      "dimensions": [
+        17.878,
+        13.232,
+        15.839999999999918
+      ]
+    },
+    {
+      "filename": "MM606_BP51921_FMA7247_Left anterior cusp of pulmonary valve.obj",
+      "anatomical_name": "Left anterior cusp of pulmonary valve",
+      "size_bytes": 484132,
+      "vertices": 3944,
+      "faces": 7450,
+      "triangles": 7450,
+      "bbox_min": [
+        22.9385,
+        -158.777,
+        1247.82
+      ],
+      "bbox_max": [
+        42.1439,
+        -143.341,
+        1260.91
+      ],
+      "center": [
+        32.5412,
+        -151.059,
+        1254.365
+      ],
+      "dimensions": [
+        19.2054,
+        15.435999999999979,
+        13.090000000000146
+      ]
+    },
+    {
+      "filename": "MM607_BP58392_FMA15086_Pulmonary trunk proper.obj",
+      "anatomical_name": "Pulmonary trunk proper",
+      "size_bytes": 268802,
+      "vertices": 2504,
+      "faces": 3734,
+      "triangles": 3734,
+      "bbox_min": [
+        13.882,
+        -159.669,
+        1247.72
+      ],
+      "bbox_max": [
+        43.3614,
+        -118.263,
+        1292.65
+      ],
+      "center": [
+        28.6217,
+        -138.966,
+        1270.185
+      ],
+      "dimensions": [
+        29.479400000000005,
+        41.406000000000006,
+        44.930000000000064
+      ]
+    },
+    {
+      "filename": "MM609_BP58397_FMA77435_Triangle of sinu-atrial node.obj",
+      "anatomical_name": "Triangle of sinu-atrial node",
+      "size_bytes": 53672,
+      "vertices": 604,
+      "faces": 635,
+      "triangles": 635,
+      "bbox_min": [
+        5.09901,
+        -123.137,
+        1211.7
+      ],
+      "bbox_max": [
+        10.1986,
+        -112.028,
+        1226.38
+      ],
+      "center": [
+        7.648805,
+        -117.58250000000001,
+        1219.04
+      ],
+      "dimensions": [
+        5.099590000000001,
+        11.108999999999995,
+        14.680000000000064
+      ]
+    },
+    {
+      "filename": "MM610_BP51926_FMA3902_Left marginal artery.obj",
+      "anatomical_name": "Left marginal artery",
+      "size_bytes": 253679,
+      "vertices": 2113,
+      "faces": 3984,
+      "triangles": 3984,
+      "bbox_min": [
+        40.8818,
+        -147.773,
+        1194.92
+      ],
+      "bbox_max": [
+        79.4521,
+        -88.8659,
+        1236.2
+      ],
+      "center": [
+        60.16695,
+        -118.31944999999999,
+        1215.56
+      ],
+      "dimensions": [
+        38.5703,
+        58.9071,
+        41.27999999999997
+      ]
+    },
+    {
+      "filename": "MM613_BP52013_FMA9345_Septal wall of left ventricle.obj",
+      "anatomical_name": "Septal wall of left ventricle",
+      "size_bytes": 41872,
+      "vertices": 390,
+      "faces": 672,
+      "triangles": 672,
+      "bbox_min": [
+        14.0158,
+        -143.381,
+        1218.42
+      ],
+      "bbox_max": [
+        41.6721,
+        -123.432,
+        1246.65
+      ],
+      "center": [
+        27.84395,
+        -133.4065,
+        1232.535
+      ],
+      "dimensions": [
+        27.6563,
+        19.948999999999998,
+        28.230000000000018
+      ]
+    },
+    {
+      "filename": "MM614_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 248827,
+      "vertices": 2022,
+      "faces": 3996,
+      "triangles": 3996,
+      "bbox_min": [
+        31.3601,
+        -141.012,
+        1230.22
+      ],
+      "bbox_max": [
+        66.9646,
+        -99.0132,
+        1250.04
+      ],
+      "center": [
+        49.16235,
+        -120.01259999999999,
+        1240.13
+      ],
+      "dimensions": [
+        35.6045,
+        41.9988,
+        19.819999999999936
+      ]
+    },
+    {
+      "filename": "MM615_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 71715,
+      "vertices": 632,
+      "faces": 1198,
+      "triangles": 1198,
+      "bbox_min": [
+        32.221,
+        -112.841,
+        1203.14
+      ],
+      "bbox_max": [
+        67.0208,
+        -83.957,
+        1241.83
+      ],
+      "center": [
+        49.62089999999999,
+        -98.399,
+        1222.4850000000001
+      ],
+      "dimensions": [
+        34.7998,
+        28.884,
+        38.68999999999983
+      ]
+    },
+    {
+      "filename": "MM616_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 47185,
+      "vertices": 433,
+      "faces": 764,
+      "triangles": 764,
+      "bbox_min": [
+        16.3086,
+        -106.651,
+        1185.93
+      ],
+      "bbox_max": [
+        55.4361,
+        -83.5684,
+        1218.37
+      ],
+      "center": [
+        35.87235,
+        -95.1097,
+        1202.15
+      ],
+      "dimensions": [
+        39.127500000000005,
+        23.0826,
+        32.43999999999983
+      ]
+    },
+    {
+      "filename": "MM618_BP52013_FMA9345_Septal wall of left ventricle.obj",
+      "anatomical_name": "Septal wall of left ventricle",
+      "size_bytes": 352497,
+      "vertices": 2836,
+      "faces": 5584,
+      "triangles": 5584,
+      "bbox_min": [
+        12.8533,
+        -153.468,
+        1184.61
+      ],
+      "bbox_max": [
+        40.357,
+        -121.811,
+        1219.68
+      ],
+      "center": [
+        26.605150000000002,
+        -137.6395,
+        1202.145
+      ],
+      "dimensions": [
+        27.5037,
+        31.656999999999982,
+        35.070000000000164
+      ]
+    },
+    {
+      "filename": "MM619_BP52013_FMA9345_Septal wall of left ventricle.obj",
+      "anatomical_name": "Septal wall of left ventricle",
+      "size_bytes": 59388,
+      "vertices": 531,
+      "faces": 986,
+      "triangles": 986,
+      "bbox_min": [
+        21.0241,
+        -158.163,
+        1206.66
+      ],
+      "bbox_max": [
+        56.0188,
+        -134.347,
+        1242.42
+      ],
+      "center": [
+        38.52145,
+        -146.255,
+        1224.54
+      ],
+      "dimensions": [
+        34.994699999999995,
+        23.816000000000003,
+        35.75999999999999
+      ]
+    },
+    {
+      "filename": "MM620_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 101119,
+      "vertices": 901,
+      "faces": 1654,
+      "triangles": 1654,
+      "bbox_min": [
+        42.1465,
+        -156.051,
+        1211.74
+      ],
+      "bbox_max": [
+        76.922,
+        -111.731,
+        1245.95
+      ],
+      "center": [
+        59.53425,
+        -133.891,
+        1228.845
+      ],
+      "dimensions": [
+        34.775499999999994,
+        44.31999999999999,
+        34.210000000000036
+      ]
+    },
+    {
+      "filename": "MM621_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 29540,
+      "vertices": 295,
+      "faces": 438,
+      "triangles": 438,
+      "bbox_min": [
+        51.9098,
+        -130.404,
+        1192.22
+      ],
+      "bbox_max": [
+        77.0941,
+        -93.2587,
+        1233.49
+      ],
+      "center": [
+        64.50195,
+        -111.83135,
+        1212.855
+      ],
+      "dimensions": [
+        25.1843,
+        37.14529999999999,
+        41.26999999999998
+      ]
+    },
+    {
+      "filename": "MM622_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 81723,
+      "vertices": 718,
+      "faces": 1364,
+      "triangles": 1364,
+      "bbox_min": [
+        28.466,
+        -122.476,
+        1177.18
+      ],
+      "bbox_max": [
+        68.3341,
+        -92.3196,
+        1204.38
+      ],
+      "center": [
+        48.40005000000001,
+        -107.39779999999999,
+        1190.7800000000002
+      ],
+      "dimensions": [
+        39.868100000000005,
+        30.156400000000005,
+        27.200000000000045
+      ]
+    },
+    {
+      "filename": "MM623_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 79541,
+      "vertices": 705,
+      "faces": 1320,
+      "triangles": 1320,
+      "bbox_min": [
+        12.5385,
+        -135.196,
+        1177.01
+      ],
+      "bbox_max": [
+        46.398,
+        -103.224,
+        1202.06
+      ],
+      "center": [
+        29.46825,
+        -119.21000000000001,
+        1189.5349999999999
+      ],
+      "dimensions": [
+        33.859500000000004,
+        31.971999999999994,
+        25.049999999999955
+      ]
+    },
+    {
+      "filename": "MM624_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 422708,
+      "vertices": 3456,
+      "faces": 6396,
+      "triangles": 6396,
+      "bbox_min": [
+        47.4417,
+        -165.434,
+        1194.26
+      ],
+      "bbox_max": [
+        77.7902,
+        -130.587,
+        1229.06
+      ],
+      "center": [
+        62.61595,
+        -148.01049999999998,
+        1211.6599999999999
+      ],
+      "dimensions": [
+        30.3485,
+        34.84700000000001,
+        34.799999999999955
+      ]
+    },
+    {
+      "filename": "MM625_BP52013_FMA9345_Septal wall of left ventricle.obj",
+      "anatomical_name": "Septal wall of left ventricle",
+      "size_bytes": 439320,
+      "vertices": 3642,
+      "faces": 6788,
+      "triangles": 6788,
+      "bbox_min": [
+        30.4587,
+        -165.448,
+        1186.03
+      ],
+      "bbox_max": [
+        61.7257,
+        -141.722,
+        1222.68
+      ],
+      "center": [
+        46.092200000000005,
+        -153.585,
+        1204.355
+      ],
+      "dimensions": [
+        31.267000000000003,
+        23.726,
+        36.65000000000009
+      ]
+    },
+    {
+      "filename": "MM626_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 117284,
+      "vertices": 1047,
+      "faces": 1900,
+      "triangles": 1900,
+      "bbox_min": [
+        28.7957,
+        -156.157,
+        1175.27
+      ],
+      "bbox_max": [
+        64.07,
+        -112.508,
+        1196.88
+      ],
+      "center": [
+        46.432849999999995,
+        -134.3325,
+        1186.075
+      ],
+      "dimensions": [
+        35.2743,
+        43.649000000000015,
+        21.610000000000127
+      ]
+    },
+    {
+      "filename": "MM627_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 151072,
+      "vertices": 1282,
+      "faces": 2478,
+      "triangles": 2478,
+      "bbox_min": [
+        54.9272,
+        -150.837,
+        1177.74
+      ],
+      "bbox_max": [
+        78.2466,
+        -111.437,
+        1215.52
+      ],
+      "center": [
+        66.5869,
+        -131.137,
+        1196.63
+      ],
+      "dimensions": [
+        23.3194,
+        39.39999999999999,
+        37.77999999999997
+      ]
+    },
+    {
+      "filename": "MM628_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 110741,
+      "vertices": 979,
+      "faces": 1814,
+      "triangles": 1814,
+      "bbox_min": [
+        50.0067,
+        -165.549,
+        1176.56
+      ],
+      "bbox_max": [
+        77.0186,
+        -135.808,
+        1208.34
+      ],
+      "center": [
+        63.51265000000001,
+        -150.67849999999999,
+        1192.4499999999998
+      ],
+      "dimensions": [
+        27.011900000000004,
+        29.741000000000014,
+        31.779999999999973
+      ]
+    },
+    {
+      "filename": "MM629_BP52013_FMA9345_Septal wall of left ventricle.obj",
+      "anatomical_name": "Septal wall of left ventricle",
+      "size_bytes": 233838,
+      "vertices": 2031,
+      "faces": 3558,
+      "triangles": 3558,
+      "bbox_min": [
+        6.87562,
+        -139.665,
+        1193.72
+      ],
+      "bbox_max": [
+        24.9867,
+        -110.65,
+        1226.09
+      ],
+      "center": [
+        15.931159999999998,
+        -125.1575,
+        1209.905
+      ],
+      "dimensions": [
+        18.11108,
+        29.014999999999986,
+        32.36999999999989
+      ]
+    },
+    {
+      "filename": "MM630_BP52013_FMA9345_Septal wall of left ventricle.obj",
+      "anatomical_name": "Septal wall of left ventricle",
+      "size_bytes": 48973,
+      "vertices": 468,
+      "faces": 758,
+      "triangles": 758,
+      "bbox_min": [
+        7.48536,
+        -121.583,
+        1211.61
+      ],
+      "bbox_max": [
+        13.5787,
+        -111.788,
+        1222.52
+      ],
+      "center": [
+        10.532029999999999,
+        -116.68549999999999,
+        1217.065
+      ],
+      "dimensions": [
+        6.0933399999999995,
+        9.795000000000002,
+        10.910000000000082
+      ]
+    },
+    {
+      "filename": "MM631_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "size_bytes": 543589,
+      "vertices": 4368,
+      "faces": 8436,
+      "triangles": 8436,
+      "bbox_min": [
+        6.67498,
+        -122.537,
+        1184.96
+      ],
+      "bbox_max": [
+        29.7399,
+        -94.3568,
+        1213.71
+      ],
+      "center": [
+        18.20744,
+        -108.4469,
+        1199.335
+      ],
+      "dimensions": [
+        23.06492,
+        28.1802,
+        28.75
+      ]
+    },
+    {
+      "filename": "MM632_BP51844_FMA49292_Anterior wall proper of left atrium.obj",
+      "anatomical_name": "Anterior wall proper of left atrium",
+      "size_bytes": 322592,
+      "vertices": 2659,
+      "faces": 5012,
+      "triangles": 5012,
+      "bbox_min": [
+        -3.06128,
+        -116.351,
+        1217.68
+      ],
+      "bbox_max": [
+        43.9691,
+        -79.7761,
+        1263.01
+      ],
+      "center": [
+        20.45391,
+        -98.06354999999999,
+        1240.345
+      ],
+      "dimensions": [
+        47.030379999999994,
+        36.5749,
+        45.32999999999993
+      ]
+    },
+    {
+      "filename": "MM633_BP51882_FMA9542_Posterior wall of left atrium.obj",
+      "anatomical_name": "Posterior wall of left atrium",
+      "size_bytes": 319852,
+      "vertices": 2583,
+      "faces": 5040,
+      "triangles": 5040,
+      "bbox_min": [
+        -9.26695,
+        -109.343,
+        1202.96
+      ],
+      "bbox_max": [
+        38.3375,
+        -70.6143,
+        1256.12
+      ],
+      "center": [
+        14.535274999999999,
+        -89.97865,
+        1229.54
+      ],
+      "dimensions": [
+        47.60445,
+        38.7287,
+        53.159999999999854
+      ]
+    },
+    {
+      "filename": "MM634_BP51951_FMA4706_Coronary sinus.obj",
+      "anatomical_name": "Coronary sinus",
+      "size_bytes": 346841,
+      "vertices": 3095,
+      "faces": 4922,
+      "triangles": 4922,
+      "bbox_min": [
+        0.823595,
+        -118.161,
+        1197.0
+      ],
+      "bbox_max": [
+        43.3267,
+        -79.5329,
+        1216.83
+      ],
+      "center": [
+        22.0751475,
+        -98.84694999999999,
+        1206.915
+      ],
+      "dimensions": [
+        42.503105000000005,
+        38.6281,
+        19.829999999999927
+      ]
+    },
+    {
+      "filename": "MM635_BP51973_FMA74923_Trunk of circumflex branch of left coronary artery.obj",
+      "anatomical_name": "Trunk of circumflex branch of left coronary artery",
+      "size_bytes": 787422,
+      "vertices": 6180,
+      "faces": 12248,
+      "triangles": 12248,
+      "bbox_min": [
+        12.2259,
+        -104.991,
+        1188.94
+      ],
+      "bbox_max": [
+        43.8613,
+        -82.0171,
+        1235.18
+      ],
+      "center": [
+        28.043599999999998,
+        -93.50405,
+        1212.06
+      ],
+      "dimensions": [
+        31.6354,
+        22.9739,
+        46.24000000000001
+      ]
+    },
+    {
+      "filename": "MM636_BP51794_FMA7264_Anterior papillary muscle of left ventricle.obj",
+      "anatomical_name": "Anterior papillary muscle of left ventricle",
+      "size_bytes": 200590,
+      "vertices": 1887,
+      "faces": 2786,
+      "triangles": 2786,
+      "bbox_min": [
+        42.6302,
+        -128.41,
+        1209.77
+      ],
+      "bbox_max": [
+        72.0373,
+        -107.846,
+        1225.36
+      ],
+      "center": [
+        57.33375,
+        -118.128,
+        1217.565
+      ],
+      "dimensions": [
+        29.4071,
+        20.563999999999993,
+        15.589999999999918
+      ]
+    },
+    {
+      "filename": "MM637_BP51813_FMA7266_Posterior papillary muscle of left ventricle.obj",
+      "anatomical_name": "Posterior papillary muscle of left ventricle",
+      "size_bytes": 200167,
+      "vertices": 1879,
+      "faces": 2786,
+      "triangles": 2786,
+      "bbox_min": [
+        29.2744,
+        -130.374,
+        1182.54
+      ],
+      "bbox_max": [
+        47.5911,
+        -117.718,
+        1207.91
+      ],
+      "center": [
+        38.43275,
+        -124.04599999999999,
+        1195.225
+      ],
+      "dimensions": [
+        18.316699999999997,
+        12.655999999999992,
+        25.37000000000012
+      ]
+    },
+    {
+      "filename": "MM638_BP51951_FMA4706_Coronary sinus.obj",
+      "anatomical_name": "Coronary sinus",
+      "size_bytes": 92828,
+      "vertices": 860,
+      "faces": 1458,
+      "triangles": 1458,
+      "bbox_min": [
+        32.6936,
+        -123.886,
+        1177.42
+      ],
+      "bbox_max": [
+        66.7981,
+        -79.6663,
+        1211.63
+      ],
+      "center": [
+        49.745850000000004,
+        -101.77615,
+        1194.525
+      ],
+      "dimensions": [
+        34.1045,
+        44.21969999999999,
+        34.210000000000036
+      ]
+    }
+  ]
+}

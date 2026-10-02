@@ -1,0 +1,230 @@
+{
+  "source_directory": "frontend/public/models/heart/BP51782_FMA3_2_1_inference_isa_FMA67135_Postnatal_anatomical_structure",
+  "normalization": {
+    "center_combined_model": true,
+    "uniform_scale_to_unit_extent": true,
+    "preserve_relative_coordinates": true
+  },
+  "heart_body": [
+    {
+      "source_filename": "MM474_BP51876_FMA84850_Free wall of left ventricle.obj",
+      "anatomical_name": "Free wall of left ventricle",
+      "role": "HeartBody_LeftVentricle",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM538_BP51878_FMA49208_Wall of outflow part of right ventricle.obj",
+      "anatomical_name": "Wall of outflow part of right ventricle",
+      "role": "HeartBody_RightVentricle_Outflow",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM598_BP51861_FMA49207_Wall of inflow part of right ventricle.obj",
+      "anatomical_name": "Wall of inflow part of right ventricle",
+      "role": "HeartBody_RightVentricle_Inflow",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM632_BP51844_FMA49292_Anterior wall proper of left atrium.obj",
+      "anatomical_name": "Anterior wall proper of left atrium",
+      "role": "HeartBody_LeftAtrium_Anterior",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM633_BP51882_FMA9542_Posterior wall of left atrium.obj",
+      "anatomical_name": "Posterior wall of left atrium",
+      "role": "HeartBody_LeftAtrium_Posterior",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM456_BP51862_FMA9306_Lateral wall of left atrium.obj",
+      "anatomical_name": "Lateral wall of left atrium",
+      "role": "HeartBody_LeftAtrium_Lateral",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM460_BP51866_FMA9562_Superior wall of left atrium.obj",
+      "anatomical_name": "Superior wall of left atrium",
+      "role": "HeartBody_LeftAtrium_Superior",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM559_BP51843_FMA49285_Anterior wall proper of right atrium.obj",
+      "anatomical_name": "Anterior wall proper of right atrium",
+      "role": "HeartBody_RightAtrium_Anterior",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM560_BP51837_FMA49286_Lateral wall proper of right atrium.obj",
+      "anatomical_name": "Lateral wall proper of right atrium",
+      "role": "HeartBody_RightAtrium_Lateral",
+      "confidence": "CONFIRMED"
+    }
+  ],
+  "aorta": [
+    {
+      "source_filename": "MM506_BP51985_FMA23733_Ascending aorta proper.obj",
+      "anatomical_name": "Ascending aorta proper",
+      "role": "Aorta_Ascending",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM558_BP51975_FMA15098_Wall of bulb of aorta.obj",
+      "anatomical_name": "Wall of bulb of aorta",
+      "role": "Aorta_Bulb",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM607_BP58392_FMA15086_Pulmonary trunk proper.obj",
+      "anatomical_name": "Pulmonary trunk proper",
+      "role": "GreatVessel_PulmonaryTrunk",
+      "confidence": "CONFIRMED"
+    }
+  ],
+  "neutral_coronary": [
+    {
+      "source_filename": "MM557_BP58405_FMA4685_Stem of left coronary artery.obj",
+      "anatomical_name": "Stem of left coronary artery",
+      "role": "LeftCoronaryStem",
+      "confidence": "CONFIRMED"
+    }
+  ],
+  "lad": [
+    {
+      "source_filename": "MM420_BP51969_FMA74912_Trunk of anterior interventricular branch of left coronary artery.obj",
+      "anatomical_name": "Trunk of anterior interventricular branch of left coronary artery",
+      "role": "LAD_Trunk_Proximal",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM424_BP51969_FMA74912_Trunk of anterior interventricular branch of left coronary artery.obj",
+      "anatomical_name": "Trunk of anterior interventricular branch of left coronary artery",
+      "role": "LAD_Trunk_Mid",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM425_BP51969_FMA74912_Trunk of anterior interventricular branch of left coronary artery.obj",
+      "anatomical_name": "Trunk of anterior interventricular branch of left coronary artery",
+      "role": "LAD_Trunk_Distal",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM422_BP51972_FMA3860_Diagonal branch of anterior descending branch of left coronary artery.obj",
+      "anatomical_name": "Diagonal branch of anterior descending branch of left coronary artery",
+      "role": "LAD_DiagonalBranch",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM423_BP51965_FMA3888_Second left anterior branch of anterior interventricular branch of left coronary artery.obj",
+      "anatomical_name": "Second left anterior branch of anterior interventricular branch of left coronary artery",
+      "role": "LAD_LeftAnteriorBranch_Second",
+      "confidence": "LIKELY"
+    },
+    {
+      "source_filename": "MM432_BP51962_FMA3890_Third left anterior branch of anterior interventricular branch of left coronary artery.obj",
+      "anatomical_name": "Third left anterior branch of anterior interventricular branch of left coronary artery",
+      "role": "LAD_LeftAnteriorBranch_Third",
+      "confidence": "LIKELY"
+    },
+    {
+      "source_filename": "MM431_BP51970_FMA3893_Anterior septal branch of anterior interventricular artery.obj",
+      "anatomical_name": "Anterior septal branch of anterior interventricular artery",
+      "role": "LAD_SeptalBranch_Proximal",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM433_BP51970_FMA3893_Anterior septal branch of anterior interventricular artery.obj",
+      "anatomical_name": "Anterior septal branch of anterior interventricular artery",
+      "role": "LAD_SeptalBranch_Mid",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM434_BP51970_FMA3893_Anterior septal branch of anterior interventricular artery.obj",
+      "anatomical_name": "Anterior septal branch of anterior interventricular artery",
+      "role": "LAD_SeptalBranch_Distal",
+      "confidence": "CONFIRMED"
+    }
+  ],
+  "lcx": [
+    {
+      "source_filename": "MM426_BP51973_FMA74923_Trunk of circumflex branch of left coronary artery.obj",
+      "anatomical_name": "Trunk of circumflex branch of left coronary artery",
+      "role": "LCX_Trunk_Proximal",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM635_BP51973_FMA74923_Trunk of circumflex branch of left coronary artery.obj",
+      "anatomical_name": "Trunk of circumflex branch of left coronary artery",
+      "role": "LCX_Trunk_Distal",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM428_BP51937_FMA3914_First posterior ventricular branch of circumflex coronary artery.obj",
+      "anatomical_name": "First posterior ventricular branch of circumflex coronary artery",
+      "role": "LCX_PosteriorVentricularBranch",
+      "confidence": "CONFIRMED"
+    }
+  ],
+  "rca": [
+    {
+      "source_filename": "MM436_BP51977_FMA3802_Trunk of right coronary artery.obj",
+      "anatomical_name": "Trunk of right coronary artery",
+      "role": "RCA_Trunk_Proximal",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM439_BP51977_FMA3802_Trunk of right coronary artery.obj",
+      "anatomical_name": "Trunk of right coronary artery",
+      "role": "RCA_Trunk_Mid",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM556_BP51977_FMA3802_Trunk of right coronary artery.obj",
+      "anatomical_name": "Trunk of right coronary artery",
+      "role": "RCA_Trunk_Distal",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM437_BP51980_FMA3815_First anterior ventricular branch of right coronary artery.obj",
+      "anatomical_name": "First anterior ventricular branch of right coronary artery",
+      "role": "RCA_AnteriorVentricularBranch",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM438_BP51922_FMA3823_Sinoatrial nodal branch of right coronary artery.obj",
+      "anatomical_name": "Sinoatrial nodal branch of right coronary artery",
+      "role": "RCA_SinoatrialNodalBranch",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM440_BP51950_FMA3818_Marginal branch of right coronary artery.obj",
+      "anatomical_name": "Marginal branch of right coronary artery",
+      "role": "RCA_MarginalBranch",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM441_BP51955_FMA3807_Conus branch of right coronary artery.obj",
+      "anatomical_name": "Conus branch of right coronary artery",
+      "role": "RCA_ConusBranch",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM443_BP51952_FMA3851_Atrioventricular node branch of right coronary artery.obj",
+      "anatomical_name": "Atrioventricular node branch of right coronary artery",
+      "role": "RCA_AtrioventricularNodeBranch",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM444_BP51956_FMA3837_First posterior ventricular branch of right coronary artery.obj",
+      "anatomical_name": "First posterior ventricular branch of right coronary artery",
+      "role": "RCA_PosteriorVentricularBranch",
+      "confidence": "CONFIRMED"
+    },
+    {
+      "source_filename": "MM445_BP51957_FMA3829_Anterior atrial branch of right coronary artery.obj",
+      "anatomical_name": "Anterior atrial branch of right coronary artery",
+      "role": "RCA_AnteriorAtrialBranch",
+      "confidence": "CONFIRMED"
+    }
+  ]
+}

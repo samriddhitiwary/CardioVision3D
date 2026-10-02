@@ -189,9 +189,15 @@ export function DashboardPage() {
 
             <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
               <HeartVisualization
-                ladRisk={analysis.visualization.LAD.risk_score}
-                lcxRisk={analysis.visualization.LCX.risk_score}
-                rcaRisk={analysis.visualization.RCA.risk_score}
+                ladRisk={analysis.predictions.LAD.probability}
+                lcxRisk={analysis.predictions.LCX.probability}
+                rcaRisk={analysis.predictions.RCA.probability}
+                ladBand={analysis.predictions.LAD.visualization_band}
+                lcxBand={analysis.predictions.LCX.visualization_band}
+                rcaBand={analysis.predictions.RCA.visualization_band}
+                ladThreshold={analysis.predictions.LAD.threshold}
+                lcxThreshold={analysis.predictions.LCX.threshold}
+                rcaThreshold={analysis.predictions.RCA.threshold}
                 selectedVessel={selectedVessel}
                 onSelectVessel={setSelectedVessel}
               />
@@ -220,4 +226,3 @@ export function DashboardPage() {
     </div>
   )
 }
-

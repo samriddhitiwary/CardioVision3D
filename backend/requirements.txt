@@ -6,7 +6,7 @@ python-multipart
 joblib
 numpy
 pandas
-scikit-learn
+scikit-learn==1.9.1
 shap
 matplotlib
 xgboost

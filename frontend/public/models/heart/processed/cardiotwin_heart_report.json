@@ -1,0 +1,16 @@
+{
+  "path": "frontend\\public\\models\\heart\\processed\\cardiotwin_heart.glb",
+  "file_size_bytes": 1738600,
+  "mesh_count": 35,
+  "node_count": 42,
+  "materials": [
+    "Heart tissue",
+    "Aorta and great vessels",
+    "Left coronary stem",
+    "LAD",
+    "LCX",
+    "RCA"
+  ],
+  "vertex_count": 51666,
+  "triangle_count": 90746
+}
