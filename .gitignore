@@ -98,6 +98,7 @@ frontend/public/models/heart/BP51782_FMA3_2_1_inference_isa_FMA67135_Postnatal_a
 
 specs/
 
+
 # Scratch and custom temp files
 scratch/
 *.db

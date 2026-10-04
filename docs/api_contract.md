@@ -247,3 +247,24 @@ Partially updates a patient's details or clinical data.
 
 ### DELETE /api/patients/{patient_id}
 Deletes a specific patient. Returns `204 No Content` on success.
+
+### POST /api/patients/{patient_id}/report
+Generates a PDF clinical report for the patient, uploads it to Supabase Storage, and saves the link to the patient profile.
+
+**Request Body (JSON):**
+```json
+{
+  "image_base64": "data:image/png;base64,iVBORw0K..."
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "id": 1,
+  "name": "Jane Doe",
+  "pdf_link": "https://[PROJECT_REF].supabase.co/storage/v1/object/public/patient-reports/1_1_abc123.pdf",
+  "created_at": "2026-10-04T12:00:00Z",
+  "...": "..."
+}
+```

@@ -23,6 +23,8 @@ class Settings(BaseSettings):
     algorithm: str = Field(alias="ALGORITHM", default="HS256")
     access_token_expire_minutes: int = Field(alias="ACCESS_TOKEN_EXPIRE_MINUTES", default=15)
     refresh_token_expire_days: int = Field(alias="REFRESH_TOKEN_EXPIRE_DAYS", default=7)
+    supabase_url: str = Field(alias="SUPABASE_URL", default="https://xyz.supabase.co")
+    supabase_service_key: str = Field(alias="SUPABASE_SERVICE_KEY", default="service-role-key")
     project_root: Path = Field(default_factory=find_project_root)
     cors_origins: list[str] = Field(
         default=[

@@ -120,3 +120,6 @@ class PatientResponse(PatientBase):
     created_at: Any
 
     model_config = ConfigDict(from_attributes=True)
+
+class PatientReportRequest(BaseModel):
+    image_base64: str = Field(..., description="Base64 encoded snapshot of the 3D heart model")

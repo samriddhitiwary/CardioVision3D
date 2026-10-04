@@ -19,3 +19,5 @@ pyjwt
 bcrypt
 pydantic[email]
 alembic
+fpdf2
+supabase

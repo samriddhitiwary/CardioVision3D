@@ -86,7 +86,11 @@ BACKEND_HOST=127.0.0.1
 BACKEND_PORT=8000
 DATABASE_URL=postgresql://postgres:[PASSWORD]@[HOST]:5432/postgres
 SECRET_KEY=generate_a_random_secure_string_here
+SUPABASE_URL=https://[PROJECT_REF].supabase.co
+SUPABASE_SERVICE_KEY=your_supabase_service_role_key
 ```
+
+**Important**: For the PDF Report Generation to work, ensure you have created a public Supabase Storage bucket named `patient-reports`.
 
 ## Backend Setup
 
