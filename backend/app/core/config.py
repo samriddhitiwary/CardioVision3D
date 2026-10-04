@@ -18,6 +18,11 @@ class Settings(BaseSettings):
     backend_host: str = Field(default="127.0.0.1", alias="BACKEND_HOST")
     backend_port: int = Field(default=8000, alias="BACKEND_PORT")
     model_version: str = "1.0.0"
+    database_url: str = Field(alias="DATABASE_URL", default="postgresql://postgres:postgres@localhost:5432/cardiodb")
+    secret_key: str = Field(alias="SECRET_KEY", default="supersecretkey")
+    algorithm: str = Field(alias="ALGORITHM", default="HS256")
+    access_token_expire_minutes: int = Field(alias="ACCESS_TOKEN_EXPIRE_MINUTES", default=15)
+    refresh_token_expire_days: int = Field(alias="REFRESH_TOKEN_EXPIRE_DAYS", default=7)
     project_root: Path = Field(default_factory=find_project_root)
     cors_origins: list[str] = Field(
         default=[
@@ -28,7 +33,7 @@ class Settings(BaseSettings):
     )
 
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=str(Path(__file__).resolve().parent.parent.parent.parent / ".env"),
         env_file_encoding="utf-8",
         extra="ignore",
     )

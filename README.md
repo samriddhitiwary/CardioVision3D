@@ -78,12 +78,14 @@ Create a local environment file from the placeholder template:
 cp .env.example .env
 ```
 
-Suggested local values:
+You must configure the `.env` file (placed in the root directory) with your Supabase credentials:
 
 ```bash
 VITE_API_BASE_URL=http://localhost:8000
 BACKEND_HOST=127.0.0.1
 BACKEND_PORT=8000
+DATABASE_URL=postgresql://postgres:[PASSWORD]@[HOST]:5432/postgres
+SECRET_KEY=generate_a_random_secure_string_here
 ```
 
 ## Backend Setup
@@ -94,7 +96,8 @@ python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+cd ..
+python -m uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
 Windows PowerShell activation:
@@ -105,7 +108,8 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+cd ..
+python -m uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
 Health check:
@@ -174,4 +178,16 @@ cd ../frontend
 npm run build
 ```
 
-Docker is included as a skeleton for later containerized development. Local development works without Docker.
+## API Testing (Postman)
+
+A full Postman collection is provided in `docs/CardioVision3D_Postman_Collection.json`. It contains all configured endpoints for Authentication, Patient Management, and ML Predictions. Import this file directly into Postman to test APIs quickly.
+
+## Docker
+
+Docker is fully configured for development. It mounts your local codebase and connects securely to the cloud Supabase database defined in your `.env`.
+
+To start both the frontend and backend simultaneously:
+
+```bash
+docker-compose up --build
+```

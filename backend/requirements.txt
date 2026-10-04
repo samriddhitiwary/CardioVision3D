@@ -13,3 +13,9 @@ xgboost
 catboost
 pytest
 httpx
+sqlalchemy==2.0.*
+psycopg2-binary
+pyjwt
+bcrypt
+pydantic[email]
+alembic

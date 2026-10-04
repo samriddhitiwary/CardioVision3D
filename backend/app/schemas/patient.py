@@ -94,3 +94,29 @@ for schema_field in INPUT_SCHEMA["fields"]:
 
 
 PatientInput = create_model("PatientInput", __base__=_PatientBase, **field_definitions)
+
+class PatientBase(BaseModel):
+    name: str
+    age: int
+    gender: str
+    clinical_data: dict[str, Any] | None = None
+
+class PatientCreate(PatientBase):
+    pass
+
+class PatientUpdate(BaseModel):
+    name: str | None = None
+    age: int | None = None
+    gender: str | None = None
+    clinical_data: dict[str, Any] | None = None
+    analysis_data: dict[str, Any] | None = None
+    pdf_link: str | None = None
+
+class PatientResponse(PatientBase):
+    id: int
+    doctor_id: int
+    analysis_data: dict[str, Any] | None = None
+    pdf_link: str | None = None
+    created_at: Any
+
+    model_config = ConfigDict(from_attributes=True)

@@ -144,3 +144,106 @@ Primary frontend endpoint. Returns `/predict` plus `/explain` data in one respon
   "disclaimer": "..."
 }
 ```
+
+## Auth APIs
+
+### POST /api/auth/register
+Registers a new doctor account.
+
+**Request Body (JSON):**
+```json
+{
+  "email": "doctor@example.com",
+  "full_name": "Dr. John Doe",
+  "password": "securepassword123"
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "email": "doctor@example.com",
+  "full_name": "Dr. John Doe",
+  "id": 1,
+  "created_at": "2026-10-04T12:00:00Z"
+}
+```
+
+### POST /api/auth/login
+Authenticates a doctor and returns JWT access and refresh tokens.
+
+**Request Body (`application/x-www-form-urlencoded`):**
+- `username`: `doctor@example.com`
+- `password`: `securepassword123`
+
+**Response (200 OK):**
+```json
+{
+  "access_token": "eyJhbGciOi...",
+  "refresh_token": "eyJhbGciOi...",
+  "token_type": "bearer"
+}
+```
+
+### POST /api/auth/refresh
+Issues a new access token using a valid refresh token.
+
+**Request Body (JSON):**
+```json
+{
+  "refresh_token": "eyJhbGciOi..."
+}
+```
+
+### POST /api/auth/logout
+Revokes a refresh token. Requires `Authorization: Bearer <access_token>`.
+
+**Request Body (JSON):**
+```json
+{
+  "refresh_token": "eyJhbGciOi..."
+}
+```
+
+## Patient Management APIs
+
+All patient APIs require `Authorization: Bearer <access_token>`.
+
+### POST /api/patients/
+Creates a new patient profile associated with the authenticated doctor.
+
+**Request Body (JSON):**
+```json
+{
+  "name": "Jane Doe",
+  "age": 45,
+  "gender": "Female",
+  "clinical_data": {
+    "sysbp": 120,
+    "diab": 0
+  }
+}
+```
+
+### GET /api/patients/
+Retrieves all patients belonging to the authenticated doctor.
+
+### GET /api/patients/{patient_id}
+Retrieves a specific patient. Returns `404 Not Found` if the patient does not exist or belongs to a different doctor.
+
+### PUT /api/patients/{patient_id}
+Partially updates a patient's details or clinical data.
+
+**Request Body (JSON):**
+```json
+{
+  "age": 46,
+  "clinical_data": {
+    "sysbp": 125,
+    "diab": 0
+  }
+}
+```
+
+### DELETE /api/patients/{patient_id}
+Deletes a specific patient. Returns `204 No Content` on success.

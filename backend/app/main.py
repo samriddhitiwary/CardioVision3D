@@ -9,6 +9,7 @@ from fastapi.responses import JSONResponse
 
 from backend.app.api.health import router as health_router
 from backend.app.api.predictions import router as predictions_router
+from backend.app.api.routers import api_router
 from backend.app.core.config import get_settings
 from backend.app.core.model_registry import init_model_registry
 from backend.app.services.explanation_service import ExplanationService
@@ -54,6 +55,7 @@ def create_app() -> FastAPI:
 
     app.include_router(health_router)
     app.include_router(predictions_router)
+    app.include_router(api_router, prefix="/api")
 
     @app.exception_handler(RequestValidationError)
     async def validation_exception_handler(request, exc):  # noqa: ANN001

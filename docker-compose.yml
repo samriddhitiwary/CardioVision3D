@@ -2,14 +2,14 @@ services:
   backend:
     build:
       context: ./backend
-    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    command: uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 --reload
+    working_dir: /app
     env_file:
       - .env
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/app
-      - ./ml/artifacts:/ml/artifacts:ro
+      - .:/app
 
   frontend:
     build:
