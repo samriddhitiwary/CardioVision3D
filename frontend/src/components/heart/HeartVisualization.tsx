@@ -21,8 +21,10 @@ import { vesselPresentation } from '../../utils/vesselVisualization'
 
 const MODEL_PATH = '/models/heart/processed/cardiotwin_heart.glb'
 const VESSELS: VesselKey[] = ['LAD', 'LCX', 'RCA']
-const INITIAL_CAMERA = new Vector3(0, 0.18, 3.15)
-const INITIAL_TARGET = new Vector3(0, -0.03, 0)
+const INITIAL_CAMERA = new Vector3(0.58, 0.24, 3.55)
+const INITIAL_TARGET = new Vector3(0, -0.16, 0)
+const TOOLTIP_WIDTH = 244
+const TOOLTIP_HEIGHT = 104
 
 interface HeartVisualizationProps {
   ladRisk?: number
@@ -158,13 +160,16 @@ function HeartModel({
         heartBody,
         makeMaterial('Heart tissue', '#be6b72', {
           transparent: true,
-          opacity: 0.42,
-          roughness: 0.72,
+          opacity: 0.84,
+          roughness: 0.66,
+          metalness: 0,
+          depthWrite: true,
+          depthTest: true,
         }),
       )
     }
     if (aorta) {
-      applyMaterial(aorta, makeMaterial('Aorta and great vessels', '#d9777f', { opacity: 0.72, transparent: true }))
+      applyMaterial(aorta, makeMaterial('Aorta and great vessels', '#d9777f', { opacity: 0.82, transparent: true, roughness: 0.58 }))
     }
     if (leftCoronaryStem) {
       applyMaterial(leftCoronaryStem, makeMaterial('Left coronary stem', '#f8fafc', { emissive: new Color('#475569'), emissiveIntensity: 0.18 }))
@@ -198,6 +203,8 @@ function HeartModel({
           material.transparent = presentation.opacity < 1
           material.roughness = presentation.roughness
           material.metalness = presentation.metalness
+          material.depthWrite = true
+          material.depthTest = true
           material.needsUpdate = true
         }
       })
@@ -205,7 +212,7 @@ function HeartModel({
   }, [bands, hoveredVessel, risks, scene, selectedVessel])
 
   return (
-    <group rotation={[0.08, -0.28, 0]}>
+    <group rotation={[0.1, -0.42, 0]} scale={0.93}>
       <primitive
         object={scene}
         onClick={(event: ThreeEvent<MouseEvent>) => {
@@ -325,6 +332,7 @@ export function HeartVisualization({
   selectedVessel = null,
   onSelectVessel,
 }: HeartVisualizationProps) {
+  const viewerRef = useRef<HTMLDivElement | null>(null)
   const [hoveredVessel, setHoveredVessel] = useState<VesselKey | null>(null)
   const [tooltip, setTooltip] = useState<TooltipState | null>(null)
   const [resetSignal, setResetSignal] = useState(0)
@@ -334,6 +342,31 @@ export function HeartVisualization({
   const bands: Record<VesselKey, VisualizationBand> = { LAD: ladBand, LCX: lcxBand, RCA: rcaBand }
   const thresholds: Record<VesselKey, number | undefined> = { LAD: ladThreshold, LCX: lcxThreshold, RCA: rcaThreshold }
   const selected = selectedVessel ?? 'LAD'
+
+  function clearHover() {
+    setHoveredVessel(null)
+    setTooltip(null)
+  }
+
+  function showTooltip(vessel: VesselKey, clientX: number, clientY: number) {
+    const bounds = viewerRef.current?.getBoundingClientRect()
+    if (!bounds) {
+      return
+    }
+    const x = Math.max(8, Math.min(clientX - bounds.left + 14, bounds.width - TOOLTIP_WIDTH - 8))
+    const y = Math.max(8, Math.min(clientY - bounds.top - 18, bounds.height - TOOLTIP_HEIGHT - 8))
+    setHoveredVessel(vessel)
+    setTooltip({ vessel, x, y })
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', clearHover, true)
+    window.addEventListener('blur', clearHover)
+    return () => {
+      window.removeEventListener('scroll', clearHover, true)
+      window.removeEventListener('blur', clearHover)
+    }
+  }, [])
 
   function handleSelect(vessel: VesselKey) {
     onSelectVessel?.(vessel)
@@ -363,19 +396,22 @@ export function HeartVisualization({
         </button>
       </div>
 
-      <div className="relative mt-5 h-[360px] overflow-hidden rounded-lg border border-slate-200 bg-slate-50 sm:h-[460px] xl:h-[520px]">
+      <div ref={viewerRef} className="relative mt-5 h-[360px] overflow-hidden rounded-lg border border-slate-200 bg-slate-50 sm:h-[460px] xl:h-[520px]" onPointerLeave={clearHover}>
         <HeartModelErrorBoundary>
           <Suspense fallback={<LoadingModel />}>
             <Canvas
               camera={{ position: INITIAL_CAMERA.toArray(), fov: 38, near: 0.01, far: 100 }}
               gl={{ antialias: true, alpha: true }}
               aria-label="Interactive generic anatomical heart visualization"
+              onPointerMissed={clearHover}
+              onPointerLeave={clearHover}
             >
               <color attach="background" args={['#f8fafc']} />
-              <ambientLight intensity={1.55} />
-              <directionalLight position={[3, 4, 5]} intensity={2.25} />
-              <directionalLight position={[-3, 1.5, 2]} intensity={0.9} />
-              <hemisphereLight args={['#ffffff', '#e2e8f0', 1.25]} />
+              <ambientLight intensity={1.2} />
+              <directionalLight position={[3.5, 4.5, 5]} intensity={2.05} />
+              <directionalLight position={[-3, 1.5, 2]} intensity={0.72} />
+              <directionalLight position={[-2, 2, -3]} intensity={0.38} />
+              <hemisphereLight args={['#ffffff', '#e2e8f0', 1.1]} />
               <HeartModel
                 risks={risks}
                 bands={bands}
@@ -383,13 +419,9 @@ export function HeartVisualization({
                 hoveredVessel={hoveredVessel}
                 onSelect={handleSelect}
                 onHover={(vessel, x, y) => {
-                  setHoveredVessel(vessel)
-                  setTooltip({ vessel, x, y })
+                  showTooltip(vessel, x, y)
                 }}
-                onLeave={() => {
-                  setHoveredVessel(null)
-                  setTooltip(null)
-                }}
+                onLeave={clearHover}
               />
               <CameraControls selectedVessel={selectedVessel} focusSignal={focusSignal} resetSignal={resetSignal} />
             </Canvas>
@@ -398,8 +430,8 @@ export function HeartVisualization({
 
         {tooltip ? (
           <div
-            className="pointer-events-none fixed z-50 max-w-[260px] rounded-md border border-slate-200 bg-white px-3 py-2 text-xs leading-5 text-slate-700 shadow-lg"
-            style={{ left: Math.min(tooltip.x + 14, window.innerWidth - 280), top: Math.max(tooltip.y - 16, 12) }}
+            className="pointer-events-none absolute z-10 w-[244px] rounded-md border border-slate-200 bg-white px-3 py-2 text-xs leading-5 text-slate-700 shadow-lg"
+            style={{ left: tooltip.x, top: tooltip.y }}
           >
             <p className="font-semibold text-slate-950">
               {tooltip.vessel} <span className="font-normal text-slate-500">{vesselLabels[tooltip.vessel]}</span>
@@ -410,48 +442,43 @@ export function HeartVisualization({
         ) : null}
       </div>
 
-      <div className="mt-4 grid gap-2 sm:grid-cols-3">
-        {VESSELS.map((vessel) => (
-          <button
-            key={vessel}
-            type="button"
-            onClick={() => handleFocus(vessel)}
-            className={`rounded-md border p-3 text-left transition focus:outline-none focus:ring-2 focus:ring-rose-200 ${
-              selected === vessel ? 'border-rose-400 bg-rose-50' : 'border-slate-200 bg-white hover:bg-slate-50'
-            }`}
-            aria-label={`Select ${vesselLabels[vessel]} in 3D heart`}
-          >
-            <p className="text-sm font-semibold text-slate-950">{vessel}</p>
-            <p className="mt-1 text-xs text-slate-500">{vesselLabels[vessel]}</p>
-            <p className="mt-2 text-sm font-semibold text-rose-700">{formatPercent(risks[vessel])}</p>
-          </button>
-        ))}
+      <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center">
+        <p className="shrink-0 text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Focus vessel</p>
+        <div className="inline-flex w-full rounded-md border border-slate-200 bg-slate-50 p-1 sm:w-auto" role="group" aria-label="Focus coronary vessel">
+          {VESSELS.map((vessel) => (
+            <button
+              key={vessel}
+              type="button"
+              onClick={() => handleFocus(vessel)}
+              className={`min-w-0 flex-1 rounded px-4 py-2 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-rose-200 sm:flex-none ${
+                selected === vessel ? 'bg-white text-rose-700 shadow-sm' : 'text-slate-600 hover:bg-white hover:text-slate-950'
+              }`}
+              aria-label={`Select ${vesselLabels[vessel]} in 3D heart`}
+            >
+              {vessel}
+            </button>
+          ))}
+        </div>
       </div>
 
-      <div className="mt-4 grid gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4 md:grid-cols-[0.9fr_1.1fr]">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Selected Vessel</p>
-          <p className="mt-1 text-lg font-semibold text-slate-950">
-            {selected} <span className="text-sm font-normal text-slate-500">{vesselLabels[selected]}</span>
-          </p>
-        </div>
-        <div className="grid gap-3 text-sm sm:grid-cols-3">
+      <div className="mt-4 border-t border-slate-200 pt-4">
+        <p className="text-sm font-semibold text-slate-950">
+          {selected} <span className="font-normal text-slate-500">- {vesselLabels[selected]}</span>
+        </p>
+        <div className="mt-2 grid gap-x-5 gap-y-1 text-sm sm:grid-cols-3">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Predicted Stenosis Risk</p>
-            <p className="mt-1 font-semibold text-slate-950">{formatPercent(risks[selected])}</p>
+            <span className="text-slate-500">Predicted risk: </span><span className="font-semibold text-slate-950">{formatPercent(risks[selected])}</span>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Model Threshold</p>
-            <p className="mt-1 font-semibold text-slate-950">{thresholds[selected] === undefined ? 'N/A' : formatPercent(thresholds[selected])}</p>
+            <span className="text-slate-500">Threshold: </span><span className="font-semibold text-slate-950">{thresholds[selected] === undefined ? 'N/A' : formatPercent(thresholds[selected])}</span>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">Visualization Band</p>
-            <p className="mt-1 font-semibold text-slate-950">{bandLabel(bands[selected])}</p>
+            <span className="text-slate-500">Visualization band: </span><span className="font-semibold text-slate-950">{bandLabel(bands[selected])}</span>
           </div>
         </div>
       </div>
 
-      <p className="mt-4 text-xs leading-5 text-slate-500">
+      <p className="mt-3 text-xs leading-4 text-slate-500">
         Vessel highlighting represents model-estimated stenosis probability. Greater visual emphasis indicates higher model probability.
         Highlighting does not represent measured physical narrowing.
       </p>
