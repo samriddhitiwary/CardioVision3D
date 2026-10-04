@@ -27,11 +27,11 @@ export function vesselPresentation(
 
   return {
     color: base.color,
-    // Selection is a neutral luminous cue; probability keeps the vessel's band color.
-    emissive: isSelected ? '#f8fafc' : base.emissive,
+    // Selection increases emphasis without replacing the probability-derived risk color.
+    emissive: base.emissive,
     emissiveIntensity: Math.min(0.95, base.floor + clamped * 0.46 + interactionBoost),
     opacity: isSelected || isHovered ? 1 : 0.96,
-    roughness: 0.3,
+    roughness: isSelected ? 0.24 : 0.3,
     metalness: 0,
   }
 }
