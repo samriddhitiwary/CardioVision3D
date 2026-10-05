@@ -69,23 +69,25 @@ async def test_generate_fails_fast_on_validation_error(mock_settings):
 
 @pytest.mark.anyio
 async def test_generate_retries_on_transient_error(mock_settings):
-    """Test that arbitrary network/API errors trigger tenacity retries."""
+    """Test that arbitrary network/API errors fail fast with single call and rotate model index."""
     with patch('app.integrations.gemini_client.genai.Client') as mock_client_class:
         mock_client = MagicMock()
         mock_aio = MagicMock()
         mock_models = MagicMock()
         
-        # Make it fail with Exception, tenacity should retry 3 times (default in client)
         mock_models.generate_content = AsyncMock(side_effect=Exception("Transient API Error"))
         mock_aio.models = mock_models
         mock_client.aio = mock_aio
         mock_client_class.return_value = mock_client
         
         client = GeminiRiskStoryClient()
+        initial_idx = client.current_model_idx
         
         with pytest.raises(Exception) as exc_info:
             await client.generate("test prompt")
             
         assert str(exc_info.value) == "Transient API Error"
-        # Since stop_after_attempt is 3
-        assert mock_models.generate_content.call_count == 3
+        assert mock_models.generate_content.call_count == 1
+        # Rotated to next model
+        assert client.current_model_idx == (initial_idx + 1) % len(client.all_models)
+
