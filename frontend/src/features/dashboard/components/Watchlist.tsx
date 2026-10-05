@@ -31,7 +31,7 @@ export function Watchlist({ patients }: WatchlistProps) {
               const band = analysis.predictions.CAD.visualization_band
               const age = patient.clinical_data.age || "?"
               const sex = patient.clinical_data.sex === 1 ? "M" : "F"
-              const name = `Patient #${patient.id.substring(0, 6)}` // Fallback since backend has no name field
+              const name = `Patient #${patient.id}` // Fallback since backend has no name field
 
               return (
                 <li 

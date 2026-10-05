@@ -63,7 +63,7 @@ export function RecentAssessments({ patients }: RecentAssessmentsProps) {
 
                   const age = patient.clinical_data.age || "-"
                   const sex = patient.clinical_data.sex === 1 ? "M" : patient.clinical_data.sex === 0 ? "F" : "-"
-                  const name = `Patient #${patient.id.substring(0, 6)}`
+                  const name = `Patient #${patient.id}`
 
                   return (
                     <TableRow key={patient.id}>
