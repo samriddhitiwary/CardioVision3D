@@ -33,6 +33,16 @@ class Settings(BaseSettings):
         ],
         alias="CORS_ORIGINS",
     )
+    
+    # AI Risk Story
+    gemini_api_key: str = Field(alias="GEMINI_API_KEY", default="test_key")
+    risk_story_model: str = Field(alias="RISK_STORY_MODEL", default="gemini-3.8-flash")
+    risk_story_fallback_models: str = Field(alias="RISK_STORY_FALLBACK_MODELS", default="gemini-3.5-flash")
+    risk_story_thinking_level: str = Field(alias="RISK_STORY_THINKING_LEVEL", default="low")
+    risk_story_max_output_tokens: int = Field(alias="RISK_STORY_MAX_OUTPUT_TOKENS", default=1200)
+    risk_story_timeout_seconds: int = Field(alias="RISK_STORY_TIMEOUT_SECONDS", default=20)
+    risk_story_max_factors: int = Field(alias="RISK_STORY_MAX_FACTORS", default=6)
+    risk_story_cache_enabled: bool = Field(alias="RISK_STORY_CACHE_ENABLED", default=True)
 
     model_config = SettingsConfigDict(
         env_file=str(Path(__file__).resolve().parent.parent.parent.parent / ".env"),

@@ -21,3 +21,5 @@ pydantic[email]
 alembic
 fpdf2
 supabase
+google-genai
+tenacity

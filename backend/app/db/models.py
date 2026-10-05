@@ -38,6 +38,13 @@ class Patient(Base):
     clinical_data = Column(JSONB, nullable=True)
     analysis_data = Column(JSONB, nullable=True)
     pdf_link = Column(String, nullable=True)
+    
+    # Risk Story Cache
+    risk_story = Column(JSONB, nullable=True)
+    risk_story_fingerprint = Column(String, nullable=True)
+    risk_story_model = Column(String, nullable=True)
+    risk_story_generated_at = Column(DateTime, nullable=True)
+    
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
     doctor = relationship("Doctor", back_populates="patients")
