@@ -14,9 +14,18 @@ const getStoredProfile = (): Profile | null => {
   return p ? JSON.parse(p) : null
 }
 
+let currentState = {
+  isAuthenticated: !!accessToken,
+  profile: getStoredProfile(),
+}
+
 let subscribers = new Set<() => void>()
 
 function emit() {
+  currentState = {
+    isAuthenticated: !!accessToken,
+    profile: getStoredProfile(),
+  }
   subscribers.forEach((cb) => cb())
 }
 
@@ -52,10 +61,7 @@ export const authStore = {
   },
 
   // State selector for useSyncExternalStore
-  getState: () => ({
-    isAuthenticated: !!accessToken,
-    profile: getStoredProfile(),
-  })
+  getState: () => currentState
 }
 
 // React Hook
