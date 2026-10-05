@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/DropdownMenu"
 import { Avatar, AvatarFallback } from "../ui/Avatar"
 import { useCurrentDoctor } from "../../features/auth/useCurrentDoctor"
+import { PatientSelector } from "./PatientSelector"
 
 export function Topbar({ onMenuClick, onLogout }: { onMenuClick: () => void, onLogout: () => void }) {
   const location = useLocation()
@@ -37,9 +38,8 @@ export function Topbar({ onMenuClick, onLogout }: { onMenuClick: () => void, onL
         
         {/* Right section */}
         <div className="flex items-center gap-x-4 lg:gap-x-6">
-          {/* Placeholder for Active Patient Selector */}
-          <div className="hidden sm:block text-sm text-[var(--text-muted)] bg-[var(--surface-muted)] px-3 py-1.5 rounded-full border border-[var(--border)]">
-            No active patient
+          <div className="hidden sm:block">
+            <PatientSelector />
           </div>
 
           <DropdownMenu>

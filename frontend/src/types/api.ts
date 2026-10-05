@@ -76,6 +76,9 @@ export interface ModelInfo {
 
 export interface Patient {
   id: string
+  name: string
+  age: number
+  gender: string
   created_at: string
   updated_at: string
   clinical_data: Record<string, any>
@@ -86,10 +89,16 @@ export interface Patient {
 }
 
 export interface PatientCreate {
+  name: string
+  age: number
+  gender: string
   clinical_data: Record<string, any>
 }
 
 export interface PatientUpdate {
+  name?: string
+  age?: number
+  gender?: string
   clinical_data?: Record<string, any>
 }
 
@@ -113,3 +122,4 @@ export interface Analysis {
   created_at: string
   data: AnalyzeResponse
 }
+
