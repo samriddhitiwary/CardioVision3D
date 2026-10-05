@@ -2,9 +2,12 @@ import { Menu, LogOut } from "lucide-react"
 import { useLocation } from "react-router-dom"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/DropdownMenu"
 import { Avatar, AvatarFallback } from "../ui/Avatar"
+import { useCurrentDoctor } from "../../features/auth/useCurrentDoctor"
 
-export function Topbar({ onMenuClick }: { onMenuClick: () => void }) {
+export function Topbar({ onMenuClick, onLogout }: { onMenuClick: () => void, onLogout: () => void }) {
   const location = useLocation()
+  const { displayName, email } = useCurrentDoctor()
+  const initials = displayName.substring(0, 2).toUpperCase()
   
   // Very basic breadcrumb derivation for placeholders
   const pathSegments = location.pathname.split('/').filter(Boolean)
@@ -42,16 +45,16 @@ export function Topbar({ onMenuClick }: { onMenuClick: () => void }) {
           <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-2 outline-none">
               <Avatar className="h-8 w-8">
-                <AvatarFallback className="bg-[var(--primary)] text-white text-xs">CL</AvatarFallback>
+                <AvatarFallback className="bg-[var(--primary)] text-white text-xs">{initials}</AvatarFallback>
               </Avatar>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-56">
               <div className="px-2 py-1.5 text-sm font-medium text-[var(--text)]">
-                Clinician
-                <p className="text-xs font-normal text-[var(--text-muted)]">clinician@hospital.org</p>
+                {displayName}
+                <p className="text-xs font-normal text-[var(--text-muted)] truncate">{email}</p>
               </div>
               <div className="h-px bg-[var(--border)] my-1" />
-              <DropdownMenuItem className="text-[var(--danger)] focus:text-[var(--danger)] cursor-pointer">
+              <DropdownMenuItem onClick={onLogout} className="text-[var(--danger)] focus:text-[var(--danger)] cursor-pointer">
                 <LogOut className="mr-2 h-4 w-4" />
                 <span>Log out</span>
               </DropdownMenuItem>

@@ -5,8 +5,12 @@ import { navItems } from "./Sidebar"
 import { NavLink } from "react-router-dom"
 import { cn } from "../../lib/utils"
 import { Avatar, AvatarFallback } from "../ui/Avatar"
+import { useCurrentDoctor } from "../../features/auth/useCurrentDoctor"
 
-export function MobileDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+export function MobileDrawer({ isOpen, onClose, onLogout }: { isOpen: boolean; onClose: () => void; onLogout: () => void }) {
+  const { displayName, email } = useCurrentDoctor()
+  const initials = displayName.substring(0, 2).toUpperCase()
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogOverlay className="z-40" />
@@ -16,7 +20,7 @@ export function MobileDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: ()
 
         <div className="flex h-16 items-center justify-between px-6 border-b border-[var(--sidebar-active)]">
           <div className="flex items-center">
-            <Activity className="h-8 w-8 text-white" />
+            <Activity className="h-8 w-8 text-[var(--primary)]" />
             <span className="ml-3 text-xl font-bold tracking-tight text-white">CardioVision3D</span>
           </div>
           <button onClick={onClose} className="text-[var(--sidebar-muted)] hover:text-white">
@@ -29,7 +33,6 @@ export function MobileDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: ()
             <NavLink
               key={item.name}
               to={item.href}
-              end={item.href === "/"}
               onClick={onClose}
               className={({ isActive }) =>
                 cn(
@@ -60,13 +63,13 @@ export function MobileDrawer({ isOpen, onClose }: { isOpen: boolean; onClose: ()
         <div className="border-t border-[var(--sidebar-active)] p-4">
           <div className="flex items-center">
             <Avatar className="h-9 w-9 border-none bg-[var(--primary)] text-white">
-              <AvatarFallback className="bg-[var(--primary)]">CL</AvatarFallback>
+              <AvatarFallback className="bg-[var(--primary)] text-xs">{initials}</AvatarFallback>
             </Avatar>
             <div className="ml-3 overflow-hidden">
-              <p className="text-sm font-medium text-white truncate">Clinician</p>
-              <p className="text-xs text-[var(--sidebar-muted)] truncate">clinician@hospital.org</p>
+              <p className="text-sm font-medium text-white truncate">{displayName}</p>
+              <p className="text-xs text-[var(--sidebar-muted)] truncate">{email}</p>
             </div>
-            <button className="ml-auto text-[var(--sidebar-muted)] hover:text-white">
+            <button onClick={() => { onClose(); onLogout(); }} className="ml-auto text-[var(--sidebar-muted)] hover:text-white">
               <LogOut className="h-5 w-5" />
             </button>
           </div>
