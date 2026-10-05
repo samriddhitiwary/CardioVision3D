@@ -15,6 +15,7 @@ import { DashboardPage } from './pages/DashboardPage'
 import { ActivePatientProvider } from '../features/patients/ActivePatientContext'
 import { RecordsPage } from './pages/RecordsPage'
 import { PatientRecordPlaceholder } from './pages/PatientRecordPlaceholder'
+import { AssessmentPage } from './pages/AssessmentPage'
 
 // Placeholders for lazily loaded routes
 const Placeholder = ({ title }: { title: string }) => (
@@ -51,8 +52,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Navigate to="/dashboard" replace /> },
       { path: 'dashboard', element: <DashboardPage /> },
-      { path: 'assessment/new', element: <Placeholder title="New Assessment" /> },
-      { path: 'assessment/:patientId', element: <Placeholder title="View/Edit Patient" /> },
+      { path: 'assessment/new', element: <AssessmentPage /> },
+      { path: 'assessment/:patientId', element: <AssessmentPage /> },
       { path: 'analysis', element: <Placeholder title="Select Patient for Analysis" /> },
       { path: 'analysis/:patientId', element: <Placeholder title="Analysis Report" /> },
       { path: 'records', element: <RecordsPage /> },

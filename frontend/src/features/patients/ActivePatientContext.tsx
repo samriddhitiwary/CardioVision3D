@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react"
-import { useMatch, useLocation } from "react-router-dom"
+import { useMatch } from "react-router-dom"
 import { usePatient } from "./hooks"
 import type { Patient } from "../../types/api"
 
