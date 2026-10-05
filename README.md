@@ -100,8 +100,7 @@ python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-cd ..
-python -m uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
+python -m uvicorn backend.app.main:app --app-dir .. --reload --host 127.0.0.1 --port 8000
 ```
 
 Windows PowerShell activation:
@@ -112,8 +111,7 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-cd ..
-python -m uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
+python -m uvicorn backend.app.main:app --app-dir .. --reload --host 127.0.0.1 --port 8000
 ```
 
 Health check:
