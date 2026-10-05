@@ -11,6 +11,7 @@ import { AuthInitializer } from './guards/AuthInitializer'
 import { AuthLayout } from './pages/auth/AuthLayout'
 import { LoginPage } from './pages/auth/LoginPage'
 import { RegisterPage } from './pages/auth/RegisterPage'
+import { DashboardPage } from './pages/DashboardPage'
 
 // Placeholders for lazily loaded routes
 const Placeholder = ({ title }: { title: string }) => (
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
     element: <RequireAuth><AppShell /></RequireAuth>,
     children: [
       { index: true, element: <Navigate to="/dashboard" replace /> },
-      { path: 'dashboard', element: <Placeholder title="Dashboard" /> },
+      { path: 'dashboard', element: <DashboardPage /> },
       { path: 'assessment/new', element: <Placeholder title="New Assessment" /> },
       { path: 'assessment/:patientId', element: <Placeholder title="View/Edit Patient" /> },
       { path: 'analysis', element: <Placeholder title="Select Patient for Analysis" /> },
