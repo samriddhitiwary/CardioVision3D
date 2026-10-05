@@ -18,11 +18,10 @@ export function ModelInfoCard({ modelInfo }: ModelInfoCardProps) {
             Model Information
           </CardTitle>
           <div className="flex gap-2">
-            <Badge variant="neutral">v{modelInfo.version}</Badge>
-            <Badge variant="neutral">{modelInfo.features} Features</Badge>
+            <Badge variant="neutral">v{modelInfo.model_version}</Badge>
           </div>
         </div>
-        <p className="text-sm text-[var(--text-muted)] mt-1">Trained on {modelInfo.dataset}</p>
+        <p className="text-sm text-[var(--text-muted)] mt-1">Trained on {modelInfo.dataset_name}</p>
       </CardHeader>
       
       <CardBody>
@@ -38,15 +37,15 @@ export function ModelInfoCard({ modelInfo }: ModelInfoCardProps) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {modelInfo.performance.map((perf) => (
-                <TableRow key={perf.target}>
-                  <TableCell className="py-2 font-medium">{perf.target}</TableCell>
-                  <TableCell className="py-2 text-[var(--text-muted)]">{perf.algorithm}</TableCell>
-                  <TableCell className="py-2">{perf.threshold}</TableCell>
-                  <TableCell className="py-2">{perf.brier.toFixed(3)}</TableCell>
+              {Object.entries(modelInfo.targets).map(([target, data]) => (
+                <TableRow key={target}>
+                  <TableCell className="py-2 font-medium">{target}</TableCell>
+                  <TableCell className="py-2 text-[var(--text-muted)]">{data.algorithm}</TableCell>
+                  <TableCell className="py-2">{data.threshold}</TableCell>
+                  <TableCell className="py-2">{data.validation.brier.toFixed(3)}</TableCell>
                   <TableCell className="py-2">
-                    <Badge variant={perf.calibration === "Isotonic" ? "success" : "neutral"}>
-                      {perf.calibration}
+                    <Badge variant={data.calibration_method === "Isotonic" ? "success" : "neutral"}>
+                      {data.calibration_method}
                     </Badge>
                   </TableCell>
                 </TableRow>
@@ -56,7 +55,7 @@ export function ModelInfoCard({ modelInfo }: ModelInfoCardProps) {
         </div>
       </CardBody>
       <CardFooter className="bg-[var(--surface-muted)] py-3 px-6 text-xs text-[var(--text-muted)] italic">
-        {modelInfo.disclaimer}
+        {modelInfo.limitations.join(" ")}
       </CardFooter>
     </Card>
   )

@@ -2,17 +2,17 @@ import { http } from "../../lib/http"
 import type { Patient } from "../../types/api"
 
 export interface ModelInfo {
-  version: string
-  dataset: string
-  features: number
-  performance: {
-    target: string
+  model_version: string
+  dataset_name: string
+  targets: Record<string, {
     algorithm: string
     threshold: number
-    calibration: string
-    brier: number
-  }[]
-  disclaimer: string
+    calibration_method: string
+    validation: {
+      brier: number
+    }
+  }>
+  limitations: string[]
 }
 
 export const dashboardApi = {
