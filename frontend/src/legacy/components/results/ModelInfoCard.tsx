@@ -1,4 +1,4 @@
-import type { ModelInfo, TargetKey } from '../../types/api'
+import type { ModelInfo, TargetKey } from '../../../types/api'
 
 interface ModelInfoCardProps {
   modelInfo: ModelInfo | null

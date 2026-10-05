@@ -1,5 +1,5 @@
 import { Activity, Server } from 'lucide-react'
-import type { HealthResponse } from '../../types/api'
+import type { HealthResponse } from '../../../types/api'
 
 interface TopNavProps {
   health: HealthResponse | null

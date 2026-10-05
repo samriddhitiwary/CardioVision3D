@@ -1,5 +1,5 @@
-import type { FormValues } from '../../types/patient'
-import { fieldByAlias } from '../../utils/patientFields'
+import type { FormValues } from '../../../types/patient'
+import { fieldByAlias } from '../../../utils/patientFields'
 
 interface PatientSummaryProps {
   values: FormValues

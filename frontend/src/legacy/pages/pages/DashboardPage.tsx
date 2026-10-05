@@ -1,17 +1,17 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { AlertCircle, Loader2 } from 'lucide-react'
 import { ExplainabilityPanel } from '../components/explainability/ExplainabilityPanel'
-import { HeartVisualization } from '../components/heart/HeartVisualization'
+import { HeartVisualization } from '../../components/heart/HeartVisualization'
 import { TopNav } from '../components/layout/TopNav'
 import { PatientForm } from '../components/patient/PatientForm'
 import { CadRiskCard } from '../components/results/CadRiskCard'
 import { ModelInfoCard } from '../components/results/ModelInfoCard'
 import { PatientSummary } from '../components/results/PatientSummary'
 import { VesselRiskPanel } from '../components/results/VesselRiskPanel'
-import { analyzePatient, apiErrorMessage, getHealth, getModelInfo } from '../services/cardioApi'
-import type { AnalyzeResponse, HealthResponse, ModelInfo, PatientInput, TargetKey, VesselKey } from '../types/api'
-import type { FormErrors, FormValues } from '../types/patient'
-import { demoPatientValues, patientFields } from '../utils/patientFields'
+import { analyzePatient, apiErrorMessage, getHealth, getModelInfo } from '../../services/cardioApi'
+import type { AnalyzeResponse, HealthResponse, ModelInfo, PatientInput, TargetKey, VesselKey } from '../../types/api'
+import type { FormErrors, FormValues } from '../../types/patient'
+import { demoPatientValues, patientFields } from '../../utils/patientFields'
 
 function validateForm(values: FormValues): FormErrors {
   const errors: FormErrors = {}

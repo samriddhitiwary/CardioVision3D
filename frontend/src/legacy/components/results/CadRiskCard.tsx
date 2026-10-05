@@ -1,6 +1,6 @@
 import { Activity } from 'lucide-react'
-import type { TargetPrediction } from '../../types/api'
-import { bandStyles, formatPercent } from '../../utils/riskBands'
+import type { TargetPrediction } from '../../../types/api'
+import { bandStyles, formatPercent } from '../../../utils/riskBands'
 
 interface CadRiskCardProps {
   prediction: TargetPrediction

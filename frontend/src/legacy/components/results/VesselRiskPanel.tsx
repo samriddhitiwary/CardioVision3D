@@ -1,5 +1,5 @@
-import type { TargetPrediction, VesselKey } from '../../types/api'
-import { bandStyles, formatPercent } from '../../utils/riskBands'
+import type { TargetPrediction, VesselKey } from '../../../types/api'
+import { bandStyles, formatPercent } from '../../../utils/riskBands'
 
 interface VesselRiskPanelProps {
   visualization: Record<VesselKey, TargetPrediction>

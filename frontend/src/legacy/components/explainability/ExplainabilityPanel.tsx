@@ -1,6 +1,6 @@
 import { Info } from 'lucide-react'
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import type { TargetExplanation, TargetKey } from '../../types/api'
+import type { TargetExplanation, TargetKey } from '../../../types/api'
 
 interface ExplainabilityPanelProps {
   explanations: Record<TargetKey, TargetExplanation>

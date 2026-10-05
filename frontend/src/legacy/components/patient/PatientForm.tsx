@@ -1,6 +1,6 @@
 import { CheckCircle2, ClipboardList, Loader2 } from 'lucide-react'
-import type { FormErrors, FormValues, PatientFieldConfig } from '../../types/patient'
-import { fieldSections, patientFields } from '../../utils/patientFields'
+import type { FormErrors, FormValues, PatientFieldConfig } from '../../../types/patient'
+import { fieldSections, patientFields } from '../../../utils/patientFields'
 
 interface PatientFormProps {
   values: FormValues
