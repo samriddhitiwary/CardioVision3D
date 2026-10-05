@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { useNavigate, useSearchParams } from "react-router-dom"
 import { Search, Plus, Filter, MoreVertical, FileText, Activity, Edit, Trash2 } from "lucide-react"
 import { PageHeader } from "../../components/layout/PageHeader"
@@ -26,11 +26,17 @@ export function RecordsPage() {
   const [deleteId, setDeleteId] = useState<string | null>(null)
 
   // URL state
-  const query = searchParams.get("q") || ""
+  const urlQuery = searchParams.get("q") || ""
   const sexFilter = searchParams.get("sex") || "All"
   const statusFilter = searchParams.get("status") || "All"
   const riskFilter = searchParams.get("risk") || "All"
   const sortBy = searchParams.get("sort") || "Newest"
+
+  const [localQuery, setLocalQuery] = useState(urlQuery)
+
+  useEffect(() => {
+    setLocalQuery(urlQuery)
+  }, [urlQuery])
 
   const updateParam = (key: string, value: string) => {
     const newParams = new URLSearchParams(searchParams)
@@ -43,8 +49,8 @@ export function RecordsPage() {
   const filteredPatients = useMemo(() => {
     let result = [...patients]
 
-    if (query) {
-      const lowerQ = query.toLowerCase()
+    if (urlQuery) {
+      const lowerQ = urlQuery.toLowerCase()
       result = result.filter(p => {
         const name = (p.name || p.clinical_data?.name || `Patient #${p.id}`).toLowerCase()
         return name.includes(lowerQ)
@@ -90,7 +96,7 @@ export function RecordsPage() {
     })
 
     return result
-  }, [patients, query, sexFilter, statusFilter, riskFilter, sortBy])
+  }, [patients, urlQuery, sexFilter, statusFilter, riskFilter, sortBy])
 
   const handleDelete = () => {
     if (!deleteId) return
@@ -173,8 +179,11 @@ export function RecordsPage() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[var(--text-muted)]" />
             <Input 
               placeholder="Search patients..." 
-              value={query}
-              onChange={(e) => updateParam("q", e.target.value)}
+              value={localQuery}
+              onChange={(e) => {
+                setLocalQuery(e.target.value)
+                updateParam("q", e.target.value)
+              }}
               className="pl-9 w-full"
             />
           </div>
