@@ -1,11 +1,6 @@
-# CardioVision 3D
+# Cardio 3D AI (CardioVision 3D)
 
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![React](https://img.shields.io/badge/React-18.3-61DAFB.svg?style=flat&logo=react&logoColor=black)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6.svg?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Three.js](https://img.shields.io/badge/Three.js-0.170-black.svg?style=flat&logo=threedotjs&logoColor=white)](https://threejs.org)
-[![CatBoost](https://img.shields.io/badge/CatBoost-1.2-FFCC00.svg?style=flat&logoColor=black)](https://catboost.ai)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+AI-powered cardiovascular risk prediction and interactive 3D heart visualization system for the IIT hackathon.
 
 **CardioVision 3D** is an AI-powered cardiovascular clinical decision-support and interactive 3D coronary artery visualization platform. It combines calibrated multi-target CatBoost machine learning models, TreeSHAP explainability, generative clinical narratives via Google Gemini, and interactive 3D heart rendering to help cardiologists assess and communicate coronary artery disease (CAD) risk.
 
@@ -89,7 +84,7 @@ The easiest way to run the entire stack (FastAPI backend + React frontend) simul
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/samriddhitiwary/CardioVision3D.git
+   git clone <repository-url>
    cd CardioVision3D
    ```
 
@@ -302,8 +297,3 @@ Comprehensive architectural notes and API contracts are available in the [`docs/
 - Verify that the `patient-reports` storage bucket exists in your Supabase project.
 - Verify that `SUPABASE_SERVICE_KEY` has service-role privileges to write objects.
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
