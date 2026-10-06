@@ -83,6 +83,8 @@ export function useRiskStory(patientId: string | number | undefined) {
 
   return {
     ...query,
+    isLoading: query.isLoading || mutation.isPending,
+    isError: query.isError || mutation.isError,
     regenerate: () => mutation.mutate({ force_regenerate: true })
   }
 }
