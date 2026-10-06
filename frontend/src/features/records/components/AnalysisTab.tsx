@@ -34,7 +34,8 @@ export function AnalysisTab({ patient }: AnalysisTabProps) {
       const payload = {
         ...patient.clinical_data,
         age: patient.age,
-        sex: patient.gender
+        // Make sure to preserve clinical_data.sex or use gender directly
+        sex: patient.clinical_data?.sex !== undefined ? patient.clinical_data.sex : patient.gender
       }
       const analysisData = await analyzePatient(payload as any)
       
@@ -43,7 +44,12 @@ export function AnalysisTab({ patient }: AnalysisTabProps) {
         payload: {
           clinical_data: patient.clinical_data,
           // @ts-ignore
-          analysis_data: analysisData
+          analysis_data: {
+            data: analysisData,
+            id: patient.analysis_data?.id || "new",
+            patient_id: patient.id,
+            created_at: patient.analysis_data?.created_at || new Date().toISOString()
+          }
         }
       })
     } catch (e: any) {
@@ -94,7 +100,7 @@ export function AnalysisTab({ patient }: AnalysisTabProps) {
   // Parse analysis data safely
   let analysis
   try {
-    analysis = normalizeAnalysis(patient.analysis_data)
+    analysis = normalizeAnalysis(patient.analysis_data?.data || patient.analysis_data)
   } catch (e) {
     return <EmptyState icon={AlertCircle} title="Error" description="Failed to parse analysis data." />
   }

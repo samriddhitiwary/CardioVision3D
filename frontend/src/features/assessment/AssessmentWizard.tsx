@@ -135,7 +135,7 @@ export function AssessmentWizard({}: AssessmentWizardProps) {
         const res = await createPatient.mutateAsync({
           name: name as string,
           age: age as number,
-          gender: sex as string,
+          gender: sex as string, // Will be "Male" or "Fmale"
           clinical_data: finalClinicalData
         })
         setActivePatientId(res.id)
@@ -222,18 +222,24 @@ export function AssessmentWizard({}: AssessmentWizardProps) {
         }
       })
       payload.age = data.age
-      payload.sex = data.sex
+      payload.sex = data.sex // It's already "Male" or "Fmale"
       
       return await analyzePatient(payload)
     },
-    onSuccess: async () => {
+    onSuccess: async (analysisResult) => {
       // Try to save analysis_data back to patient
       try {
         await updatePatient.mutateAsync({
           id: patientId!,
           payload: {
             clinical_data: patient!.clinical_data,
-            // @ts-ignore - The api interface might need analysis_data
+            // @ts-ignore
+            analysis_data: {
+              data: analysisResult, // the result of analyzePatient
+              id: patient!.analysis_data?.id || "new",
+              patient_id: patient!.id,
+              created_at: patient!.analysis_data?.created_at || new Date().toISOString()
+            }
           }
         })
         // NOTE: Our backend might not allow direct PUT of analysis_data or it creates an Analysis record.

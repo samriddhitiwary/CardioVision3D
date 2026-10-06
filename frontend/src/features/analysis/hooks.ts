@@ -35,7 +35,7 @@ export function useAnalysis(patientId: string | number | undefined) {
       const payload = {
         ...patient.clinical_data,
         age: patient.age,
-        sex: patient.gender
+        sex: patient.clinical_data?.sex !== undefined ? patient.clinical_data.sex : patient.gender
       }
       
       const analysisData = await analyzePatient(payload as any)
