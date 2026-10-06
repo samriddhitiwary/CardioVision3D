@@ -26,13 +26,19 @@ export function useAnalysis(patientId: string | number | undefined) {
         }
       }
 
-      // Check if we have clinical data
-      if (!patient.clinical_data || Object.keys(patient.clinical_data).length < 55) {
+      // Check if we have clinical data (53 clinical fields excluding name, age, sex)
+      if (!patient.clinical_data || Object.keys(patient.clinical_data).length < 53) {
         throw new Error("INCOMPLETE_ASSESSMENT")
       }
 
-      // Fetch fresh analysis
-      const analysisData = await analyzePatient(patient.clinical_data as any)
+      // Fetch fresh analysis by combining root age/sex with clinical data
+      const payload = {
+        ...patient.clinical_data,
+        age: patient.age,
+        sex: patient.gender
+      }
+      
+      const analysisData = await analyzePatient(payload as any)
       
       // Save it silently
       try {

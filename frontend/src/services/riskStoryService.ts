@@ -34,7 +34,7 @@ export interface RiskStoryResponse {
 
 export async function generateRiskStory(patientId: string | number, request: RiskStoryRequest = {}): Promise<RiskStoryResponse> {
   const { force_regenerate = false, language = "en" } = request
-  const response = await http.post<RiskStoryResponse>(`/api/v1/patients/${patientId}/risk-story`, {
+  const response = await http.post<RiskStoryResponse>(`/api/patients/${patientId}/risk-story`, {
     force_regenerate,
     language
   })
