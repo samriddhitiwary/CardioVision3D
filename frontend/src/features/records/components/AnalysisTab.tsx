@@ -11,6 +11,7 @@ import { mapShapData } from "../../analysis/shapMapper"
 import { analyzePatient } from "../../../services/cardioApi"
 import { useUpdatePatient } from "../../patients/hooks"
 import type { Patient } from "../../../types/api"
+import { getCompletion } from "../../patients/patientView"
 
 interface AnalysisTabProps {
   patient: Patient
@@ -24,8 +25,8 @@ export function AnalysisTab({ patient }: AnalysisTabProps) {
   const [error, setError] = useState<string | null>(null)
 
   const hasAnalysis = !!patient.analysis_data
-  const clinicalFieldsCount = patient.clinical_data ? Object.keys(patient.clinical_data).filter(k => k !== "name" && k !== "age" && k !== "sex").length : 0
-  const isComplete = clinicalFieldsCount >= 53
+  const { filled: clinicalFieldsCount, total } = getCompletion(patient)
+  const isComplete = clinicalFieldsCount >= total
 
   const handleRunAnalysis = async () => {
     setIsAnalyzing(true)

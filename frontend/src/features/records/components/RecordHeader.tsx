@@ -4,7 +4,7 @@ import { Button } from "../../../components/ui/Button"
 import { Avatar, AvatarFallback } from "../../../components/ui/Avatar"
 import { PatientSelector } from "../../../components/layout/PatientSelector"
 import { RiskBadge } from "../../dashboard/components/RiskBadge"
-import { getAnalysis, getHighestBand } from "../../patients/patientView"
+import { getAnalysis, getHighestBand, getCompletion } from "../../patients/patientView"
 import { formatDate } from "../../../lib/format"
 import type { Patient } from "../../../types/api"
 
@@ -24,11 +24,7 @@ export function RecordHeader({ patient, onDelete }: RecordHeaderProps) {
   const analysis = getAnalysis(patient)
   const band = getHighestBand(analysis)
   
-  const filledFields = patient.clinical_data 
-    ? Object.keys(patient.clinical_data).filter(k => k !== "name" && k !== "age" && k !== "sex").length 
-    : 0
-  const totalFields = 53 // Based on feature config excluding name, age, sex
-  const completion = Math.min(filledFields, totalFields)
+  const { filled: completion, total: totalFields } = getCompletion(patient)
 
   const handleDelete = () => {
     if (confirm("Are you sure you want to delete this patient record? This action cannot be undone.")) {

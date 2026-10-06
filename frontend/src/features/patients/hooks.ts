@@ -11,7 +11,7 @@ export function usePatients() {
 
 export function usePatient(id: string | number | undefined) {
   return useQuery({
-    queryKey: ["patient", id],
+    queryKey: ["patient", String(id)],
     queryFn: () => patientsApi.get(id!),
     enabled: !!id,
   })
@@ -23,7 +23,7 @@ export function useCreatePatient() {
     mutationFn: (payload: Partial<Patient>) => patientsApi.create(payload),
     onSuccess: (newPatient) => {
       queryClient.setQueryData<Patient[]>(["patients", "all"], (old) => old ? [...old, newPatient] : [newPatient])
-      queryClient.setQueryData(["patient", newPatient.id], newPatient)
+      queryClient.setQueryData(["patient", String(newPatient.id)], newPatient)
       queryClient.invalidateQueries({ queryKey: ["patients", "all"] })
     }
   })
@@ -34,7 +34,7 @@ export function useUpdatePatient() {
   return useMutation({
     mutationFn: ({ id, payload }: { id: string | number, payload: Partial<Patient> }) => patientsApi.update(id, payload),
     onSuccess: (updatedPatient) => {
-      queryClient.setQueryData(["patient", updatedPatient.id], updatedPatient)
+      queryClient.setQueryData(["patient", String(updatedPatient.id)], updatedPatient)
       queryClient.invalidateQueries({ queryKey: ["patients", "all"] })
     }
   })
@@ -45,7 +45,7 @@ export function useDeletePatient() {
   return useMutation({
     mutationFn: (id: string | number) => patientsApi.remove(id),
     onSuccess: (_, deletedId) => {
-      queryClient.removeQueries({ queryKey: ["patient", deletedId] })
+      queryClient.removeQueries({ queryKey: ["patient", String(deletedId)] })
       queryClient.invalidateQueries({ queryKey: ["patients", "all"] })
     }
   })

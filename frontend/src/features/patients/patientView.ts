@@ -40,8 +40,11 @@ export function getCompletion(patient: Patient): { filled: number, total: number
     }
   }
   
+  if (patient.age !== undefined && patient.age !== null) filled++
+  if (patient.gender !== undefined && patient.gender !== null && patient.gender !== "") filled++
+  
   // Total is 55
-  return { filled, total: 55 }
+  return { filled: Math.min(filled, 55), total: 55 }
 }
 
 export function syncPatientTopLevelAndClinical(payload: Partial<Patient>): Partial<Patient> {
