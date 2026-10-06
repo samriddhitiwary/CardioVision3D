@@ -1,43 +1,50 @@
-# CardioTwin Frontend
+# CardioVision3D Frontend
 
-React + Vite + TypeScript dashboard for the CardioTwin FastAPI backend.
+This is the completely redesigned React-based frontend for CardioVision3D. It provides a modern, responsive interface for doctors to manage patients, run CAD risk assessments, and view 3D anatomical heart models with AI-generated risk stories.
 
-## Setup
+## Requirements
+- Node.js (v20+ recommended, v18+ supported)
+- npm (v10+)
 
-```powershell
-cd frontend
-npm install
-```
+## Setup & Running
+1. Install dependencies: `npm install`
+2. Configure environment (optional, defaults to `http://localhost:8000`):
+   - The Vite frontend automatically reads environment variables from the root `.env` file!
+   - Alternatively, copy `frontend/.env.example` to `frontend/.env`.
+3. Start the development server: `npm run dev`
+4. Build for production: `npm run build`
 
-Create or update the root `.env`/frontend environment with:
+## Scripts
+- `npm run dev`: Starts the Vite development server on `http://localhost:5173`.
+- `npm run build`: Compiles TypeScript and builds the production bundle in `dist/`.
+- `npm run preview`: Locally previews the production build.
+- `npm run test`: Runs the Vitest unit/component test suite.
+- `npm run test:e2e`: Runs Playwright end-to-end tests.
+- `npm run lint`: Runs oxlint for fast static analysis.
+- `npm run typecheck`: Runs the TypeScript compiler (`tsc -b`) to verify types.
 
-```env
-VITE_API_BASE_URL=http://localhost:8000
-```
+## Environment Variables
+- `VITE_API_BASE_URL`: URL pointing to the FastAPI backend (defaults to `http://localhost:8000`). Loaded from root `.env` or `frontend/.env`.
 
-Start the backend first from the repository root:
+## Folder Structure
+- `src/app`: Application router, route guards, and top-level page components.
+- `src/components`: Shared, reusable UI building blocks (using Radix UI primitives) and layout shells.
+  - `src/components/heart`: The WebGL 3D Heart Visualization built with React Three Fiber.
+- `src/features`: Domain-driven feature modules containing hooks, state, and specific components.
+  - `analysis`: Risk overview, Shapley visualizations, and AI Risk Story.
+  - `assessment`: The clinical data wizard driven by `featureConfig.ts`.
+  - `auth`: JWT token management and doctor context.
+  - `dashboard`: Statistics and recent patient lists.
+  - `patients`: React Query hooks for fetching/mutating patient data.
+  - `records`: The patient list and detailed record views.
+  - `reports`: PDF generation and export logic.
+- `src/hooks`: Global React hooks (e.g., `usePageTitle`).
+- `src/lib`: Axios HTTP instance and TanStack Query client setup.
+- `src/types`: TypeScript definitions matching backend schemas.
+- `src/utils`: Helper functions (e.g., form validation, vessel coloring).
 
-```powershell
-.\backend\.venv\Scripts\python.exe -m uvicorn backend.app.main:app --reload
-```
+## Feature Config
+The assessment wizard forms are entirely data-driven via `src/features/assessment/featureConfig.ts`. Adding a new clinical feature simply requires updating the schema array in that file; the UI (inputs, validation, steppers, presets) will automatically generate the corresponding controls.
 
-Then run the frontend:
-
-```powershell
-cd frontend
-npm run dev
-```
-
-Vite serves the dashboard at:
-
-```text
-http://localhost:5173
-```
-
-## Build
-
-```powershell
-npm run build
-```
-
-The dashboard consumes `GET /health`, `GET /api/v1/model-info`, and `POST /api/v1/analyze`.
+## Known Backend Gaps
+Please see [docs/known-gaps.md](../docs/known-gaps.md) for a list of known limitations in the current API layer and suggested backend additions.

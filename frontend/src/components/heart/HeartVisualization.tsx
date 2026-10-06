@@ -401,7 +401,7 @@ export function HeartVisualization({
           <Suspense fallback={<LoadingModel />}>
             <Canvas
               camera={{ position: INITIAL_CAMERA.toArray(), fov: 38, near: 0.01, far: 100 }}
-              gl={{ antialias: true, alpha: true }}
+              gl={{ antialias: true, alpha: true, preserveDrawingBuffer: true }}
               aria-label="Interactive generic anatomical heart visualization"
               onPointerMissed={clearHover}
               onPointerLeave={clearHover}

@@ -87,6 +87,13 @@ ml/artifacts/metrics/*
 *.ckpt
 *.model
 
+# Allow frozen inference pipelines, schemas, and processed datasets needed by backend
+!ml/artifacts/models/*.joblib
+!ml/artifacts/models/*.json
+!ml/data/processed/features_clean.csv
+!ml/data/processed/feature_metadata.csv
+!ml/data/processed/targets_clean.csv
+
 # Temporary files and logs
 *.log
 logs/

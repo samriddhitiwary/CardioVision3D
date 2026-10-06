@@ -74,3 +74,53 @@ export interface ModelInfo {
   limitations: string[]
 }
 
+export interface Patient {
+  id: string
+  name: string
+  age: number
+  gender: string
+  created_at: string
+  updated_at: string
+  clinical_data: Record<string, any>
+  analysis_data?: Analysis | null
+  risk_story?: string | null
+  risk_story_generated_at?: string | null
+  risk_story_model?: string | null
+  pdf_link?: string
+}
+
+export interface PatientCreate {
+  name: string
+  age: number
+  gender: string
+  clinical_data: Record<string, any>
+}
+
+export interface PatientUpdate {
+  name?: string
+  age?: number
+  gender?: string
+  clinical_data?: Record<string, any>
+}
+
+export interface Doctor {
+  id: string
+  email: string
+  full_name?: string
+  is_active: boolean
+  is_superuser: boolean
+}
+
+export interface Token {
+  access_token: string
+  token_type: string
+  refresh_token: string
+}
+
+export interface Analysis {
+  id: string
+  patient_id: string
+  created_at: string
+  data: AnalyzeResponse
+}
+
