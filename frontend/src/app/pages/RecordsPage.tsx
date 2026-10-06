@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from "react"
 import { useNavigate, useSearchParams } from "react-router-dom"
-import { Search, Plus, Filter, MoreVertical, FileText, Activity, Edit, Trash2 } from "lucide-react"
+import { Search, Plus, Filter, MoreVertical, FileText, Activity, Edit, Trash2, ExternalLink, DownloadCloud } from "lucide-react"
 import { PageHeader } from "../../components/layout/PageHeader"
 import { Button } from "../../components/ui/Button"
 import { Input } from "../../components/ui/Input"
@@ -127,6 +127,17 @@ export function RecordsPage() {
         <DropdownMenuItem onClick={() => navigate(`/assessment/${p.id}`)}>
           <Edit className="mr-2 h-4 w-4" /> Edit inputs
         </DropdownMenuItem>
+        
+        {p.pdf_link ? (
+          <DropdownMenuItem onClick={() => window.open(p.pdf_link!, "_blank", "noopener,noreferrer")}>
+            <ExternalLink className="mr-2 h-4 w-4" /> Open PDF
+          </DropdownMenuItem>
+        ) : (
+          <DropdownMenuItem onClick={() => navigate(`/analysis/${p.id}?autoexport=1`)}>
+            <DownloadCloud className="mr-2 h-4 w-4" /> Generate report
+          </DropdownMenuItem>
+        )}
+
         <div className="h-px bg-[var(--border)] my-1" />
         <DropdownMenuItem onClick={() => setDeleteId(String(p.id))} className="text-[var(--danger)] focus:text-[var(--danger)]">
           <Trash2 className="mr-2 h-4 w-4" /> Delete

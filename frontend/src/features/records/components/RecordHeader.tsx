@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { ArrowLeft, Edit3, FileText, DownloadCloud, Trash2, Calendar } from "lucide-react"
+import { ArrowLeft, Edit3, FileText, DownloadCloud, Trash2, Calendar, ExternalLink, FileBadge } from "lucide-react"
 import { Button } from "../../../components/ui/Button"
 import { Avatar, AvatarFallback } from "../../../components/ui/Avatar"
 import { PatientSelector } from "../../../components/layout/PatientSelector"
@@ -68,6 +68,19 @@ export function RecordHeader({ patient, onDelete }: RecordHeaderProps) {
               <span className="text-xs text-[var(--text-muted)]">
                 {completion}/{totalFields} clinical inputs
               </span>
+              {patient.pdf_link && (
+                <div className="group relative flex items-center">
+                  <span className="inline-flex items-center rounded-md bg-[var(--primary-soft)] px-2 py-1 text-xs font-medium text-[var(--primary)] ring-1 ring-inset ring-[var(--primary)]/20 cursor-default">
+                    <FileBadge className="w-3 h-3 mr-1" />
+                    PDF available
+                  </span>
+                  <div className="absolute top-full mt-1 left-0 w-64 z-50 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all pointer-events-none">
+                    <div className="bg-[var(--surface-muted)] text-[var(--text)] text-xs p-2 rounded shadow-md border border-[var(--border)] relative">
+                      Generated from the data at the time of export. Regenerate after editing inputs.
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -81,12 +94,17 @@ export function RecordHeader({ patient, onDelete }: RecordHeaderProps) {
             <FileText className="w-4 h-4 mr-2" />
             Open full report
           </Button>
-          <div title="Available in Phase 08">
-            <Button variant="secondary" size="sm" disabled>
-              <DownloadCloud className="w-4 h-4 mr-2" />
-              Export PDF
+          {patient.pdf_link ? (
+            <Button variant="secondary" size="sm" onClick={() => window.open(patient.pdf_link!, "_blank", "noopener,noreferrer")}>
+              <ExternalLink className="w-4 h-4 mr-2" />
+              Open PDF
             </Button>
-          </div>
+          ) : (
+            <Button variant="secondary" size="sm" onClick={() => navigate(`/analysis/${patient.id}?autoexport=1`)}>
+              <DownloadCloud className="w-4 h-4 mr-2" />
+              Generate report
+            </Button>
+          )}
           <Button variant="danger" size="sm" onClick={handleDelete}>
             <Trash2 className="w-4 h-4 mr-2" />
             Delete

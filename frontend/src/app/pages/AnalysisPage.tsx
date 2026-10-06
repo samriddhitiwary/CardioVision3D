@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
-import { Edit3, FileText, DownloadCloud, AlertTriangle, Info } from "lucide-react"
+import { useSearchParams } from "react-router-dom"
+import { Edit3, FileText, AlertTriangle, Info } from "lucide-react"
 
 import { usePatient } from "../../features/patients/hooks"
 import { useActivePatient } from "../../features/patients/ActivePatientContext"
@@ -11,11 +12,14 @@ import { RiskOverview } from "../../features/analysis/components/RiskOverview"
 import { VesselCards } from "../../features/analysis/components/VesselCards"
 import { ShapView } from "../../features/analysis/components/ShapView"
 import { RiskStoryView } from "../../features/analysis/components/RiskStoryView"
+import { ReportExportButton } from "../../features/reports/components/ReportExportButton"
 import type { VesselKey } from "../../types/api"
 
 export function AnalysisPage() {
   const { patientId } = useParams()
   const navigate = useNavigate()
+  const [searchParams, setSearchParams] = useSearchParams()
+  const autoExport = searchParams.get("autoexport") === "1"
   
   const { activePatientId } = useActivePatient()
   const resolvedPatientId = patientId || activePatientId
@@ -26,6 +30,15 @@ export function AnalysisPage() {
 
   const [selectedVessel, setSelectedVessel] = useState<VesselKey | null>(null)
   const [touchOverlay, setTouchOverlay] = useState(true)
+
+  // Clear autoexport flag after component mount if it exists
+  useEffect(() => {
+    if (autoExport) {
+      const newParams = new URLSearchParams(searchParams)
+      newParams.delete("autoexport")
+      setSearchParams(newParams, { replace: true })
+    }
+  }, [autoExport, searchParams, setSearchParams])
 
   if (!resolvedPatientId) {
     return (
@@ -123,11 +136,11 @@ export function AnalysisPage() {
           <Button variant="secondary" size="sm" onClick={() => navigate(`/records`)}>
             <FileText className="w-4 h-4 mr-2" /> Open record
           </Button>
-          <div title="Available in Phase 08">
-            <Button variant="primary" size="sm" disabled>
-              <DownloadCloud className="w-4 h-4 mr-2" /> Export PDF
-            </Button>
-          </div>
+          <ReportExportButton 
+            patientId={resolvedPatientId!} 
+            autoExport={autoExport}
+            pdfLink={patient?.pdf_link} 
+          />
         </div>
       </div>
 
