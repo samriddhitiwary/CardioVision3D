@@ -47,7 +47,7 @@ export function RiskOverview({ predictions }: RiskOverviewProps) {
       
       {/* CAD Gauge */}
       <div className="lg:col-span-5 flex items-center gap-6">
-        <div className="relative w-32 h-20 shrink-0 overflow-hidden pt-2">
+        <div className="relative w-40 h-24 shrink-0 overflow-hidden pt-2">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
@@ -59,29 +59,17 @@ export function RiskOverview({ predictions }: RiskOverviewProps) {
                 cy="100%"
                 startAngle={180}
                 endAngle={0}
-                innerRadius={40}
-                outerRadius={56}
+                innerRadius={60}
+                outerRadius={76}
                 stroke="none"
                 dataKey="value"
               >
                 <Cell fill={cadData.positive ? "var(--danger)" : "var(--primary)"} className="transition-all duration-1000 ease-out" />
                 <Cell fill="var(--surface-muted)" />
               </Pie>
-              <Tooltip 
-                content={({ active, payload }) => {
-                  if (active && payload && payload.length) {
-                    return (
-                      <div className="bg-white border border-[var(--border)] p-2 rounded shadow-sm text-xs font-bold">
-                        Risk: {(cadData.probability * 100).toFixed(1)}%
-                      </div>
-                    )
-                  }
-                  return null
-                }}
-              />
             </PieChart>
           </ResponsiveContainer>
-          <div className="absolute bottom-0 left-0 w-full flex justify-center text-2xl font-bold text-[var(--text)] leading-none pointer-events-none">
+          <div className="absolute bottom-1 left-0 w-full flex justify-center text-2xl font-bold text-[var(--text)] leading-none pointer-events-none">
             {cadPercent}<span className="text-sm font-medium text-[var(--text-muted)] ml-0.5">%</span>
           </div>
         </div>
