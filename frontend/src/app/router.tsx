@@ -14,7 +14,7 @@ import { RegisterPage } from './pages/auth/RegisterPage'
 import { DashboardPage } from './pages/DashboardPage'
 import { ActivePatientProvider } from '../features/patients/ActivePatientContext'
 import { RecordsPage } from './pages/RecordsPage'
-import { PatientRecordPlaceholder } from './pages/PatientRecordPlaceholder'
+import { RecordsDetailPage } from './pages/RecordsDetailPage'
 import { AssessmentPage } from './pages/AssessmentPage'
 import { AnalysisPage } from './pages/AnalysisPage'
 
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
       { path: 'analysis', element: <AnalysisPage /> },
       { path: 'analysis/:patientId', element: <AnalysisPage /> },
       { path: 'records', element: <RecordsPage /> },
-      { path: 'records/:patientId', element: <PatientRecordPlaceholder /> },
+      { path: 'records/:id', element: <RecordsDetailPage /> },
       { path: 'model-info', element: <Placeholder title="Model Information" /> },
       { path: '_kit', element: <KitPage /> },
       { path: '*', element: <Placeholder title="404 Not Found" /> },
