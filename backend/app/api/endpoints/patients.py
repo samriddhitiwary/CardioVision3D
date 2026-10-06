@@ -102,7 +102,13 @@ def generate_patient_report(
         
     # 1. ML Analysis
     try:
-        patient_input = PatientInput(**patient.clinical_data)
+        # Combine clinical data with root fields
+        full_data = {
+            **patient.clinical_data,
+            "age": patient.age,
+            "sex": patient.gender
+        }
+        patient_input = PatientInput(**full_data)
         patient_df = patient_input.to_ml_dataframe()
         raw_predictions = predictor.predict(patient_df)
         raw_explanations = explainer.explain(patient_df)

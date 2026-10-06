@@ -32,8 +32,13 @@ async def generate_risk_story(
         raise HTTPException(status_code=400, detail="Patient has no clinical data")
         
     try:
-        # Recompute authoritative analysis from ML services
-        patient_input = PatientInput(**patient.clinical_data)
+        # Combine clinical data with root fields
+        full_data = {
+            **patient.clinical_data,
+            "age": patient.age,
+            "sex": patient.gender
+        }
+        patient_input = PatientInput(**full_data)
         patient_df = patient_input.to_ml_dataframe()
         raw_predictions = predictor.predict(patient_df)
         raw_explanations = explainer.explain(patient_df)

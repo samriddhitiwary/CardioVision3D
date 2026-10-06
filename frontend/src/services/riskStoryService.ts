@@ -42,7 +42,8 @@ export async function generateRiskStory(patientId: string | number, request: Ris
 }
 
 // Fallback detection
-export function isFallbackStory(story: RiskStoryResponse): boolean {
+export function isFallbackStory(story: RiskStoryResponse | undefined | null): boolean {
+  if (!story) return false
   return story.headline === "Model explanation available" || 
-         (story.visualization_steps.length === 0 && story.disclaimer.startsWith("AI-generated narrative unavailable"))
+         (story.visualization_steps?.length === 0 && story.disclaimer?.startsWith("AI-generated narrative unavailable"))
 }

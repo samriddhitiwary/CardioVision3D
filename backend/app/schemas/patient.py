@@ -117,6 +117,8 @@ class PatientResponse(PatientBase):
     doctor_id: int
     analysis_data: dict[str, Any] | None = None
     pdf_link: str | None = None
+    risk_story: dict[str, Any] | None = None
+    risk_story_model: str | None = None
     created_at: Any
 
     model_config = ConfigDict(from_attributes=True)

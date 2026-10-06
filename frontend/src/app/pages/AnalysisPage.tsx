@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom"
 import { Edit3, FileText, DownloadCloud, AlertTriangle, Info } from "lucide-react"
 
 import { usePatient } from "../../features/patients/hooks"
+import { useActivePatient } from "../../features/patients/ActivePatientContext"
 import { useAnalysis, useRiskStory } from "../../features/analysis/hooks"
 import { Button } from "../../components/ui/Button"
 import { HeartVisualization } from "../../components/heart/HeartVisualization"
@@ -16,12 +17,32 @@ export function AnalysisPage() {
   const { patientId } = useParams()
   const navigate = useNavigate()
   
-  const { data: patient, isLoading: isPatientLoading } = usePatient(patientId)
-  const { data: analysis, isLoading: isAnalysisLoading, error: analysisError } = useAnalysis(patientId)
-  const { data: story, isLoading: isStoryLoading, isError: isStoryError, regenerate } = useRiskStory(patientId)
+  const { activePatientId } = useActivePatient()
+  const resolvedPatientId = patientId || activePatientId
+
+  const { data: patient, isLoading: isPatientLoading } = usePatient(resolvedPatientId || undefined)
+  const { data: analysis, isLoading: isAnalysisLoading, error: analysisError } = useAnalysis(resolvedPatientId || undefined)
+  const { data: story, isLoading: isStoryLoading, isError: isStoryError, regenerate } = useRiskStory(resolvedPatientId || undefined)
 
   const [selectedVessel, setSelectedVessel] = useState<VesselKey | null>(null)
   const [touchOverlay, setTouchOverlay] = useState(true)
+
+  if (!resolvedPatientId) {
+    return (
+      <div className="flex flex-col items-center justify-center py-24 space-y-4">
+        <div className="bg-[var(--surface-muted)] text-[var(--text-muted)] p-6 rounded-full w-24 h-24 mx-auto mb-6 flex items-center justify-center">
+          <Info className="w-12 h-12" />
+        </div>
+        <h2 className="text-2xl font-bold text-[var(--text)] mb-4">No Patient Selected</h2>
+        <p className="text-[var(--text-muted)] mb-8">
+          Please select a patient from the records list to view their analysis.
+        </p>
+        <Button onClick={() => navigate('/records')}>
+          View Patient Records
+        </Button>
+      </div>
+    )
+  }
 
   if (isPatientLoading || isAnalysisLoading) {
     return (
