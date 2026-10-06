@@ -1,4 +1,4 @@
-import { Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Scatter, ComposedChart, Cell } from "recharts"
+import { Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Scatter, ComposedChart, Cell, PieChart, Pie } from "recharts"
 import { RiskBadge } from "../../dashboard/components/RiskBadge"
 import type { AnalyzeResponse } from "../../../types/api"
 
@@ -33,38 +33,55 @@ export function RiskOverview({ predictions }: RiskOverviewProps) {
     return null
   }
 
+  const ThresholdLine = (props: any) => {
+    const { cx, cy } = props
+    if (cx === undefined || cy === undefined) return null
+    return (
+      <line x1={cx} y1={cy - 10} x2={cx} y2={cy + 10} stroke="#000" strokeWidth={3} strokeLinecap="round" />
+    )
+  }
+
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-[var(--surface)] p-6 rounded-[var(--radius-card)] border border-[var(--border)] shadow-sm">
       
       {/* CAD Gauge */}
       <div className="lg:col-span-5 flex items-center gap-6">
-        <div className="relative w-32 h-20 shrink-0 flex flex-col items-center justify-end overflow-hidden">
-          <svg className="w-full h-auto overflow-visible" viewBox="0 0 100 50">
-            {/* Background arc */}
-            <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="var(--surface-muted)" strokeWidth="12" strokeLinecap="round" />
-            
-            {/* Value arc */}
-            <path 
-              d="M 10 50 A 40 40 0 0 1 90 50" 
-              fill="none" 
-              stroke={cadData.positive ? "var(--danger)" : "var(--primary)"} 
-              strokeWidth="12" 
-              strokeLinecap="round"
-              strokeDasharray="125.6" // pi * r (r=40)
-              strokeDashoffset={125.6 - (125.6 * cadData.probability)} 
-              className="transition-all duration-1000 ease-out"
-            />
-            
-            {/* Threshold marker */}
-            <line 
-              x1="50" y1="50" 
-              x2={50 + 48 * Math.cos(Math.PI - (Math.PI * cadData.threshold))} 
-              y2={50 - 48 * Math.sin(Math.PI - (Math.PI * cadData.threshold))} 
-              stroke="var(--text-muted)" strokeWidth="2" strokeDasharray="2 2"
-            />
-          </svg>
-          <div className="absolute bottom-0 text-2xl font-bold text-[var(--text)]">
+        <div className="relative w-32 h-20 shrink-0 overflow-hidden pt-2">
+          <ResponsiveContainer width="100%" height="100%">
+            <PieChart>
+              <Pie
+                data={[
+                  { value: cadData.probability * 100 },
+                  { value: 100 - (cadData.probability * 100) }
+                ]}
+                cx="50%"
+                cy="100%"
+                startAngle={180}
+                endAngle={0}
+                innerRadius={40}
+                outerRadius={56}
+                stroke="none"
+                dataKey="value"
+              >
+                <Cell fill={cadData.positive ? "var(--danger)" : "var(--primary)"} className="transition-all duration-1000 ease-out" />
+                <Cell fill="var(--surface-muted)" />
+              </Pie>
+              <Tooltip 
+                content={({ active, payload }) => {
+                  if (active && payload && payload.length) {
+                    return (
+                      <div className="bg-white border border-[var(--border)] p-2 rounded shadow-sm text-xs font-bold">
+                        Risk: {(cadData.probability * 100).toFixed(1)}%
+                      </div>
+                    )
+                  }
+                  return null
+                }}
+              />
+            </PieChart>
+          </ResponsiveContainer>
+          <div className="absolute bottom-0 left-0 w-full flex justify-center text-2xl font-bold text-[var(--text)] leading-none pointer-events-none">
             {cadPercent}<span className="text-sm font-medium text-[var(--text-muted)] ml-0.5">%</span>
           </div>
         </div>
@@ -99,7 +116,7 @@ export function RiskOverview({ predictions }: RiskOverviewProps) {
                   <Cell key={`cell-${index}`} fill={entry.prob >= entry.threshold ? 'var(--danger)' : 'var(--primary)'} />
                 ))}
               </Bar>
-              <Scatter dataKey="threshold" fill="var(--text-muted)" shape="wye" />
+              <Scatter dataKey="threshold" shape={<ThresholdLine />} />
             </ComposedChart>
           </ResponsiveContainer>
         </div>

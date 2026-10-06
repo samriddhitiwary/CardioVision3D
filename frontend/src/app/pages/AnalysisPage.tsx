@@ -123,11 +123,7 @@ export function AnalysisPage() {
       {/* 3. 3D heart section */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 relative">
-          <div 
-            className="w-full rounded-[var(--radius-card)] overflow-hidden border border-[var(--border)] shadow-sm bg-white"
-            style={{ height: 'clamp(420px, 60vh, 640px)' }}
-            data-heart-canvas
-          >
+          <div data-heart-canvas>
             <HeartVisualization
               ladRisk={analysis.visualization.LAD.probability}
               lcxRisk={analysis.visualization.LCX.probability}

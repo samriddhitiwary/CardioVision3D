@@ -26,23 +26,12 @@ const VESSEL_INFO = {
 export function VesselCards({ visualization, selectedVessel, onSelectVessel }: VesselCardsProps) {
   const vessels: VesselKey[] = ["LAD", "LCX", "RCA"]
   
-  // Find highest risk vessel
-  let highestRisk = -1
-  let highestVessel: VesselKey = "LAD"
-  vessels.forEach(v => {
-    if (visualization[v].probability > highestRisk) {
-      highestRisk = visualization[v].probability
-      highestVessel = v
-    }
-  })
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {vessels.map(vessel => {
         const data = visualization[vessel]
         const info = VESSEL_INFO[vessel]
         const isSelected = selectedVessel === vessel
-        const isHighest = vessel === highestVessel
         
         return (
           <button
@@ -54,11 +43,6 @@ export function VesselCards({ visualization, selectedVessel, onSelectVessel }: V
                 : 'border-[var(--border)] bg-[var(--surface)] hover:border-[var(--text-muted)] hover:shadow-sm'
             }`}
           >
-            {isHighest && (
-              <div className="absolute top-0 right-0 bg-[var(--danger)] text-white text-[10px] font-bold px-2 py-0.5 rounded-bl-lg shadow-sm z-10">
-                Highest risk
-              </div>
-            )}
             
             <div className="flex justify-between items-start mb-2">
               <div>
