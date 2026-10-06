@@ -3,26 +3,28 @@
 This is the completely redesigned React-based frontend for CardioVision3D. It provides a modern, responsive interface for doctors to manage patients, run CAD risk assessments, and view 3D anatomical heart models with AI-generated risk stories.
 
 ## Requirements
-- Node.js (v18+)
-- npm
+- Node.js (v20+ recommended, v18+ supported)
+- npm (v10+)
 
 ## Setup & Running
 1. Install dependencies: `npm install`
-2. Start the development server: `npm run dev`
-3. Build for production: `npm run build`
+2. Configure environment (optional, defaults to `http://localhost:8000`):
+   - The Vite frontend automatically reads environment variables from the root `.env` file!
+   - Alternatively, copy `frontend/.env.example` to `frontend/.env`.
+3. Start the development server: `npm run dev`
+4. Build for production: `npm run build`
 
 ## Scripts
-- `npm run dev`: Starts the Vite development server.
-- `npm run build`: Compiles TypeScript and builds the production bundle.
+- `npm run dev`: Starts the Vite development server on `http://localhost:5173`.
+- `npm run build`: Compiles TypeScript and builds the production bundle in `dist/`.
 - `npm run preview`: Locally previews the production build.
-- `npm run test`: Runs the Vitest unit test suite.
-- `npm run test:e2e`: Runs Playwright accessibility and smoke tests.
+- `npm run test`: Runs the Vitest unit/component test suite.
+- `npm run test:e2e`: Runs Playwright end-to-end tests.
 - `npm run lint`: Runs oxlint for fast static analysis.
-- `npm run typecheck`: Runs the TypeScript compiler to verify types.
+- `npm run typecheck`: Runs the TypeScript compiler (`tsc -b`) to verify types.
 
 ## Environment Variables
-Create a `.env` file in the `frontend` root:
-- `VITE_API_BASE_URL`: The URL pointing to the FastAPI backend (defaults to `http://localhost:8000`).
+- `VITE_API_BASE_URL`: URL pointing to the FastAPI backend (defaults to `http://localhost:8000`). Loaded from root `.env` or `frontend/.env`.
 
 ## Folder Structure
 - `src/app`: Application router, route guards, and top-level page components.

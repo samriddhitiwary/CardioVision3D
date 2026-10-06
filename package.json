@@ -1,4 +1,13 @@
 {
+  "name": "cardiovision3d",
+  "private": true,
+  "scripts": {
+    "frontend:dev": "npm --prefix frontend run dev",
+    "frontend:build": "npm --prefix frontend run build",
+    "frontend:test": "npm --prefix frontend run test",
+    "docker:up": "docker-compose up --build",
+    "docker:down": "docker-compose down"
+  },
   "devDependencies": {
     "jsdom": "^29.1.1"
   }

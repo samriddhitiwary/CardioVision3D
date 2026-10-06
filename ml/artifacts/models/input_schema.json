@@ -1,0 +1,430 @@
+{
+  "model_version": "1.0.0",
+  "description": "Raw clinical input schema for CardioTwin vessel/CAD prediction pipelines.",
+  "fields": [
+    {
+      "name": "Age",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "Weight",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "Length",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "BMI",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "BP",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "PR",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "FBS",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "CR",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "TG",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "LDL",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "HDL",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "BUN",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "ESR",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "HB",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "K",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "Na",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "WBC",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "Lymph",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "Neut",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "PLT",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "EF-TTE",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "Sex",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "Fmale",
+        "Male"
+      ]
+    },
+    {
+      "name": "DM",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "HTN",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "Current Smoker",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "EX-Smoker",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "FH",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "Obesity",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "CRF",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "CVA",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "Airway disease",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "Thyroid Disease",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "CHF",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "DLP",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "Edema",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "Weak Peripheral Pulse",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "Lung rales",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "Systolic Murmur",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "Diastolic Murmur",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "Typical Chest Pain",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "Dyspnea",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "Function Class",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "name": "Atypical",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "Nonanginal",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "Exertional CP",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N"
+      ]
+    },
+    {
+      "name": "LowTH Ang",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "Q Wave",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "St Elevation",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "St Depression",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "Tinversion",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "LVH",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "Poor R Progression",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "N",
+        "Y"
+      ]
+    },
+    {
+      "name": "BBB",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "LBBB",
+        "N",
+        "RBBB"
+      ]
+    },
+    {
+      "name": "Region RWMA",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "name": "VHD",
+      "type": "categorical",
+      "required": true,
+      "allowed_values": [
+        "Moderate",
+        "N",
+        "Severe",
+        "mild"
+      ]
+    }
+  ],
+  "forbidden_input_fields": [
+    "Cath",
+    "LAD",
+    "LCX",
+    "RCA"
+  ]
+}
