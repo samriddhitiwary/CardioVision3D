@@ -4,6 +4,7 @@ import { Sidebar } from "./Sidebar"
 import { Topbar } from "./Topbar"
 import { MobileDrawer } from "./MobileDrawer"
 import { DisclaimerBar } from "./DisclaimerBar"
+import { ServerStatusBanner } from "./ServerStatusBanner"
 import { Toaster } from "../ui/Toaster"
 import { useLogout } from "../../features/auth/useLogout"
 
@@ -21,8 +22,11 @@ export function AppShell() {
       
       {/* Main Content Area */}
       <div className="flex flex-1 flex-col overflow-hidden">
-        <DisclaimerBar />
-        <Topbar onMenuClick={() => setMobileMenuOpen(true)} onLogout={openLogout} />
+        <header>
+          <ServerStatusBanner />
+          <DisclaimerBar />
+          <Topbar onMenuClick={() => setMobileMenuOpen(true)} onLogout={openLogout} />
+        </header>
         
         {/* Scrollable Main Content */}
         <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 sm:p-6 lg:p-8">

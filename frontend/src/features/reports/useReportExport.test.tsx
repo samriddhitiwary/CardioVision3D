@@ -16,6 +16,13 @@ vi.mock("react-router-dom", () => ({
   useNavigate: () => vi.fn()
 }))
 
+import { assessmentFields } from "./../../features/assessment/featureConfig"
+
+const mockClinicalData = assessmentFields.reduce((acc, field) => {
+  acc[field.key] = 1;
+  return acc;
+}, {} as any);
+
 const createWrapper = () => {
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -27,7 +34,7 @@ const createWrapper = () => {
   // pre-populate patient cache
   queryClient.setQueryData(["patient", "1"], {
     id: 1,
-    clinical_data: { foo: 1, bar: 2 }, // just needs to pass getCompletion length
+    clinical_data: mockClinicalData,
     age: 45,
     gender: "Male"
   })
@@ -53,7 +60,9 @@ describe("useReportExport", () => {
 
     await result.current.exportReport({ patientId: "1", canvasEl })
     
-    expect(result.current.status).toBe("error")
+    await waitFor(() => {
+      expect(result.current.status).toBe("error")
+    })
     expect(result.current.error).toBe("The 3D view isn't ready yet — wait for the heart to load and try again.")
     expect(http.post).not.toHaveBeenCalled()
   })
@@ -69,7 +78,9 @@ describe("useReportExport", () => {
 
     await result.current.exportReport({ patientId: "1", canvasEl })
     
-    expect(result.current.status).toBe("error")
+    await waitFor(() => {
+      expect(result.current.status).toBe("error")
+    })
     expect(result.current.error).toBe("The report could not be stored. Please try again.")
   })
 
@@ -85,7 +96,9 @@ describe("useReportExport", () => {
 
     await result.current.exportReport({ patientId: "1", canvasEl })
     
-    expect(result.current.status).toBe("ready")
+    await waitFor(() => {
+      expect(result.current.status).toBe("ready")
+    })
     expect(result.current.pdfLink).toBe("https://example.com/pdf.pdf")
   })
 })

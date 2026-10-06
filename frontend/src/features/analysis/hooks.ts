@@ -64,20 +64,25 @@ export function useAnalysis(patientId: string | number | undefined) {
   })
 }
 
-export function useRiskStory(patientId: string | number | undefined) {
+export function useRiskStory(patientId: string | number | undefined, options: { enabled?: boolean } = {}) {
   const queryClient = useQueryClient()
   
+  const isEnabled = options.enabled !== undefined ? options.enabled : !!patientId;
+
   const query = useQuery({
     queryKey: ["riskStory", patientId],
     queryFn: () => generateRiskStory(patientId!, { force_regenerate: false }),
-    enabled: !!patientId,
+    enabled: isEnabled,
     staleTime: Infinity, // don't refetch automatically
   })
 
   const mutation = useMutation({
-    mutationFn: (request: RiskStoryRequest) => generateRiskStory(patientId!, request),
+    mutationFn: (request: RiskStoryRequest) => {
+      if (!patientId) throw new Error("Patient ID is required")
+      return generateRiskStory(patientId, request)
+    },
     onSuccess: (data) => {
-      queryClient.setQueryData(["riskStory", patientId], data)
+      if (patientId) queryClient.setQueryData(["riskStory", patientId], data)
     }
   })
 

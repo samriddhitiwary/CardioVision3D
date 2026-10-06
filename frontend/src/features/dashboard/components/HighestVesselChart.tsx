@@ -23,10 +23,19 @@ export function HighestVesselChart({ byHighestVessel }: HighestVesselChartProps)
             <XAxis type="number" hide />
             <YAxis dataKey="name" type="category" axisLine={false} tickLine={false} tick={{ fill: 'var(--text)' }} width={50} />
             <Tooltip 
-              cursor={{ fill: 'var(--surface-hover)' }}
-              contentStyle={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", color: "var(--text)", borderRadius: "6px" }}
+              cursor={false}
+              content={({ active, payload }) => {
+                if (active && payload && payload.length) {
+                  return (
+                    <div style={{ backgroundColor: "var(--surface)", border: "1px solid var(--border)", color: "var(--text)", padding: "8px", borderRadius: "6px" }}>
+                      <p className="text-sm font-medium">{`${payload[0].payload.name}: ${payload[0].value}`}</p>
+                    </div>
+                  );
+                }
+                return null;
+              }}
             />
-            <Bar dataKey="value" radius={[0, 4, 4, 0]}>
+            <Bar dataKey="value" radius={[0, 4, 4, 0]} activeBar={false}>
               {data.map((_, index) => (
                 <Cell key={`cell-${index}`} fill="var(--primary)" />
               ))}

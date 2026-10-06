@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { Sparkles, AlertCircle, RefreshCw } from "lucide-react"
+import { Sparkles, AlertCircle } from "lucide-react"
 import { Button } from "../../../components/ui/Button"
 import { EmptyState } from "../../../components/ui/EmptyState"
 import { RiskStoryView } from "../../analysis/components/RiskStoryView"
@@ -23,7 +23,7 @@ export function RiskStoryTab({ patient }: RiskStoryTabProps) {
   // This will fetch ONLY if we don't have a cached one AND the user clicks "Generate", 
   // or we can use the mutation directly.
   const { data: fetchedStory, regenerate, isError, isLoading } = useRiskStory(
-    showFetched ? patient.id : undefined // conditionally enable hook
+    patient.id, { enabled: showFetched }
   )
 
   const handleGenerate = () => {
@@ -34,7 +34,18 @@ export function RiskStoryTab({ patient }: RiskStoryTabProps) {
     regenerate()
   }
 
-  const storyData = showFetched ? fetchedStory : (hasCachedStory ? patient.risk_story : null)
+  let parsedCachedStory = null
+  if (hasCachedStory && typeof patient.risk_story === 'string') {
+    try {
+      parsedCachedStory = JSON.parse(patient.risk_story)
+    } catch (e) {
+      console.error("Failed to parse cached risk story", e)
+    }
+  } else if (hasCachedStory) {
+    parsedCachedStory = patient.risk_story
+  }
+
+  const storyData = showFetched ? fetchedStory : parsedCachedStory
 
   const { filled: clinicalFieldsCount, total } = getCompletion(patient)
   const isComplete = clinicalFieldsCount >= total

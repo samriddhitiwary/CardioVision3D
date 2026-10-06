@@ -13,6 +13,7 @@ import { VesselCards } from "../../features/analysis/components/VesselCards"
 import { ShapView } from "../../features/analysis/components/ShapView"
 import { RiskStoryView } from "../../features/analysis/components/RiskStoryView"
 import { ReportExportButton } from "../../features/reports/components/ReportExportButton"
+import { usePageTitle } from "../../hooks/usePageTitle"
 import type { VesselKey } from "../../types/api"
 
 export function AnalysisPage() {
@@ -23,6 +24,7 @@ export function AnalysisPage() {
   
   const { activePatientId } = useActivePatient()
   const resolvedPatientId = patientId || activePatientId
+  const h1Ref = usePageTitle("Analysis Report")
 
   const { data: patient, isLoading: isPatientLoading } = usePatient(resolvedPatientId || undefined)
   const { data: analysis, isLoading: isAnalysisLoading, error: analysisError } = useAnalysis(resolvedPatientId || undefined)
@@ -119,7 +121,7 @@ export function AnalysisPage() {
             {patient?.name?.[0] || "?"}
           </div>
           <div>
-            <h1 className="text-xl font-bold text-[var(--text)]">{patient?.name || "Unknown Patient"}</h1>
+            <h1 ref={h1Ref} tabIndex={-1} className="text-xl font-bold text-[var(--text)] outline-none">Analysis Report</h1>
             <p className="text-sm text-[var(--text-muted)] flex items-center gap-2">
               {patient?.age} yrs &bull; {patient?.gender} &bull; ID: {patient?.id}
             </p>
@@ -200,7 +202,7 @@ export function AnalysisPage() {
               <span className="w-3 h-3 rounded-full bg-[var(--protective)]" /> Low &lt; 33%
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-full bg-[#f59e0b]" /> Moderate 33–66%
+              <span className="w-3 h-3 rounded-full bg-[var(--warning)]" /> Moderate 33–66%
             </div>
             <div className="flex items-center gap-1.5">
               <span className="w-3 h-3 rounded-full bg-[var(--risk-high)]" /> High &ge; 66%

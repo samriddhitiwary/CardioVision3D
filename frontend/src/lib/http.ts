@@ -81,7 +81,7 @@ function handleSessionExpired() {
   
   // Only redirect and toast if we are not already on login/register
   if (!window.location.pathname.startsWith('/login') && !window.location.pathname.startsWith('/register')) {
-    toast.error("Your session expired. Please sign in again.")
+    toast.error("Your session expired, please sign in again")
     const nextUrl = encodeURIComponent(window.location.pathname + window.location.search)
     window.location.href = `/login?next=${nextUrl}`
   }

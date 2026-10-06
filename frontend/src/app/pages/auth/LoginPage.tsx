@@ -68,6 +68,7 @@ export function LoginPage() {
           />
           <button
             type="button"
+            aria-label="Toggle password visibility"
             className="absolute right-3 top-8 text-[var(--text-muted)] hover:text-[var(--text)]"
             onClick={() => setShowPassword(!showPassword)}
           >

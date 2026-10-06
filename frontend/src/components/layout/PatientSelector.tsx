@@ -52,6 +52,7 @@ export function PatientSelector() {
         <Button 
           variant="secondary" 
           role="combobox" 
+          aria-label="Select patient"
           aria-expanded={open} 
           className="w-full md:w-[260px] justify-between h-12 bg-[var(--surface)] border-[var(--border)] hover:bg-[var(--surface-hover)]"
         >

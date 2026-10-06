@@ -34,7 +34,7 @@ const TargetPredictionSchema = z.object({
 
 export const AnalyzeResponseSchema = z.object({
   model_version: z.string(),
-  disclaimer: z.string(),
+  disclaimer: z.string().optional().default("Educational / decision-support prototype only. Predictions are model risk estimates and are not a medical diagnosis or substitute for professional evaluation or coronary imaging."),
   predictions: z.object({
     CAD: TargetPredictionSchema,
     LAD: TargetPredictionSchema,

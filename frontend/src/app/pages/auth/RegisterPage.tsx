@@ -56,7 +56,7 @@ export function RegisterPage() {
         setError("email", { message: "Email already registered" })
       } else if (msg.toLowerCase().includes("incorrect email or password")) {
         // Auto-login failed but registration might have succeeded
-        toast.success("Account created! Please log in.")
+        toast.success("Account created, please log in")
         navigate("/login", { replace: true })
       } else {
         toast.error(msg)
@@ -105,6 +105,7 @@ export function RegisterPage() {
             />
             <button
               type="button"
+              aria-label="Toggle password visibility"
               className="absolute right-3 top-8 text-[var(--text-muted)] hover:text-[var(--text)]"
               onClick={() => setShowPassword(!showPassword)}
             >

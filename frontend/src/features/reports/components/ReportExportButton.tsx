@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import { DownloadCloud, CheckCircle2, Copy, ExternalLink, Loader2 } from "lucide-react"
+import { toast } from "sonner"
 import { Button } from "../../../components/ui/Button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../../../components/ui/DropdownMenu"
 import { useReportExport } from "../useReportExport"
@@ -11,7 +12,7 @@ interface ReportExportButtonProps {
 }
 
 export function ReportExportButton({ patientId, autoExport, pdfLink: initialPdfLink }: ReportExportButtonProps) {
-  const { exportReport, status, error, pdfLink: hookPdfLink, reset } = useReportExport()
+  const { exportReport, status, error, pdfLink: hookPdfLink } = useReportExport()
   
   const currentPdfLink = hookPdfLink || initialPdfLink
 
@@ -33,8 +34,7 @@ export function ReportExportButton({ patientId, autoExport, pdfLink: initialPdfL
   const handleCopyLink = () => {
     if (currentPdfLink) {
       navigator.clipboard.writeText(currentPdfLink)
-      // Normally show a toast here, but for now we just rely on the UX.
-      alert("Link copied! Anyone with this link can open the report.")
+      toast.success("Link copied")
     }
   }
 

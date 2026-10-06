@@ -86,6 +86,7 @@ export interface Patient {
   risk_story?: string | null
   risk_story_generated_at?: string | null
   risk_story_model?: string | null
+  pdf_link?: string
 }
 
 export interface PatientCreate {

@@ -6,6 +6,7 @@ import { PatientSelector } from "../../../components/layout/PatientSelector"
 import { RiskBadge } from "../../dashboard/components/RiskBadge"
 import { getAnalysis, getHighestBand, getCompletion } from "../../patients/patientView"
 import { formatDate } from "../../../lib/format"
+import { usePageTitle } from "../../../hooks/usePageTitle"
 import type { Patient } from "../../../types/api"
 
 interface RecordHeaderProps {
@@ -17,6 +18,7 @@ export function RecordHeader({ patient, onDelete }: RecordHeaderProps) {
   const navigate = useNavigate()
   
   const name = patient.name || patient.clinical_data?.name || `Patient #${patient.id}`
+  const h1Ref = usePageTitle("Patient Record")
   const initials = name.substring(0, 2).toUpperCase()
   const age = patient.age ?? patient.clinical_data?.age ?? "?"
   const sex = (patient.gender?.startsWith("M") || patient.clinical_data?.sex === 1) ? "M" : "F"
@@ -51,7 +53,7 @@ export function RecordHeader({ patient, onDelete }: RecordHeaderProps) {
           
           <div className="space-y-1">
             <div className="flex items-center gap-3 flex-wrap">
-              <h1 className="text-2xl font-bold text-[var(--text)]">{name}</h1>
+              <h1 ref={h1Ref} tabIndex={-1} className="text-2xl font-bold text-[var(--text)] outline-none">Patient Record</h1>
               <div className="hidden md:block w-[240px]">
                 <PatientSelector />
               </div>

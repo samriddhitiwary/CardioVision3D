@@ -4,8 +4,10 @@ import { normalizeAnalysis } from "../analysis/normalizeAnalysis"
 export function getAnalysis(patient: Patient): AnalyzeResponse | null {
   if (!patient.analysis_data) return null
   try {
-    return normalizeAnalysis(patient.analysis_data)
+    const rawData = patient.analysis_data.data ? patient.analysis_data.data : patient.analysis_data;
+    return normalizeAnalysis(rawData)
   } catch (e) {
+    console.error("normalizeAnalysis error for patient", patient.id, e)
     return null
   }
 }

@@ -1,9 +1,7 @@
 import { Suspense } from 'react'
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import { AppShell } from '../components/layout/AppShell'
-import { PageHeader } from '../components/layout/PageHeader'
-import { EmptyState } from '../components/ui/EmptyState'
-import { Activity } from 'lucide-react'
+
 import { KitPage } from './KitPage'
 import { RequireAuth } from './guards/RequireAuth'
 import { PublicOnly } from './guards/PublicOnly'
@@ -11,24 +9,18 @@ import { AuthInitializer } from './guards/AuthInitializer'
 import { AuthLayout } from './pages/auth/AuthLayout'
 import { LoginPage } from './pages/auth/LoginPage'
 import { RegisterPage } from './pages/auth/RegisterPage'
-import { DashboardPage } from './pages/DashboardPage'
+import { lazy } from 'react'
 import { ActivePatientProvider } from '../features/patients/ActivePatientContext'
-import { RecordsPage } from './pages/RecordsPage'
-import { RecordsDetailPage } from './pages/RecordsDetailPage'
-import { AssessmentPage } from './pages/AssessmentPage'
-import { AnalysisPage } from './pages/AnalysisPage'
 
-// Placeholders for lazily loaded routes
-const Placeholder = ({ title }: { title: string }) => (
-  <div className="max-w-7xl mx-auto">
-    <PageHeader title={title} />
-    <EmptyState 
-      icon={Activity}
-      title="Coming Soon"
-      description={`This page (${title}) will be implemented in a future phase.`}
-    />
-  </div>
-)
+const DashboardPage = lazy(() => import('./pages/DashboardPage').then(module => ({ default: module.DashboardPage })))
+const RecordsPage = lazy(() => import('./pages/RecordsPage').then(module => ({ default: module.RecordsPage })))
+const RecordsDetailPage = lazy(() => import('./pages/RecordsDetailPage').then(module => ({ default: module.RecordsDetailPage })))
+const AssessmentPage = lazy(() => import('./pages/AssessmentPage').then(module => ({ default: module.AssessmentPage })))
+const AnalysisPage = lazy(() => import('./pages/AnalysisPage').then(module => ({ default: module.AnalysisPage })))
+import { NotFoundPage } from './pages/NotFoundPage'
+import { ValidPatientIdGuard } from './guards/ValidPatientIdGuard'
+
+
 
 const router = createBrowserRouter([
   // Auth Routes (Public Only)
@@ -52,16 +44,15 @@ const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <Navigate to="/dashboard" replace /> },
-      { path: 'dashboard', element: <DashboardPage /> },
-      { path: 'assessment/new', element: <AssessmentPage /> },
-      { path: 'assessment/:patientId', element: <AssessmentPage /> },
-      { path: 'analysis', element: <AnalysisPage /> },
-      { path: 'analysis/:patientId', element: <AnalysisPage /> },
-      { path: 'records', element: <RecordsPage /> },
-      { path: 'records/:id', element: <RecordsDetailPage /> },
-      { path: 'model-info', element: <Placeholder title="Model Information" /> },
-      { path: '_kit', element: <KitPage /> },
-      { path: '*', element: <Placeholder title="404 Not Found" /> },
+      { path: 'dashboard', element: <Suspense fallback={<div className="p-8">Loading...</div>}><DashboardPage /></Suspense> },
+      { path: 'assessment/new', element: <Suspense fallback={<div className="p-8">Loading...</div>}><AssessmentPage /></Suspense> },
+      { path: 'assessment/:patientId', element: <ValidPatientIdGuard><Suspense fallback={<div className="p-8">Loading...</div>}><AssessmentPage /></Suspense></ValidPatientIdGuard> },
+      { path: 'analysis', element: <Suspense fallback={<div className="p-8">Loading...</div>}><AnalysisPage /></Suspense> },
+      { path: 'analysis/:patientId', element: <ValidPatientIdGuard><Suspense fallback={<div className="p-8">Loading...</div>}><AnalysisPage /></Suspense></ValidPatientIdGuard> },
+      { path: 'records', element: <Suspense fallback={<div className="p-8">Loading...</div>}><RecordsPage /></Suspense> },
+      { path: 'records/:id', element: <ValidPatientIdGuard paramName="id"><Suspense fallback={<div className="p-8">Loading...</div>}><RecordsDetailPage /></Suspense></ValidPatientIdGuard> },
+      ...(import.meta.env.DEV ? [{ path: '_kit', element: <KitPage /> }] : []),
+      { path: '*', element: <NotFoundPage /> },
     ]
   }
 ])

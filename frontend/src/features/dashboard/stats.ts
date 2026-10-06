@@ -1,5 +1,5 @@
 import type { Patient } from "../../types/api"
-import { normalizeAnalysis } from "../analysis/normalizeAnalysis"
+import { getAnalysis } from "../patients/patientView"
 
 export interface DashboardStats {
   total: number
@@ -52,7 +52,11 @@ export function computeDashboardStats(patients: Patient[]): DashboardStats {
     }
 
     try {
-      const analysis = normalizeAnalysis(patient.analysis_data)
+      const analysis = getAnalysis(patient)
+      if (!analysis) {
+        stats.notAssessed++
+        continue
+      }
       stats.assessed++
       validPatients.push({ patient, analysis })
 

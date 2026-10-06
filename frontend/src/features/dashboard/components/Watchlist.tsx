@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { ChevronRight } from "lucide-react"
 import { Card, CardBody, CardHeader, CardTitle } from "../../../components/ui/Card"
 import type { Patient } from "../../../types/api"
-import { normalizeAnalysis } from "../../analysis/normalizeAnalysis"
+import { getAnalysis } from "../../patients/patientView"
 import { RiskBadge } from "./RiskBadge"
 import { formatPercent } from "../../../lib/format"
 
@@ -26,7 +26,9 @@ export function Watchlist({ patients }: WatchlistProps) {
         ) : (
           <ul className="divide-y divide-[var(--border)]">
             {patients.map(patient => {
-              const analysis = normalizeAnalysis(patient.analysis_data)
+              const analysis = getAnalysis(patient)
+              if (!analysis) return null // should not happen since stats.ts filters these
+
               const cadProb = analysis.predictions.CAD.probability
               const band = analysis.predictions.CAD.visualization_band
               const age = patient.clinical_data.age || "?"

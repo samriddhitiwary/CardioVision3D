@@ -17,7 +17,7 @@ export function Topbar({ onMenuClick, onLogout }: { onMenuClick: () => void, onL
     : pathSegments.map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(" / ")
 
   return (
-    <header className="sticky top-0 z-30 flex h-16 shrink-0 items-center gap-x-4 border-b border-[var(--border)] bg-[var(--surface)] px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
+    <div className="sticky top-0 z-30 flex h-16 shrink-0 items-center gap-x-4 border-b border-[var(--border)] bg-[var(--surface)] px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
       <button
         type="button"
         className="-m-2.5 p-2.5 text-[var(--text-muted)] hover:text-[var(--text)] md:hidden"
@@ -62,6 +62,6 @@ export function Topbar({ onMenuClick, onLogout }: { onMenuClick: () => void, onL
           </DropdownMenu>
         </div>
       </div>
-    </header>
+    </div>
   )
 }

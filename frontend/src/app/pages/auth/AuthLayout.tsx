@@ -6,7 +6,7 @@ export function AuthLayout() {
   return (
     <div className="flex min-h-screen bg-[var(--bg)]">
       {/* Brand Panel (Hidden on very small screens, compact on mobile, full on md) */}
-      <div className="hidden md:flex flex-col w-1/2 bg-[var(--sidebar-bg)] text-white p-12 justify-center relative overflow-hidden">
+      <aside className="hidden md:flex flex-col w-1/2 bg-[var(--sidebar-bg)] text-white p-12 justify-center relative overflow-hidden">
         {/* Subtle SVG Background Pattern */}
         <svg 
           className="absolute inset-0 w-full h-full opacity-10 pointer-events-none" 
@@ -44,10 +44,10 @@ export function AuthLayout() {
             </li>
           </ul>
         </div>
-      </div>
+      </aside>
 
       {/* Form Area */}
-      <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 lg:px-20 xl:px-24">
+      <main className="flex-1 flex flex-col justify-center px-4 sm:px-6 lg:px-20 xl:px-24">
         {/* Mobile Header */}
         <div className="md:hidden flex items-center justify-center gap-2 mb-8">
           <Activity className="h-8 w-8 text-[var(--primary)]" />
@@ -57,7 +57,7 @@ export function AuthLayout() {
         <div className="mx-auto w-full max-w-sm">
           <Outlet />
         </div>
-      </div>
+      </main>
       <Toaster />
     </div>
   )

@@ -1,8 +1,6 @@
-import { useState } from "react"
 import { AlertCircle, RefreshCw, Cpu, Database, FileWarning, Play } from "lucide-react"
 import { Button } from "../../../components/ui/Button"
 import { isFallbackStory } from "../../../services/riskStoryService"
-import { RiskReasoningGraph } from "../../../legacy/components/risk-story/RiskReasoningGraph"
 import type { RiskStoryResponse, RiskStoryFactor } from "../../../services/riskStoryService"
 import type { VesselKey } from "../../../types/api"
 
@@ -16,7 +14,6 @@ interface RiskStoryViewProps {
 }
 
 export function RiskStoryView({ story, isLoading, isError, onRegenerate, onSelectVessel, modelInfo }: RiskStoryViewProps) {
-  const [showGraph, setShowGraph] = useState(false)
   const isFallback = isFallbackStory(story)
   
   if (isLoading) {
@@ -164,18 +161,7 @@ export function RiskStoryView({ story, isLoading, isError, onRegenerate, onSelec
           </div>
         )}
 
-        <div className="border-t border-[var(--border)] pt-6">
-          <Button variant="ghost" size="sm" onClick={() => setShowGraph(!showGraph)} className="mb-4">
-            {showGraph ? "Hide Reasoning Graph" : "Show Reasoning Graph"}
-          </Button>
-          {showGraph && (
-            <div className="rounded-md border border-[var(--border)] p-4 bg-white overflow-hidden">
-              <RiskReasoningGraph story={story as any} />
-            </div>
-          )}
-        </div>
-
-        <p className="text-xs text-[var(--text-muted)] italic">
+        <p className="text-xs text-[var(--text-muted)] italic mt-6 border-t border-[var(--border)] pt-6">
           {story.disclaimer}
         </p>
       </div>

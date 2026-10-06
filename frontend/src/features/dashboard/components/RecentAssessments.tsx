@@ -3,7 +3,7 @@ import { Card, CardBody, CardHeader, CardTitle } from "../../../components/ui/Ca
 import { Button } from "../../../components/ui/Button"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../../../components/ui/Table"
 import type { Patient } from "../../../types/api"
-import { normalizeAnalysis } from "../../analysis/normalizeAnalysis"
+import { getAnalysis } from "../../patients/patientView"
 import { RiskBadge } from "./RiskBadge"
 import { formatDate } from "../../../lib/format"
 
@@ -46,8 +46,9 @@ export function RecentAssessments({ patients }: RecentAssessmentsProps) {
                   
                   if (patient.analysis_data) {
                     try {
-                      const analysis = normalizeAnalysis(patient.analysis_data)
-                      band = analysis.predictions.CAD.visualization_band
+                      const analysis = getAnalysis(patient)
+                      if (analysis) {
+                        band = analysis.predictions.CAD.visualization_band
                       
                       const vessels = [
                         { name: "LAD", prob: analysis.predictions.LAD.probability },
@@ -56,6 +57,7 @@ export function RecentAssessments({ patients }: RecentAssessmentsProps) {
                       ]
                       const highestVessel = vessels.reduce((acc, v) => v.prob > acc.prob ? v : acc, vessels[0])
                       highestVesselStr = highestVessel.name
+                      }
                     } catch (e) {
                       // ignore parse errors
                     }

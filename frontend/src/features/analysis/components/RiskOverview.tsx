@@ -37,7 +37,7 @@ export function RiskOverview({ predictions }: RiskOverviewProps) {
     const { cx, cy } = props
     if (cx === undefined || cy === undefined) return null
     return (
-      <line x1={cx} y1={cy - 10} x2={cx} y2={cy + 10} stroke="#000" strokeWidth={3} strokeLinecap="round" />
+      <line x1={cx} y1={cy - 10} x2={cx} y2={cy + 10} stroke="currentColor" className="text-[var(--text)]" strokeWidth={3} strokeLinecap="round" />
     )
   }
 

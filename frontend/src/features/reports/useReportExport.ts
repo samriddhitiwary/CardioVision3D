@@ -1,8 +1,6 @@
 import { useState, useCallback } from "react"
-import { useNavigate } from "react-router-dom"
 import { useQueryClient } from "@tanstack/react-query"
 import { http } from "../../lib/http"
-import { usePatient, useUpdatePatient } from "../patients/hooks"
 import { getCompletion } from "../patients/patientView"
 import type { Patient } from "../../types/api"
 
@@ -15,8 +13,6 @@ interface ExportReportArgs {
 
 export function useReportExport() {
   const queryClient = useQueryClient()
-  const navigate = useNavigate()
-  
   const [status, setStatus] = useState<ExportStatus>("idle")
   const [error, setError] = useState<string | null>(null)
   const [pdfLink, setPdfLink] = useState<string | null>(null)

@@ -1,4 +1,4 @@
-import { LayoutDashboard, ClipboardPlus, Activity, FolderOpen, Cpu, LogOut } from "lucide-react"
+import { LayoutDashboard, ClipboardPlus, Activity, FolderOpen, LogOut } from "lucide-react"
 import { cn } from "../../lib/utils"
 import { NavLink } from "react-router-dom"
 import { Avatar, AvatarFallback } from "../ui/Avatar"
@@ -9,7 +9,6 @@ export const navItems = [
   { name: "New Assessment", href: "/assessment/new", icon: ClipboardPlus },
   { name: "Patient Records", href: "/records", icon: FolderOpen },
   { name: "Analysis Report", href: "/analysis", icon: Activity },
-  { name: "Model Info", href: "/model-info", icon: Cpu },
 ]
 
 export function Sidebar({ onLogout }: { onLogout: () => void }) {
@@ -17,7 +16,7 @@ export function Sidebar({ onLogout }: { onLogout: () => void }) {
   const initials = displayName.substring(0, 2).toUpperCase()
 
   return (
-    <div className="hidden md:flex h-full flex-col bg-[var(--sidebar-bg)] text-[var(--sidebar-fg)] transition-all duration-300 w-16 xl:w-64">
+    <aside className="hidden md:flex h-full flex-col bg-[var(--sidebar-bg)] text-[var(--sidebar-fg)] transition-all duration-300 w-16 xl:w-64">
       {/* Logo Area */}
       <div className="flex h-16 shrink-0 items-center justify-center xl:justify-start xl:px-6 border-b border-[var(--sidebar-active)]">
         <Activity className="h-8 w-8 text-[var(--primary)]" />
@@ -65,11 +64,11 @@ export function Sidebar({ onLogout }: { onLogout: () => void }) {
             <p className="text-sm font-medium text-white truncate">{displayName}</p>
             <p className="text-xs text-[var(--sidebar-muted)] truncate">{email}</p>
           </div>
-          <button onClick={onLogout} className="ml-auto hidden xl:block text-[var(--sidebar-muted)] hover:text-white">
+          <button onClick={onLogout} aria-label="Logout" className="ml-auto hidden xl:block text-[var(--sidebar-muted)] hover:text-white">
             <LogOut className="h-5 w-5" />
           </button>
         </div>
       </div>
-    </div>
+    </aside>
   )
 }
